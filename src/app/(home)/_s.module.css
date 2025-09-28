@@ -1,0 +1,89 @@
+.he {
+  margin-top: 208rem;
+  position: relative;
+}
+
+.he h1 {
+  position: absolute;
+  top: -80rem;
+  left: 130rem;
+  width: fit-content;
+  font-family: "bu";
+  font-weight: normal;
+  font-size: 100rem;
+  line-height: 90%;
+  & span {
+    display: block;
+    text-align: right;
+  }
+}
+
+.he figure {
+  padding-inline: var(--p-i);
+}
+
+.ab {
+  margin-top: 24rem;
+  padding-inline: var(--p-i);
+}
+
+.ab_an {
+  padding-top: 36rem;
+}
+.ab ul {
+  margin-left: 596rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.ab li {
+  width: 160rem;
+}
+.ab li h3 {
+  font-size: 35rem;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--c-black);
+}
+.ab li p {
+  margin-top: 14rem;
+  font-size: 12rem;
+  font-weight: normal;
+  line-height: 15rem;
+  color: var(--c-gray);
+}
+
+.ab_in {
+  margin-top: 76rem;
+  display: flex;
+}
+.ab_in .l {
+  flex-basis: calc(3 / 7 * 100%);
+  padding-left: 20rem;
+  display: flex;
+  flex-direction: column;
+  & h3 {
+    font-size: 35rem;
+    line-height: 30rem;
+    font-weight: 400;
+    color: var(--c-black);
+  }
+  & p {
+    margin-top: auto;
+    width: 370rem;
+    font-weight: 300;
+    font-size: 20rem;
+    line-height: 30rem;
+    color: var(--c-black);
+  }
+  & a {
+    margin-top: 35rem;
+    color: var(--c-gold);
+    text-decoration: underline;
+    line-height: 30rem;
+  }
+}
+.ab_in .r {
+  flex-basis: calc(4 / 7 * 100%);
+}
+

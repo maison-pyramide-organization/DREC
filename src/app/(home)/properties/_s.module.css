@@ -1,0 +1,36 @@
+.prs {
+  margin-top: 120rem;
+}
+.prs h2 {
+  font-size: 60rem;
+  line-height: 100%;
+  font-family: "bu";
+  font-weight: normal;
+}
+.prs_link {
+  margin-top: 16rem;
+  display: flex;
+  gap: 16rem;
+  align-items: center;
+}
+.prs_link a {
+  color: var(--c-gold);
+  font-size: 20rem;
+  text-decoration: underline;
+}
+.prs_link svg {
+  width: 20rem;
+}
+
+.pr {
+  margin-top: 105rem;
+}
+.pr h3 {
+  font-size: 20rem;
+}
+.pr p {
+  width: 340rem;
+  margin-top: 16rem;
+  font-size: 12rem;
+  line-height: 14rem;
+}

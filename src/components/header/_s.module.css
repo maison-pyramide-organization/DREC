@@ -1,0 +1,41 @@
+:global(#h) {
+  padding-top: 40rem;
+  padding-inline: var(--p-i);
+  display: flex;
+  align-items: center;
+}
+.lo {
+  flex-basis: 100%;
+}
+.lo svg {
+  width: 52rem;
+}
+
+.t {
+  flex-shrink: 0;
+  font-size: 15rem;
+  font-family: "so";
+  letter-spacing: 0.25em;
+}
+
+.menu_ {
+  flex-basis: 100%;
+}
+
+:global(#menu-btn) {
+  margin-left: auto;
+}
+
+.menu_i {
+}
+
+.menu_i span {
+  display: block;
+  width: 45rem;
+  height: 1px;
+  background-color: black;
+
+  &:last-child {
+    margin-top: 8px;
+  }
+}
