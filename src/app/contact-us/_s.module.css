@@ -1,0 +1,101 @@
+.c0 {
+  margin-top: 130rem;
+  width: 860rem;
+  margin-inline: auto;
+}
+.c0 h1 {
+  font-size: 70rem;
+  font-family: "bu";
+  font-weight: normal;
+  line-height: 60rem;
+  & div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.c_info {
+  margin-top: 120rem;
+  display: flex;
+  justify-content: space-between;
+}
+.c_info h3 {
+  font-size: 20rem;
+  font-weight: bold;
+  margin-bottom: 28rem;
+}
+.c_info .social {
+  display: block;
+  font-size: 15rem;
+  text-decoration: underline;
+}
+
+.c1 {
+  margin-top: 200rem;
+  position: relative;
+  padding-inline: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.c1 h2 {
+  position: absolute;
+  top: -30rem;
+  left: 30rem;
+  font-size: 70rem;
+  font-family: "bu";
+  font-weight: normal;
+  line-height: 60rem;
+}
+.c1 figure {
+  width: 600rem;
+}
+.f {
+  width: 710rem;
+  display: flex;
+  gap: 45rem 50rem;
+  flex-wrap: wrap;
+}
+
+.f input {
+  width: calc((100% - 50rem) / 2);
+  font-size: 15rem;
+  padding-bottom: 14rem;
+  border-bottom: 1px solid var(--c-black);
+  &::placeholder {
+    color: var(--c-black);
+  }
+}
+
+.f .b {
+  flex-basis: 100%;
+}
+.f label {
+  display: block;
+  font-size: 15rem;
+}
+.f textarea {
+  width: 100%;
+  height: 160rem;
+  margin-top: 8px;
+}
+.f button {
+  margin-top: 16rem;
+  text-decoration: underline;
+}
+
+.c2 {
+  padding-inline: var(--p-i);
+  margin-top: 140rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.c2 h2 {
+  font-size: 70rem;
+  font-family: "bu";
+  font-weight: normal;
+  line-height: 60rem;
+}
+.c2 form {
+  padding-top: 8rem;
+}

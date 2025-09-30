@@ -1,0 +1,167 @@
+.s_a0 {
+  margin-top: 150rem;
+  position: relative;
+}
+
+.s_a0 h1 {
+  font-size: 70rem;
+  font-family: "bu";
+  font-weight: normal;
+  line-height: 60rem;
+  position: absolute;
+  top: -30rem;
+  left: 100rem;
+}
+
+.s_a0 figure {
+  margin-inline: auto;
+  width: 1090rem;
+}
+
+.s_a0 p {
+  position: absolute;
+  width: 500rem;
+  right: 90rem;
+  bottom: -35rem;
+  font-family: "bu";
+  font-size: 40rem;
+  line-height: 35rem;
+}
+
+.s_a1 {
+  margin-top: 215rem;
+  padding-inline: var(--p-i);
+  display: flex;
+  justify-content: space-between;
+}
+.s_a1 .l {
+  width: 680rem;
+}
+
+.s_a1 h2 {
+  font-size: 35rem;
+  line-height: 30rem;
+  font-weight: normal;
+}
+.s_a1 .l figure {
+  margin-top: 24rem;
+}
+
+.s_a1 .r {
+  width: 600rem;
+  display: flex;
+  flex-direction: column;
+}
+.s_a1 p {
+  font-size: 20rem;
+  line-height: 30rem;
+  font-weight: 300;
+}
+
+.s_a1 a {
+  display: block;
+  margin-top: 24rem;
+  font-size: 13rem;
+  color: var(--c-gold);
+  text-decoration: underline;
+}
+
+.s_a1 .r figure {
+  margin-top: auto;
+}
+
+.s_a2 {
+  margin-top: 100rem;
+}
+.s_a2 h2 {
+  font-family: "bu";
+  font-size: 70rem;
+  line-height: 60rem;
+  margin-left: 105rem;
+  font-weight: normal;
+  & span {
+    display: block;
+    margin-left: 175rem;
+  }
+}
+
+.s_a2 .c {
+  margin-top: 150rem;
+  display: flex;
+  gap: 100rem;
+  justify-content: center;
+}
+
+.s_a2 .c div {
+  width: 343rem;
+  padding-left: 20rem;
+  border-left: 1px solid var(--c-black);
+}
+.s_a2 .c h3 {
+  font-size: 30rem;
+  line-height: 35rem;
+  font-weight: normal;
+}
+.s_a2 .c p {
+  margin-top: 56rem;
+  font-size: 20rem;
+  line-height: 25rem;
+  font-weight: 300;
+}
+
+.s_a3 {
+  margin-top: 180rem;
+  position: relative;
+}
+
+.s_a3 h2 {
+  position: absolute;
+  font-size: 70rem;
+  font-family: "bu";
+  font-weight: normal;
+  line-height: 60rem;
+  left: 30rem;
+  top: -30rem;
+}
+.s_a3 figure {
+  width: 1130rem;
+  margin-left: auto;
+}
+.s_a3 p {
+  font-size: 20rem;
+  line-height: 25rem;
+  font-weight: 300;
+  margin-top: 50rem;
+  width: 710rem;
+  margin-inline: auto 30rem;
+}
+
+.s_a4 {
+  margin-top: 135rem;
+}
+.s_a4 .h {
+  padding-inline: var(--p-i);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.s_a4 h2 {
+  width: 1040rem;
+  font-size: 70rem;
+  font-family: "bu";
+  font-weight: normal;
+  line-height: 60rem;
+  & div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.s_a4 a {
+  text-decoration: underline;
+  font-size: 13rem;
+  color: var(--c-gold);
+}
+.s_a4 figure {
+  margin-top: 60rem;
+}

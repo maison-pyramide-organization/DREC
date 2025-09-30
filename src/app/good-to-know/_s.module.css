@@ -1,0 +1,142 @@
+.g0 {
+  margin-top: 130rem;
+}
+.g0 > div {
+  padding-inline: var(--p-i);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.g0 h1 {
+  font-size: 70rem;
+  font-family: "bu";
+  font-weight: normal;
+  line-height: 60rem;
+}
+.g0 p {
+  width: 575rem;
+  font-weight: 300;
+  font-size: 20rem;
+  line-height: 30rem;
+}
+.g0 figure {
+  margin-top: 75rem;
+  margin-left: auto;
+  width: 605rem;
+}
+
+.g1 {
+  margin-top: 150rem;
+  padding-inline: var(--p-i);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.g1 > div {
+  position: relative;
+}
+
+.g1 h2 {
+  font-size: 70rem;
+  font-family: "bu";
+  font-weight: normal;
+  line-height: 60rem;
+  position: absolute;
+  &:first-child {
+    top: -52rem;
+    left: 0rem;
+  }
+  &:last-child {
+    text-align: right;
+    bottom: -115rem;
+    right: -50rem;
+  }
+}
+
+.g1 figure {
+  margin-left: 30rem;
+  width: 435rem;
+}
+.faqs {
+  width: 720rem;
+  border-bottom: 1px solid var(--c-black);
+}
+
+.g2 {
+  margin-top: 220rem;
+  display: flex;
+  gap: 35rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.g2 figure {
+  width: 240rem;
+  &:last-of-type {
+    margin-top: 238rem;
+  }
+}
+.g2 > div {
+  margin-top: 90rem;
+  width: 615rem;
+  text-align: center;
+}
+.g2 h2 {
+  font-size: 70rem;
+  font-family: "bu";
+  font-weight: normal;
+  line-height: 60rem;
+}
+.g2 h3 {
+  font-weight: normal;
+  margin-top: 70rem;
+  font-size: 35rem;
+  line-height: 35rem;
+}
+.g2 p {
+  font-size: 20rem;
+  line-height: 30rem;
+  margin-top: 70rem;
+  &:last-of-type {
+    margin-top: 40rem;
+  }
+}
+
+.download {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.download a {
+  display: block;
+  width: 140rem;
+}
+
+.g3 {
+  margin-top: 75rem;
+  position: relative;
+}
+.g3 h2 {
+  width: 655rem;
+  font-family: "bu";
+  font-weight: normal;
+  font-size: 35rem;
+  line-height: 30rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 393rem;
+  top: -16rem;
+  & div {
+    display: flex;
+    justify-content: space-between;
+    & span:last-of-type {
+      margin-left: 110rem;
+    }
+  }
+}
+
+.g3 figure {
+  margin-inline: auto;
+  width: 655rem;
+}

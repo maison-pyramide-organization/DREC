@@ -1,3 +1,11 @@
+.test {
+  width: 400px;
+  height: 500px;
+  background-color: red;
+  &:hover .cursor {
+    opacity: 1;
+  }
+}
 .map {
   padding-inline: var(--p-i);
   position: relative;
@@ -22,6 +30,9 @@
   top: 0;
   left: var(--p-i);
   cursor: none;
+  &:hover .cursor {
+    opacity: 1;
+  }
 }
 
 .popup {
@@ -54,6 +65,7 @@
   background-color: white;
   box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
   border-radius: 10rem;
+  opacity: 0;
 }
 .cursor svg {
   width: 20rem;

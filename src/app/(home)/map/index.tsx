@@ -4,7 +4,7 @@ import s from "./_s.module.css";
 import Image from "next/image";
 import map from "@/assets/images/map.png";
 import { useLoadScript } from "@react-google-maps/api";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Popup from "./popup";
 import { disableScrolling, enableScrolling } from "@/utils/scrolling";
 import Iplus from "@/assets/icons/plus.svg";
@@ -31,7 +31,6 @@ export default function Map() {
   }
   function hide() {
     console.log("left");
-
     const $cursor = cursorRef.current as any;
     $cursor.style.opacity = "0";
   }
@@ -45,26 +44,33 @@ export default function Map() {
 
   if (!isLoaded) return <p>Loading map…</p>;
   return (
-    <section className={s.map}>
-      <h2>
-        LIFE WELL <br />
-        PLACED
-      </h2>
-      <div
-        className={s.mb}
-        onClick={handleClick}
-        onMouseEnter={show}
-        onMouseMove={move}
-        onMouseLeave={hide}
-      >
+    <>
+      <div className={s.test} onMouseMove={move}>
         <div id="map-cursor" className={s.cursor} ref={cursorRef}>
           <Iplus />
         </div>
       </div>
-      <figure>
-        <Image src={map} alt="DREC Map" />
-      </figure>
-      {isOpened && <Popup closePopup={closePopup} />}
-    </section>
+      <section className={s.map}>
+        <h2>
+          LIFE WELL <br />
+          PLACED
+        </h2>
+        <div
+          className={s.mb}
+          onClick={handleClick}
+          // onMouseEnter={show}
+          onMouseMove={move}
+          // onMouseLeave={hide}
+        >
+          {/* <div id="map-cursor" className={s.cursor} ref={cursorRef}>
+          <Iplus />
+        </div> */}
+        </div>
+        <figure>
+          <Image src={map} alt="DREC Map" />
+        </figure>
+        {isOpened && <Popup closePopup={closePopup} />}
+      </section>
+    </>
   );
 }

@@ -1,0 +1,30 @@
+.item_t {
+  padding-block:30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--c-black);
+  cursor: pointer;
+}
+.item_t span {
+  font-size: 22rem;
+  line-height: 35rem;
+  text-transform: uppercase;
+}
+.item_t svg {
+  width: 18rem;
+  height: 18rem;
+}
+
+.item_b_ {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+}
+
+.item_b {
+  padding-bottom: 24rem;
+  font-size: 20rem;
+  line-height: 30rem;
+  font-weight: 300;
+}

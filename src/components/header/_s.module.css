@@ -10,7 +10,6 @@
 .lo svg {
   width: 52rem;
 }
-
 .t {
   flex-shrink: 0;
   font-size: 15rem;
@@ -22,8 +21,11 @@
   flex-basis: 100%;
 }
 
-:global(#menu-btn) {
+.menu_ button {
   margin-left: auto;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
 }
 
 .menu_i {
@@ -34,8 +36,77 @@
   width: 45rem;
   height: 1px;
   background-color: black;
+  transform-origin: center;
 
   &:last-child {
     margin-top: 8px;
+  }
+}
+.menu_i.open span:first-child {
+  animation: top 0.4s linear both;
+}
+.menu_i.open span:last-child {
+  animation: bottom 0.4s linear both;
+}
+
+/*****************
+/* MENU */
+/*****************/
+
+.menu {
+  width: 1280rem;
+  background-color: #c09470;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  padding-block: 160rem 60rem;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.menu li {
+  font-family: "bu";
+  font-size: 70rem;
+  text-transform: uppercase;
+  padding-left: 50rem;
+}
+.menu a {
+  position: relative;
+  &:hover {
+    color: #eec4a2;
+  }
+}
+
+.menu li span {
+  font-size: 20rem;
+  position: absolute;
+  left: 100%;
+}
+
+@keyframes top {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(4px) rotate(0);
+  }
+  100% {
+    transform: translateY(4px) rotate(-30deg);
+  }
+}
+@keyframes bottom {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-4px) rotate(0);
+  }
+  100% {
+    transform: translateY(-4px) rotate(30deg);
   }
 }
