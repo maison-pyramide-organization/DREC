@@ -1,0 +1,69 @@
+.he {
+  position: relative;
+  margin-top: 215rem;
+  padding-inline: var(--p-i);
+}
+.he h1 {
+  position: absolute;
+  top: -65rem;
+  left: 290rem;
+  font-size: 70rem;
+  line-height: 60rem;
+  font-family: "bu";
+  font-weight: normal;
+  & span {
+    display: block;
+    margin-left: 185rem;
+  }
+}
+
+.prs {
+  margin-top: 40rem;
+  padding-inline: var(--p-i);
+}
+.prs_title {
+  font-size: 55rem;
+  font-family: "bu";
+  font-weight: normal;
+}
+.prs_saved {
+  width: fit-content;
+  padding: 8rem 26rem;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+  font-size: 14rem;
+  color: var(--c-gold);
+  border: 1px solid var(--c-gold);
+  & svg {
+    width: 18rem;
+    fill: var(--c-gold);
+  }
+}
+
+.intro {
+  margin-top: 96rem;
+  max-width: 960rem;
+  margin-inline: auto;
+  & h2 {
+    font-size: 35rem;
+    line-height: 30rem;
+    font-weight: normal;
+    text-align: center;
+  }
+  & p {
+    margin-top: 40rem;
+    font-size: 20rem;
+    line-height: 30rem;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+.prs_list {
+  margin-top: 88rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40rem;
+}

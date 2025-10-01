@@ -1,0 +1,55 @@
+.prp {
+  margin-top: 185rem;
+}
+.prp h1 {
+  font-family: "bu";
+  font-size: 40rem;
+  line-height: 35rem;
+  font-weight: 300;
+  padding-inline: 62rem;
+}
+
+.prp_g {
+  margin-top: 12rem;
+}
+.prp_g figure {
+  width: 600rem;
+}
+
+.prp_data {
+  margin-top: 50rem;
+  padding-inline: 60rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data_l {
+  width: 750rem;
+}
+.data_r {
+  width: 520rem;
+}
+.data_r button {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  font-size: 14rem;
+  font-weight: bold;
+  & svg {
+    width: 18rem;
+  }
+}
+
+.data_desc {
+  margin-top: 90rem;
+  font-size: 20rem;
+  line-height: 20rem;
+  font-weight: 300;
+}
+.data_com {
+  margin-top: 14rem;
+  font-size: 12rem;
+  line-height: 15rem;
+  font-weight: 300;
+}

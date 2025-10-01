@@ -1,0 +1,74 @@
+.info_n {
+  display: flex;
+  gap: 50rem;
+}
+.info_n > div {
+  padding-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+  font-size: 16rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background-color: var(--c-gold);
+    transition: left 0.3s linear;
+  }
+}
+.info_n .active:after {
+  left: 0;
+}
+.info_c {
+  margin-top: 80rem;
+}
+
+/****************
+*** OVERVIEW
+****************/
+.ov {
+  display: flex;
+  gap: 24rem;
+}
+.ov > div {
+  width: 135rem;
+  font-size: 14rem;
+}
+.ov h3 {
+  color: var(--c-gold);
+}
+.ov p {
+  margin-top: 28rem;
+}
+
+/****************
+*** LOCATION
+****************/
+.map {
+  width: 600rem;
+  height: 335rem;
+}
+/****************
+*** CONTACT
+****************/
+.contact {
+  display: flex;
+  gap: 32rem;
+}
+.contact > div {
+  width: 135rem;
+}
+.contact h3 {
+  font-size: 14rem;
+  color: var(--c-gold);
+}
+.contact a {
+  margin-top: 28rem;
+  font-size: 14rem;
+  text-decoration: underline;
+}
