@@ -2,6 +2,12 @@
 
 import s from "./_s.module.css";
 import { useState } from "react";
+import GymI from "@/assets/icons/gym.svg";
+import PoolI from "@/assets/icons/pool.svg";
+import PlaygroundI from "@/assets/icons/playground.svg";
+import CommunityI from "@/assets/icons/community.svg";
+import FloorsI from "@/assets/icons/floors.svg";
+import SchoolI from "@/assets/icons/school.svg";
 
 const tabs = ["overview", "location", "property details", "get in contact"];
 
@@ -18,7 +24,7 @@ const Overview = (props: any) => {
         <p>{bathrooms} Bathrooms</p>
       </div>
       <div>
-        <h3>INTERIOR</h3>
+        <h3>AREA</h3>
         <p>{area} sq. ft.</p>
       </div>
       <div>
@@ -62,6 +68,23 @@ const Contact = () => {
   );
 };
 
+const Amenity = (props: any) => {
+  const { amenity } = props;
+  return (
+    <>
+      <div className={s.amenity}>
+        {amenity == "gym" && <GymI />}
+        {amenity == "access to playground" && <PlaygroundI />}
+        {amenity == "pool" && <PoolI />}
+        {amenity == "heated floors" && <FloorsI />}
+        {amenity == "gated community" && <CommunityI />}
+        {amenity == "school district" && <SchoolI />}
+        <h4>{amenity}</h4>
+      </div>
+    </>
+  );
+};
+
 export default function Info(props: any) {
   const { prp } = props;
   const [activeTab, setActiveTab] = useState(tabs[0]);
@@ -89,6 +112,16 @@ export default function Info(props: any) {
         )}
         {activeTab == "location" && <Location location={prp.location} />}
         {activeTab == "get in contact" && <Contact />}
+        {activeTab == "property details" && (
+          <div className={s.amenities}>
+            <h3>AMENTIES</h3>
+            <div>
+              {prp.amenities.map((amen) => (
+                <Amenity amenity={amen} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

@@ -72,3 +72,31 @@
   font-size: 14rem;
   text-decoration: underline;
 }
+/****************
+*** AMENITIES
+****************/
+.amenities {
+  & > div {
+    margin-top: 26rem;
+    display: grid;
+    grid-template-columns: repeat(3, 200rem);
+    gap: 53rem;
+  }
+  & h3 {
+    font-size: 14rem;
+    color: var(--c-gold);
+  }
+}
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  & h4 {
+    font-size: 14rem;
+    font-weight: normal;
+    text-transform: capitalize;
+  }
+  & svg {
+    width: 28rem;
+  }
+}
