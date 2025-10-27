@@ -5,8 +5,6 @@ import Accordion from "@/components/accordion";
 import Igtk0 from "@/assets/images/gtk0.png";
 import Igtk1 from "@/assets/images/gtk1.png";
 import Igtk3 from "@/assets/images/gtk3.png";
-import Iphone1 from "@/assets/images/iphone1.png";
-import Iphone2 from "@/assets/images/iphone2.png";
 import Igplay from "@/assets/images/gplay.png";
 import Iappstore from "@/assets/images/appstore.png";
 
@@ -44,8 +42,8 @@ export default function GTK() {
           </h2>
         </div>
         <div className={s.faqs}>
-          {faqs.map((faq) => (
-            <Accordion title={faq.q}>
+          {faqs.map((faq, i) => (
+            <Accordion title={faq.q} key={i}>
               <p>{faq.a}</p>
             </Accordion>
           ))}
@@ -53,9 +51,6 @@ export default function GTK() {
       </section>
 
       <section className={s.g2}>
-        <figure>
-          <Image src={Iphone1} alt="DREC" />
-        </figure>
         <div>
           <h2>YOUR DREC TENANTS PORTAL</h2>
           <h3>DOWNLOAD OUR APP</h3>
@@ -73,9 +68,10 @@ export default function GTK() {
             </a>
           </div>
         </div>
-        <figure>
-          <Image src={Iphone2} alt="DREC" />
-        </figure>
+
+          <video autoPlay loop muted playsInline>
+            <source src="/videos/phone.mp4" type="video/mp4" />
+          </video>
       </section>
 
       <section className={s.g3}>

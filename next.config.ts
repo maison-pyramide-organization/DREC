@@ -2,6 +2,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "assets-us-01.kc-usercontent.com",
+        port: "", // leave empty if no custom port
+        pathname: "/**",
+      },
+    ],
+  },
   experimental: {
     turbo: {
       rules: {

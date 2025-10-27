@@ -1,0 +1,67 @@
+.g_ {
+  overflow: auto;
+}
+.g {
+  width: fit-content;
+  display: flex;
+  gap: 20rem;
+}
+.g figure {
+  flex-shrink: 0;
+  cursor: none;
+  width: 510rem;
+  & img {
+    position: static !important;
+  }
+}
+.gp_ {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+  cursor: none;
+}
+
+.gp {
+  width: 900px;
+  position: relative;
+  cursor: default;
+}
+
+.gp figure {
+  width: 900px;
+  & img {
+    position: static !important;
+  }
+}
+
+.gp_n {
+  width: 100%;
+  padding-inline: 10rem;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.gp_n button {
+  cursor: pointer;
+  &:disabled {
+    opacity: 0;
+  }
+  &:first-child svg {
+    transform: rotate(180deg);
+  }
+
+  & svg {
+    width: 20rem;
+  }
+}

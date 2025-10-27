@@ -1,0 +1,112 @@
+.f {
+  margin-top: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.f_l {
+  width: 465rem;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  border-bottom: 1px solid var(--c-black);
+}
+.f_l svg {
+  margin-left: -2rem;
+  width: 20rem;
+}
+.f_l input {
+  font-size: 24rem;
+  &::placeholder {
+    color: var(--c-black);
+  }
+}
+
+.f_r {
+  /* width: 500rem; */
+  position: relative;
+  display: flex;
+  gap: 26rem;
+}
+
+.f_r button {
+  padding-inline: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+  font-size: 13rem;
+  text-transform: uppercase;
+  & svg {
+    transform: rotate(90deg);
+    & path {
+      stroke: var(--c-black);
+    }
+    width: 12rem;
+  }
+}
+
+.dd {
+  position: absolute;
+  top: calc(100% + 8rem);
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+}
+.optionsList {
+}
+.optionsList li {
+  &:not(:first-child) {
+    border-top: 1px solid #d9d9d9;
+  }
+}
+.optionsList label {
+  display: block;
+  padding-left: 24rem;
+  padding-block: 10rem;
+  font-size: 11rem;
+  color: var(--c-gold);
+}
+.optionsList input {
+  display: none;
+}
+
+/*************** 
+RANGE SLIDER
+****************/
+.rs {
+  padding: 16rem;
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  color: var(--c-gold);
+  font-size: 12rem;
+}
+.rs fieldset {
+  width: 100%;
+  position: relative;
+}
+.rs_value {
+  position: absolute;
+  bottom: calc(100% + 4rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.rs input {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 2px;
+  background-color: #ddd;
+  cursor: move;
+  &::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 8rem;
+    height: 8rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+  }
+}

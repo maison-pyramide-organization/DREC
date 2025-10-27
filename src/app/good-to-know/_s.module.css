@@ -65,20 +65,11 @@
 .g2 {
   margin-top: 220rem;
   display: flex;
-  gap: 35rem;
-  justify-content: center;
-  align-items: flex-start;
-}
-.g2 figure {
-  width: 240rem;
-  &:last-of-type {
-    margin-top: 238rem;
-  }
+  align-items: center;
 }
 .g2 > div {
-  margin-top: 90rem;
   width: 615rem;
-  text-align: center;
+  margin-left: 85rem;
 }
 .g2 h2 {
   font-size: 70rem;
@@ -96,25 +87,30 @@
   font-size: 20rem;
   line-height: 30rem;
   margin-top: 70rem;
+  max-width: 400rem;
   &:last-of-type {
     margin-top: 40rem;
   }
 }
 
+.g2 video {
+  width: 285rem;
+  margin-left: 275rem;
+}
+
 .download {
-  margin-top: 8rem;
+  margin-top: 10rem;
   display: flex;
-  justify-content: center;
   gap: 8rem;
 }
 
 .download a {
   display: block;
-  width: 140rem;
+  width: 142rem;
 }
 
 .g3 {
-  margin-top: 75rem;
+  margin-top: 250rem;
   position: relative;
 }
 .g3 h2 {

@@ -3,17 +3,20 @@ import Image from "next/image";
 import Ibanner from "@/assets/images/ps-banner.png";
 import Link from "next/link";
 import StarI from "@/assets/icons/star.svg";
-import prps from "@/data/prps";
-import PropertyCard from "./components/property/property card";
+import PropertyCard from "./components/property card";
+import FiltersList from "./components/filters list";
+import getProperties from "@/services/api/properties";
 
-export default function Properties() {
+export default async function Properties() {
+  const properties = await getProperties();
+
   return (
     <>
       <div className={s.he}>
         <h1>
-          84 PROPERTIES
-          <span>7 COMMUNITIES</span>
-          15 YEARS OF EXPERIENCE
+          46 PROPERTIES
+          <span>15 LOCATIONS</span>
+          30+ YEARS OF EXPERIENCE
         </h1>
         <figure>
           <Image src={Ibanner} alt="DREC" />
@@ -27,7 +30,9 @@ export default function Properties() {
           SAVED SEARCHES
         </Link>
 
-        <div className={s.filter}></div>
+        <div className={s.filter}>
+          <FiltersList />
+        </div>
 
         <div className={s.intro}>
           <h2>CITYWIDE COMMUNITIES, THOUGHTFULLY MANAGED</h2>
@@ -40,7 +45,7 @@ export default function Properties() {
         </div>
 
         <ul className={s.prs_list}>
-          {prps.map((prp, i) => (
+          {properties.map((prp, i) => (
             <li key={i}>
               <PropertyCard prp={prp} i={i} />
             </li>

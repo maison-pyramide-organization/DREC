@@ -8,6 +8,14 @@ import PlaygroundI from "@/assets/icons/playground.svg";
 import CommunityI from "@/assets/icons/community.svg";
 import FloorsI from "@/assets/icons/floors.svg";
 import SchoolI from "@/assets/icons/school.svg";
+import PetsI from "@/assets/icons/pets.svg";
+import StorageI from "@/assets/icons/storage.svg";
+import EventsI from "@/assets/icons/events.svg";
+import SpaI from "@/assets/icons/spa.svg";
+import SportsI from "@/assets/icons/sports.svg";
+import ParkingI from "@/assets/icons/parking.svg";
+import AcI from "@/assets/icons/ac.svg";
+import formatPrice from "@/utils/formatPrice";
 
 const tabs = ["overview", "location", "property details", "get in contact"];
 
@@ -29,7 +37,7 @@ const Overview = (props: any) => {
       </div>
       <div>
         <h3>PRICE</h3>
-        <p>{price > 0 || "Price upon request"}</p>
+        <p>{formatPrice(price)}</p>
       </div>
     </div>
   );
@@ -69,7 +77,9 @@ const Contact = () => {
 };
 
 const Amenity = (props: any) => {
-  const { amenity } = props;
+  let { amenity } = props;
+  amenity = amenity?.toLowerCase();
+
   return (
     <>
       <div className={s.amenity}>
@@ -79,6 +89,12 @@ const Amenity = (props: any) => {
         {amenity == "heated floors" && <FloorsI />}
         {amenity == "gated community" && <CommunityI />}
         {amenity == "school district" && <SchoolI />}
+        {amenity == "parking" && <ParkingI />}
+        {amenity == "sports courts" && <SportsI />}
+        {amenity == "spa" && <SpaI />}
+        {amenity == "pets allowed" && <PetsI />}
+        {amenity == "events hall" && <EventsI />}
+        {amenity == "central ac" && <AcI />}
         <h4>{amenity}</h4>
       </div>
     </>
@@ -88,6 +104,8 @@ const Amenity = (props: any) => {
 export default function Info(props: any) {
   const { prp } = props;
   const [activeTab, setActiveTab] = useState(tabs[0]);
+  const amenities =
+    prp.amenities?.items?.map((item) => item._system_.name) || [];
 
   return (
     <>
@@ -96,6 +114,7 @@ export default function Info(props: any) {
           <div
             className={activeTab == tab ? s.active : ""}
             onClick={() => setActiveTab(tab)}
+            key={tab}
           >
             {tab}
           </div>
@@ -110,14 +129,14 @@ export default function Info(props: any) {
             price={prp.price}
           />
         )}
-        {activeTab == "location" && <Location location={prp.location} />}
+        {activeTab == "location" && <Location location={prp.googleMapsLink} />}
         {activeTab == "get in contact" && <Contact />}
         {activeTab == "property details" && (
           <div className={s.amenities}>
             <h3>AMENTIES</h3>
             <div>
-              {prp.amenities.map((amen) => (
-                <Amenity amenity={amen} />
+              {amenities.map((amen) => (
+                <Amenity amenity={amen} key={amen} />
               ))}
             </div>
           </div>

@@ -1,6 +1,6 @@
 .he {
   position: relative;
-  margin-top: 215rem;
+  margin-top: 200rem;
   padding-inline: var(--p-i);
 }
 .he h1 {
@@ -13,10 +13,9 @@
   font-weight: normal;
   & span {
     display: block;
-    margin-left: 185rem;
+    margin-left: 183rem;
   }
 }
-
 .prs {
   margin-top: 40rem;
   padding-inline: var(--p-i);
@@ -41,7 +40,6 @@
     fill: var(--c-gold);
   }
 }
-
 .intro {
   margin-top: 96rem;
   max-width: 960rem;
@@ -60,10 +58,17 @@
     text-align: center;
   }
 }
-
 .prs_list {
   margin-top: 88rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40rem;
+}
+.prs_list li {
+  min-width: 0;
+}
+.prs_list li:nth-child(2n) {
+  & figure {
+    aspect-ratio: 434/350;
+  }
 }

@@ -14,7 +14,7 @@
   line-height: 90%;
   & span {
     display: block;
-    text-align: right;
+    margin-left: 380rem;
   }
 }
 
@@ -86,4 +86,3 @@
 .ab_in .r {
   flex-basis: calc(4 / 7 * 100%);
 }
-

@@ -11,7 +11,7 @@ export default function Header() {
 
   const handleClick = () => {
     setIsOpened(!isOpened);
-    document.body.classList.toggle("ds");
+    document.body.classList.toggle("d-s");
   };
   return (
     <>
