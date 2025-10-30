@@ -1,6 +1,6 @@
 import s from "./_s.module.css";
 // import Image from "next/image";
-// import vph from "@/assets/images/vph.png";
+import vph from "@/assets/images/vph.png";
 import Map from "./map";
 import Lifestyle from "./lifestyle";
 import Cursor from "@/components/cursor";
@@ -21,9 +21,16 @@ export default function Home() {
           </h1>
           <figure>
             {/* <Image src={vph} alt="" /> */}
-            <video className={s.v} autoPlay loop muted playsInline>
-            <source src="/videos/he.mp4" type="video/mp4" />
-          </video>
+            <video
+              className={s.v}
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster={`/vph.png`}
+            >
+              <source src="/videos/he.mp4" type="video/mp4" />
+            </video>
           </figure>
         </section>
 
