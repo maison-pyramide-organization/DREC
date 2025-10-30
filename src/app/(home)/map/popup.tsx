@@ -5,8 +5,6 @@ import s from "./_s.module.css";
 import {
   GoogleMap,
   Marker,
-  InfoWindow,
-  useLoadScript,
 } from "@react-google-maps/api";
 import places from "@/data/places";
 

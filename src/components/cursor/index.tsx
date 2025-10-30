@@ -7,10 +7,10 @@ import Iplus from "@/assets/icons/plus.svg";
 export default function Cursor() {
   const cursorRef = useRef(null);
 
-  let mouseX = useRef(0);
-  let mouseY = useRef(0);
-  let currX = useRef(0);
-  let currY = useRef(0);
+  const mouseX = useRef(0);
+  const mouseY = useRef(0);
+  const currX = useRef(0);
+  const currY = useRef(0);
   const ease = 0.5;
   const size = 34;
 
