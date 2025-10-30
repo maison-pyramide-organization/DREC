@@ -2,13 +2,10 @@
 
 import { useState } from "react";
 import s from "./_s.module.css";
-import {
-  GoogleMap,
-  Marker,
-} from "@react-google-maps/api";
+import { GoogleMap, Marker } from "@react-google-maps/api";
 import places from "@/data/places";
 
-export default function Popup(props: any) {
+export default function Popup(props) {
   const { closePopup } = props;
   const containerStyle = { width: "100%", height: "100%" };
   const defaultZoom = 10;
@@ -19,12 +16,12 @@ export default function Popup(props: any) {
     e.stopPropagation();
     if (e.currentTarget == e.target) closePopup();
     const $cursor = document.getElementById("cursor") as any;
-    $cursor.classList.remove("close",'v');
+    $cursor.classList.remove("close", "v");
   };
 
-  const onEnter = (e) => {
+  const onEnter = () => {
     const $cursor = document.getElementById("cursor") as any;
-    $cursor.classList.remove("v" );
+    $cursor.classList.remove("v");
   };
   const onLeave = () => {
     const $cursor = document.getElementById("cursor") as any;

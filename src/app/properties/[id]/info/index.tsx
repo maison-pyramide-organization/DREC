@@ -97,6 +97,7 @@ const Amenity = (props: any) => {
         {amenity == "pets allowed" && <PetsI />}
         {amenity == "events hall" && <EventsI />}
         {amenity == "central ac" && <AcI />}
+        {amenity == "storage" && <StorageI />}
         <h4>{amenity}</h4>
       </div>
     </>
