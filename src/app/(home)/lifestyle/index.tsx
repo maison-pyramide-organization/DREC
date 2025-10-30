@@ -12,12 +12,12 @@ export default function Lifestyle() {
           life around you."
         </h2>
 
-        <figure>
+        <figure data-animation="pi">
           <Image src={lifestyle1} alt="" />
         </figure>
       </div>
       <div className={s.r}>
-        <figure>
+        <figure data-animation="pi">
           <Image src={lifestyle2} alt="" />
         </figure>
       </div>

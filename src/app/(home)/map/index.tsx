@@ -5,7 +5,7 @@ import Image from "next/image";
 import map from "@/assets/images/map.png";
 import { useLoadScript } from "@react-google-maps/api";
 import { useState } from "react";
-import Popup from "./popup";
+import Popup from "./Popup";
 import { disableScrolling, enableScrolling } from "@/utils/scrolling";
 
 export default function Map() {

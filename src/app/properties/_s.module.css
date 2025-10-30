@@ -69,6 +69,6 @@
 }
 .prs_list li:nth-child(2n) {
   & figure {
-    aspect-ratio: 434/350;
+    aspect-ratio: 5/4;
   }
 }

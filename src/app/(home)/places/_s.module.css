@@ -1,0 +1,83 @@
+.pl {
+  margin-top: 320rem;
+  display: flex;
+}
+:global(.cc) {
+  top: 0 !important;
+  left: 0 !important;
+  z-index: -1 !important;
+  transition: all 0.2s linear;
+}
+
+.pl_s {
+  position: relative;
+  margin-left: 133rem;
+  top: -195rem;
+  width: 475rem;
+  aspect-ratio: 5/7;
+}
+.pl_s figure {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &:nth-child(2) {
+    top: 40rem;
+    left: 50rem;
+  }
+  &:nth-child(3) {
+    top: 80rem;
+    left: 100rem;
+  }
+
+  [slide-i="1"] {
+    z-index: 1;
+  }
+  &[slide-i="2"] {
+    z-index: 2;
+  }
+  &[slide-i="3"] {
+    z-index: 3;
+  }
+}
+
+.pl_c {
+  /* margin-left: 835rem; */
+  margin-left: 225rem;
+}
+
+.pl h2 {
+  font-size: 60rem;
+  line-height: 100%;
+  font-family: "bu";
+  font-weight: normal;
+}
+.pl a {
+  display: block;
+  margin-top: 16rem;
+  color: var(--c-gold);
+  font-size: 20rem;
+  text-decoration: underline;
+}
+.pl a svg {
+  display: inline;
+  width: 18rem;
+  margin-left: 14rem;
+  vertical-align: middle;
+  & path {
+    stroke: var(--c-gold);
+  }
+}
+
+.pr {
+  margin-top: 105rem;
+}
+.pr h3 {
+  font-size: 20rem;
+}
+.pr p {
+  width: 340rem;
+  margin-top: 16rem;
+  font-size: 12rem;
+  line-height: 14rem;
+}

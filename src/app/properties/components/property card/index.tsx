@@ -38,7 +38,7 @@ export default function PropertyCard(props: any) {
 
   return (
     <Link className={s.pc} href={`/properties/${prpId}`}>
-      <span className={s.pc_index}>0{i + 1}</span>
+      <span className={s.pc_index}>{i < 9 ? `0${i + 1}` : `${i + 1}`}</span>
       <div className={s.pc_gallery}>
         <Swiper
           slidesPerView={1}
@@ -64,7 +64,7 @@ export default function PropertyCard(props: any) {
           {gallery.items.map((img) => (
             <SwiperSlide>
               <figure>
-                <img src={img.url} alt={name} />
+                <img src={`${img.url}?w=800&fm=webp&q=70`} alt={name} />
               </figure>
             </SwiperSlide>
           ))}

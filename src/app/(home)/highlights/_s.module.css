@@ -17,6 +17,7 @@
   display: flex;
   gap: 40rem;
   margin-left: 55rem;
+  overflow-y: hidden;
 }
 .hi figure {
   width: 1110rem;

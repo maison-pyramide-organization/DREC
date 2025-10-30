@@ -18,6 +18,9 @@ export default function Gallery(props: any) {
     gallery.items = [iProp1, iProp2, iProp3];
   }
 
+  const layout2 = gallery.items.length == 2;
+  console.log(layout2);
+
   const [slide, setSlide] = useState(-1);
 
   const onContainerClick = (e: any) => {
@@ -76,7 +79,7 @@ export default function Gallery(props: any) {
   return (
     <>
       <div className={`${s.g_} h-s`}>
-        <div className={s.g} id="g">
+        <div className={`${s.g} ${layout2 ? s.l2 : ""}`} id="g">
           {gallery.items.map((img, i) => (
             <figure
               key={i}
@@ -84,7 +87,7 @@ export default function Gallery(props: any) {
               onMouseEnter={onEnter}
               onMouseLeave={onLeave}
             >
-              <Image fill src={img.url || img} alt="" />
+              <img src={`${img.url}?w=1000&fm=webp&q=90` || img} alt="" />
             </figure>
           ))}
         </div>
@@ -105,7 +108,10 @@ export default function Gallery(props: any) {
                 {gallery.items.map((img, i) => (
                   <SwiperSlide key={i}>
                     <figure>
-                      <Image fill src={img.url || img} alt="" />
+                      <img
+                        src={`${img.url}?w=1500&fm=webp&q=100` || img}
+                        alt=""
+                      />
                     </figure>
                   </SwiperSlide>
                 ))}

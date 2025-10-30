@@ -92,6 +92,8 @@ const Amenity = (props: any) => {
         {amenity == "parking" && <ParkingI />}
         {amenity == "sports courts" && <SportsI />}
         {amenity == "spa" && <SpaI />}
+        {amenity == "sauna" && <SpaI />}
+        {amenity == "steam" && <SpaI />}
         {amenity == "pets allowed" && <PetsI />}
         {amenity == "events hall" && <EventsI />}
         {amenity == "central ac" && <AcI />}

@@ -6,10 +6,18 @@
   display: flex;
   gap: 20rem;
 }
+.g.l2 figure {
+  width: unset;
+  flex: 1;
+  aspect-ratio: 71/41;
+}
+
 .g figure {
   flex-shrink: 0;
   cursor: none;
   width: 510rem;
+  aspect-ratio: 5/4;
+  overflow: hidden;
   & img {
     position: static !important;
   }
@@ -36,6 +44,8 @@
 
 .gp figure {
   width: 900px;
+  aspect-ratio: 5/4;
+  overflow: hidden;
   & img {
     position: static !important;
   }
