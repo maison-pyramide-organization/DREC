@@ -3,6 +3,7 @@ import Link from "next/link";
 import ab_image from "@/assets/images/about.png";
 import Image from "next/image";
 import Analytics from "./Analytics";
+import Animation from "./_animation";
 
 export default function About() {
   return (
@@ -29,6 +30,7 @@ export default function About() {
           </figure>
         </div>
       </div>
+      <Animation />
     </section>
   );
 }

@@ -12,7 +12,7 @@ export default async function Highlights() {
         {highlights.map((hi) => (
           <li key={hi.title}>
             <figure>
-              <img src={hi.image.url} alt={hi.image.description || "DREC"} />
+              <img src={`${hi.image.url}?w=1500&fm=webp&q=100`} alt={hi.image.description || "DREC"} />
             </figure>
             <div className={s.type}>{hi.type}</div>
             <div className={s.b}>

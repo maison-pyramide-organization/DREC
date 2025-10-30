@@ -36,19 +36,19 @@ const nav = [
     links: [
       {
         name: "beach center",
-        link: "/properties/residential",
+        link: "/beach-center",
       },
       {
         name: "about us",
-        link: "/properties/residential",
+        link: "/about-us",
       },
       {
         name: "good to know",
-        link: "/properties/residential",
+        link: "/good-to-know",
       },
       {
-        name: "news",
-        link: "/properties/residential",
+        name: "facilities",
+        link: "/facilities",
       },
     ],
   },
@@ -57,7 +57,7 @@ const nav = [
     links: [
       {
         name: "contact us",
-        link: "/properties/residential",
+        link: "/contact-us",
       },
     ],
   },

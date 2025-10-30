@@ -1,10 +1,10 @@
 import s from "./_s.module.css";
-import Image from "next/image";
-import vph from "@/assets/images/vph.png";
+// import Image from "next/image";
+// import vph from "@/assets/images/vph.png";
 import Map from "./map";
 import Lifestyle from "./lifestyle";
 import Cursor from "@/components/cursor";
-// import Highlights from "./highlights";
+import Highlights from "./highlights";
 import Places from "./places";
 import About from "./about";
 import Animation from "./_animation";
@@ -20,10 +20,10 @@ export default function Home() {
             ACROSS DUBAI
           </h1>
           <figure>
-            <Image src={vph} alt="" />
-            {/* <video className={s.v} autoPlay loop muted playsInline>
-            <source src="/he.mp4" type="video/mp4" />
-          </video> */}
+            {/* <Image src={vph} alt="" /> */}
+            <video className={s.v} autoPlay loop muted playsInline>
+            <source src="/videos/he.mp4" type="video/mp4" />
+          </video>
           </figure>
         </section>
 
@@ -31,7 +31,7 @@ export default function Home() {
         <Places />
         <Lifestyle />
         <Map />
-        {/* <Highlights /> */}
+        <Highlights />
       </div>
       <Cursor />
       <Animation />

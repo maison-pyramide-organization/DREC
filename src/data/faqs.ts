@@ -19,6 +19,10 @@ const faqs = [
     q: "How is rent paid and is there a deposit?",
     a: "Payments are made by post-dated cheques or bank transfer as agreed in your lease. A refundable security deposit is held until move-out inspection and final settlement.",
   },
+  {
+    q: "WHEN DO I GET MY DEPOSIT BACK?",
+    a: "Deposit will be refunded upon vacating the property, completion of inspection and move-out process.",
+  },
 ];
 
 export default faqs;
