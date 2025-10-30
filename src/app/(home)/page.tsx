@@ -4,7 +4,7 @@ import vph from "@/assets/images/vph.png";
 import Map from "./map";
 import Lifestyle from "./lifestyle";
 import Cursor from "@/components/cursor";
-import Highlights from "./highlights";
+// import Highlights from "./highlights";
 import Places from "./places";
 import About from "./about";
 import Animation from "./_animation";
@@ -31,7 +31,7 @@ export default function Home() {
         <Places />
         <Lifestyle />
         <Map />
-        <Highlights />
+        {/* <Highlights /> */}
       </div>
       <Cursor />
       <Animation />
