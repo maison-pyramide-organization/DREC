@@ -1,7 +1,7 @@
 "use client";
 import s from "./_s.module.css";
 import { Filter } from "./filter";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { areas, prpType } from "@/data/filters";
 
 export default function FiltersList() {
@@ -12,8 +12,20 @@ export default function FiltersList() {
     else setOpenedF(name);
   };
 
+  useEffect(() => {
+    const $filters_list = document.getElementById("filters") as HTMLElement;
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Node;
+      if ($filters_list.contains(target)) return;
+      else setOpenedF(null);
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
   return (
-    <div className={s["filters-list"]}>
+    <div id="filters" className={s["filters-list"]}>
       <Filter
         name="area"
         options={areas}
@@ -21,9 +33,9 @@ export default function FiltersList() {
         open={openF}
       />
       <Filter
-        name="property type"
+        name="property-type"
         options={prpType}
-        active={openedF === "property type"}
+        active={openedF === "property-type"}
         open={openF}
       />
       <Filter

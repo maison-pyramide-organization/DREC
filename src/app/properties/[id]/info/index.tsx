@@ -2,19 +2,19 @@
 
 import s from "./_s.module.css";
 import { useState } from "react";
-import GymI from "@/assets/icons/gym.svg";
-import PoolI from "@/assets/icons/pool.svg";
-import PlaygroundI from "@/assets/icons/playground.svg";
-import CommunityI from "@/assets/icons/community.svg";
-import FloorsI from "@/assets/icons/floors.svg";
-import SchoolI from "@/assets/icons/school.svg";
-import PetsI from "@/assets/icons/pets.svg";
-import StorageI from "@/assets/icons/storage.svg";
-import EventsI from "@/assets/icons/events.svg";
-import SpaI from "@/assets/icons/spa.svg";
-import SportsI from "@/assets/icons/sports.svg";
-import ParkingI from "@/assets/icons/parking.svg";
-import AcI from "@/assets/icons/ac.svg";
+import GymI from "@/assets/icons/amenities/gym.svg";
+import PoolI from "@/assets/icons/amenities/pool.svg";
+import PlaygroundI from "@/assets/icons/amenities/playground.svg";
+import CommunityI from "@/assets/icons/amenities/community.svg";
+import FloorsI from "@/assets/icons/amenities/floors.svg";
+import SchoolI from "@/assets/icons/amenities/school.svg";
+import PetsI from "@/assets/icons/amenities/pets.svg";
+import StorageI from "@/assets/icons/amenities/storage.svg";
+import EventsI from "@/assets/icons/amenities/events.svg";
+import SpaI from "@/assets/icons/amenities/spa.svg";
+import SportsI from "@/assets/icons/amenities/sports.svg";
+import ParkingI from "@/assets/icons/amenities/parking.svg";
+import AcI from "@/assets/icons/amenities/ac.svg";
 import formatPrice from "@/utils/formatPrice";
 
 const tabs = ["overview", "location", "property details", "get in contact"];

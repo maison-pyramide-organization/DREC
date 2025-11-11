@@ -42,6 +42,13 @@ const getProperties = async () => {
           area
           price
           googleMapsLink
+          type {
+            items {
+              _system_ {
+                name
+              }
+            }
+          }
           amenities {
             items {
               _system_ {
@@ -60,7 +67,15 @@ const getProperties = async () => {
     }
   `;
   const data = await kontentClient.request(query);
-  return data.property_All.items;
+  const properties = data.property_All.items;
+
+  const fProperties = properties.map((prp) => {
+    const type = prp.type.items[0]?._system_.name || "";
+    prp.type = type;
+    return prp;
+  });
+
+  return fProperties;
 };
 
 export const getPropertyById = async (id) => {

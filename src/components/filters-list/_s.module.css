@@ -5,6 +5,10 @@
   gap: 26rem;
 }
 
+.filter:global(.active) .dropdown {
+  display: block;
+}
+
 .filter button {
   padding-inline: 10rem;
   display: flex;
@@ -22,6 +26,7 @@
 }
 
 .dropdown {
+  display: none;
   position: absolute;
   top: calc(100% + 8rem);
   left: 0;

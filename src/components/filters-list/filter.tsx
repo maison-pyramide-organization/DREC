@@ -16,21 +16,24 @@ interface Iprops {
 export function Filter(props: Iprops) {
   const { type, name, options, min, max, step, active, open } = props;
 
+  const handleClick = (e) => {
+    // e.stopPropagation();
+    open(name);
+  };
+
   return (
-    <div className={s.filter}>
-      <button onClick={() => open(name)}>
+    <div className={`${s.filter} ${active ? "active" : ""}`}>
+      <button onClick={handleClick}>
         {name}
         <ChevI />
       </button>
-      {active && (
-        <div className={s.dropdown}>
-          {type === "range" ? (
-            <RangeSlider min={min!} max={max!} step={step!} name={name} />
-          ) : (
-            <OptionsList options={options!} name={name} />
-          )}
-        </div>
-      )}
+      <div className={s.dropdown}>
+        {type === "range" ? (
+          <RangeSlider min={min!} max={max!} step={step!} name={name} />
+        ) : (
+          <OptionsList options={options!} name={name} />
+        )}
+      </div>
     </div>
   );
 }

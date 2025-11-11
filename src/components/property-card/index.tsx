@@ -64,7 +64,7 @@ export default function PropertyCard(props: any) {
           {gallery.items.map((img) => (
             <SwiperSlide>
               <figure>
-                <img src={`${img.url}?w=800&fm=webp&q=70`} alt={name} />
+                <img src={`${img.url}?w=600&fm=webp&q=70`} alt={name} />
               </figure>
             </SwiperSlide>
           ))}
