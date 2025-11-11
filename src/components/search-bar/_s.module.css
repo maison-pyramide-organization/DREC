@@ -1,0 +1,16 @@
+.search {
+  width: 465rem;
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+  border-bottom: 1px solid var(--c-black);
+}
+.search svg {
+  width: 30rem;
+}
+.search input {
+  font-size: 24rem;
+  &::placeholder {
+    color: var(--c-black);
+  }
+}

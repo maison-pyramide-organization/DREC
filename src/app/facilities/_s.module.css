@@ -1,0 +1,18 @@
+.he {
+  margin-top: 200rem;
+  padding-inline: var(--p-i);
+  position: relative;
+}
+.he h1 {
+  position: absolute;
+  top: -88rem;
+  left: 218rem;
+  font-family: "bu";
+  font-weight: normal;
+  font-size: 70rem;
+  line-height: 60rem;
+  & span {
+    display: block;
+    margin-left: 183rem;
+  }
+}

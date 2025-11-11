@@ -1,6 +1,6 @@
 import s from "./_s.module.css";
 // import Image from "next/image";
-import vph from "@/assets/images/vph.png";
+// import vph from "@/assets/images/vph.png";
 import Map from "./map";
 import Lifestyle from "./lifestyle";
 import Cursor from "@/components/cursor";

@@ -1,0 +1,42 @@
+.listings {
+  margin-top: 90rem;
+}
+.listings_h {
+  margin-top: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listings_intro {
+  margin-top: 88rem;
+}
+
+.listings_intro h2 {
+  font-size: 35rem;
+  line-height: 30rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.listings_intro p {
+  margin-top: 40rem;
+  font-size: 20rem;
+  line-height: 30rem;
+  font-weight: 300;
+  text-align: center;
+}
+.prps {
+  margin-top: 88rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40rem;
+}
+.prps li {
+  min-width: 0;
+}
+.prps li:nth-child(2n) {
+  & figure {
+    aspect-ratio: 5/4;
+  }
+}

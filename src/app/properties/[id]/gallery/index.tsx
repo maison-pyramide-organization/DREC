@@ -19,7 +19,6 @@ export default function Gallery(props: any) {
   }
 
   const layout2 = gallery.items.length == 2;
-  console.log(layout2);
 
   const [slide, setSlide] = useState(-1);
 

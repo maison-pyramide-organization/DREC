@@ -1,35 +1,11 @@
-.f {
-  margin-top: 60rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.f_l {
-  width: 465rem;
-  display: flex;
-  align-items: center;
-  gap: 10rem;
-  border-bottom: 1px solid var(--c-black);
-}
-.f_l svg {
-  margin-left: -2rem;
-  width: 20rem;
-}
-.f_l input {
-  font-size: 24rem;
-  &::placeholder {
-    color: var(--c-black);
-  }
-}
-
-.f_r {
+.filters-list {
   /* width: 500rem; */
   position: relative;
   display: flex;
   gap: 26rem;
 }
 
-.f_r button {
+.filter button {
   padding-inline: 10rem;
   display: flex;
   align-items: center;
@@ -45,7 +21,7 @@
   }
 }
 
-.dd {
+.dropdown {
   position: absolute;
   top: calc(100% + 8rem);
   left: 0;
@@ -54,6 +30,10 @@
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(4px);
 }
+
+/*************** 
+OPTIONS LIST
+****************/
 .optionsList {
 }
 .optionsList li {

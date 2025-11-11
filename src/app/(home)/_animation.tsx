@@ -23,6 +23,7 @@ export default function Animation() {
   };
 
   useGSAP(() => {
+    
     document.fonts.ready
       .then(() => {
         animation();
