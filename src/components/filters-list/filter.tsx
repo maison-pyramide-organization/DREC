@@ -11,7 +11,7 @@ interface Iprops {
   max?: number;
   step?: number;
   active: boolean;
-  open: (name: string) => void;
+  open: (name: string | null) => void;
 }
 export function Filter(props: Iprops) {
   const { type, name, options, min, max, step, active, open } = props;
@@ -31,7 +31,11 @@ export function Filter(props: Iprops) {
         {type === "range" ? (
           <RangeSlider min={min!} max={max!} step={step!} name={name} />
         ) : (
-          <OptionsList options={options!} name={name} />
+          <OptionsList
+            options={options!}
+            name={name}
+            closeF={() => open(null)}
+          />
         )}
       </div>
     </div>

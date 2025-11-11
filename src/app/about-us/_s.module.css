@@ -29,8 +29,9 @@
 }
 
 .s_a1 {
-  margin-top: 215rem;
+  padding-top: 215rem;
   padding-inline: var(--p-i);
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -71,7 +72,8 @@
 }
 
 .s_a2 {
-  margin-top: 100rem;
+  padding-top: 100rem;
+  position: relative;
 }
 .s_a2 h2 {
   font-family: "bu";

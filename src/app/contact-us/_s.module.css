@@ -1,5 +1,8 @@
 .c0 {
+  position: relative;
   margin-top: 130rem;
+}
+.c0 ._ {
   width: 860rem;
   margin-inline: auto;
 }

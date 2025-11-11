@@ -1,11 +1,13 @@
 import s from "./_s.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import Iabout from "@/assets/images/about-banner.png";
-import Iabout11 from "@/assets/images/about1.1.png";
-import Iabout12 from "@/assets/images/about1.2.png";
-import Iabout31 from "@/assets/images/about3.1.png";
-import Iabout41 from "@/assets/images/about4.1.png";
+import Iabout from "@/assets/images/about/about-banner.png";
+import Iabout11 from "@/assets/images/about/about1.1.png";
+import Iabout12 from "@/assets/images/about/about1.2.png";
+import Iabout31 from "@/assets/images/about/about3.1.png";
+import Iabout41 from "@/assets/images/about/about4.1.png";
+import bg1 from "@/assets/images/about/ab-bg-1.png";
+import bg2 from "@/assets/images/about/ab-bg-2.png";
 
 export default function About() {
   return (
@@ -42,6 +44,7 @@ export default function About() {
             <Image src={Iabout12} alt="DREC" />
           </figure>
         </div>
+        <Image className="bg" src={bg1} alt="" />
       </section>
 
       <section className={s.s_a2}>
@@ -82,6 +85,8 @@ export default function About() {
             </p>
           </div>
         </div>
+
+        <Image className="bg" src={bg2} alt="" />
       </section>
 
       <section className={s.s_a3}>
@@ -106,10 +111,10 @@ export default function About() {
         <div className={s.h}>
           <h2>
             <div>
-            FIND YOUR <span>NEXT HOME</span>
+              FIND YOUR <span>NEXT HOME</span>
             </div>
             <div>
-            NOW. <span>START THE SEARCH</span>
+              NOW. <span>START THE SEARCH</span>
             </div>
           </h2>
           <Link href="/properties">DISCOVER OUR PROPERTIES</Link>

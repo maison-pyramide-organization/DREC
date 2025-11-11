@@ -2,11 +2,13 @@ import s from "./_s.module.css";
 import Image from "next/image";
 import faqs from "@/data/faqs";
 import Accordion from "@/components/accordion";
-import Igtk0 from "@/assets/images/gtk0.png";
-import Igtk1 from "@/assets/images/gtk1.png";
-import Igtk3 from "@/assets/images/gtk3.png";
-import Igplay from "@/assets/images/gplay.png";
-import Iappstore from "@/assets/images/appstore.png";
+import Igtk0 from "@/assets/images/gtk/gtk0.png";
+import Igtk1 from "@/assets/images/gtk/gtk1.png";
+import Igtk3 from "@/assets/images/gtk/gtk3.png";
+import Igplay from "@/assets/images/gtk/gplay.png";
+import Iappstore from "@/assets/images/gtk/appstore.png";
+import bg1 from "@/assets/images/gtk/gtk-bg-1.png";
+import bg2 from "@/assets/images/gtk/gtk-bg-2.png";
 
 export default function GTK() {
   return (
@@ -28,6 +30,7 @@ export default function GTK() {
         <figure>
           <Image src={Igtk0} alt="DREC" />
         </figure>
+        <Image className="bg" src={bg1} alt="" />
       </section>
 
       <section className={s.g1}>
@@ -69,9 +72,10 @@ export default function GTK() {
           </div>
         </div>
 
-          <video autoPlay loop muted playsInline>
-            <source src="/videos/phone.mp4" type="video/mp4" />
-          </video>
+        <video autoPlay loop muted playsInline>
+          <source src="/videos/phone.mp4" type="video/mp4" />
+        </video>
+        <Image className="bg" src={bg2} alt="" />
       </section>
 
       <section className={s.g3}>

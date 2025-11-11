@@ -1,10 +1,12 @@
 import s from "./_s.module.css";
 
-import StarI from "@/assets/icons/star.svg";
 import Info from "./info";
 import Gallery from "./gallery";
 import Cursor from "@/components/cursor";
 import { getPropertyById } from "@/services/api/properties";
+import Image from "next/image";
+import StarI from "@/assets/icons/star.svg";
+import bg from "@/assets/images/prp-bg.png";
 
 export default async function Property(props: any) {
   const { params } = props;
@@ -38,6 +40,7 @@ export default async function Property(props: any) {
             <p className={s.data_desc}>{prp?.description}</p>
             {/* <p className={s.data_com}>{prp?.community}</p> */}
           </div>
+          <Image className="bg" src={bg} alt="" />
         </section>
       </div>
       <Cursor />

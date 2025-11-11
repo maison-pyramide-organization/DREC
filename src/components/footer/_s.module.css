@@ -4,6 +4,7 @@
   padding-inline: var(--p-i);
   padding-top: 40rem;
   padding-bottom: 50rem;
+  background-color: white;
 }
 .f_t {
   display: flex;

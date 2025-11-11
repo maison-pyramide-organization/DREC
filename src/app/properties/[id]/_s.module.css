@@ -14,7 +14,8 @@
 }
 
 .prp_data {
-  margin-top: 50rem;
+  position: relative;
+  padding-top: 50rem;
   padding-inline: 60rem;
   display: flex;
   justify-content: space-between;

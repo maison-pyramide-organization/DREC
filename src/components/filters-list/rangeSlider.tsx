@@ -1,4 +1,3 @@
-"use client";
 import s from "./_s.module.css";
 import { useRef } from "react";
 

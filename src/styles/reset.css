@@ -43,23 +43,6 @@
   font-display: swap;
 }
 
-/*******************
-*  UTILS  */
-/******************/
-.d-s {
-  height: 100vh;
-  height: 100dvh;
-  overflow: hidden;
-}
-.h-s {
-  overflow: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 /*
 * THIS FILES IS FOR RESETTING SOME OF THE DEFAULTS STYLES
 */

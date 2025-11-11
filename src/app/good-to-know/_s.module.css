@@ -1,5 +1,6 @@
 .g0 {
   margin-top: 130rem;
+  position: relative;
 }
 .g0 > div {
   padding-inline: var(--p-i);
@@ -66,6 +67,7 @@
   margin-top: 220rem;
   display: flex;
   align-items: center;
+  position: relative;
 }
 .g2 > div {
   width: 615rem;
@@ -110,7 +112,7 @@
 }
 
 .g3 {
-  margin-top: 250rem;
+  margin-top: 195rem;
   position: relative;
 }
 .g3 h2 {

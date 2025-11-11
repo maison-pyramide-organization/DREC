@@ -1,10 +1,11 @@
-"use client";
 import s from "./_s.module.css";
 import { Filter } from "./filter";
 import { useEffect, useState } from "react";
 import { areas, prpType } from "@/data/filters";
 
-export default function FiltersList() {
+export default function FiltersList(props: any) {
+  const { onFilter } = props;
+
   const [openedF, setOpenedF] = useState<any>(null);
 
   const openF = (name) => {
@@ -24,8 +25,18 @@ export default function FiltersList() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
+  const handleFilterChange = (e: React.ChangeEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLInputElement;
+    if (!target.name || !target.value) return;
+    onFilter(target.name, target.value);
+  };
+
   return (
-    <div id="filters" className={s["filters-list"]}>
+    <div
+      id="filters"
+      className={s["filters-list"]}
+      onChange={handleFilterChange}
+    >
       <Filter
         name="area"
         options={areas}

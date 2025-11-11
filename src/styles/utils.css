@@ -1,0 +1,34 @@
+:root {
+  --p-i: 30rem;
+  --c-gray: #77726d;
+  --c-black: #1b1b27;
+  --c-gold: #c09470;
+}
+
+/*******************
+*  UTILS  */
+/******************/
+
+.d-s {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+.h-s {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: -99;
+}

@@ -1,6 +1,6 @@
 import s from "./_s.module.css";
 import Link from "next/link";
-import ab_image from "@/assets/images/about.png";
+import ab_image from "@/assets/images/home/about.png";
 import Image from "next/image";
 import Analytics from "./Analytics";
 import Animation from "./_animation";
