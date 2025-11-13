@@ -6,7 +6,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Lenis from "@/components/lenis";
 import { WindowProvider } from "@/contexts/windowContext";
-import SmoothScroller from "@/components/smooth-scroller";
+// import SmoothScroller from "@/components/smooth-scroller";
 
 export const metadata: Metadata = {
   title: "DREC",
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <Lenis> */}
+        <Lenis>
         <WindowProvider>
           <div id="smooth-wrapper">
             <div className="_">
@@ -31,8 +31,8 @@ export default function RootLayout({
             </div>
           </div>
         </WindowProvider>
-        <SmoothScroller />
-        {/* </Lenis> */}
+        {/* <SmoothScroller /> */}
+        </Lenis>
       </body>
     </html>
   );
