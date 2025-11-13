@@ -65,6 +65,7 @@
 /*****************/
 
 .menu {
+  display: none;
   width: 1280rem;
   background-color: #c09470;
   position: fixed;
@@ -72,6 +73,9 @@
   right: 0;
   z-index: 99;
   padding-block: 160rem 60rem;
+}
+.menu:global(.opened) {
+  display: block;
 }
 
 .menu ul {
@@ -88,13 +92,16 @@
 }
 .menu a {
   position: relative;
+  display: flex;
+  align-items: flex-start;
   &:hover {
     color: #eec4a2;
   }
 }
+.menu span {
+  display: block;
+}
 
-.menu li span {
+.menu li div:last-child {
   font-size: 20rem;
-  position: absolute;
-  left: 100%;
 }

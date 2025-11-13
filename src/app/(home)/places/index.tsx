@@ -3,9 +3,9 @@
 import s from "./_s.module.css";
 import Link from "next/link";
 import Chev from "@/assets/icons/chev.svg";
-import iSl1 from "@/assets/images/sl-1.png";
-import iSl2 from "@/assets/images/sl-2.png";
-import iSl3 from "@/assets/images/sl-3.png";
+import iSl1 from "@/assets/images/home/sl-1.png";
+import iSl2 from "@/assets/images/home/sl-2.png";
+import iSl3 from "@/assets/images/home/sl-3.png";
 import Image from "next/image";
 import gsap from "gsap";
 

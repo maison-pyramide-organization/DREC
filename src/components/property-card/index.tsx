@@ -2,18 +2,19 @@
 
 import s from "./_s.module.css";
 import Image from "next/image";
-import IbedIcon from "@/assets/images/bed-icon.png";
-import IbathIcon from "@/assets/images/bath-icon.png";
-import IareaIcon from "@/assets/images/area-icon.png";
-import StarI from "@/assets/icons/star.svg";
-import iProp from "@/assets/images/prp1.png";
+import IbedIcon from "@im/bed-icon.png";
+import IbathIcon from "@im/bath-icon.png";
+import IareaIcon from "@im/area-icon.png";
+import iProp from "@im/prp1.png";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import Ichev from "@/assets/icons/chev.svg";
+import Istar from "@ic/star.svg";
+import Ichev from "@ic/chev.svg";
 import { Navigation } from "swiper/modules";
 import { useRef } from "react";
 import formatPrice from "@/utils/formatPrice";
+// import Ibed from '@/assets/icons/bed.svg'
 
 export default function PropertyCard(props: any) {
   const { prp, i } = props;
@@ -84,7 +85,7 @@ export default function PropertyCard(props: any) {
           <p>{formatPrice(price)}</p>
         </div>
         <button>
-          <StarI />
+          <Istar />
         </button>
       </div>
 
@@ -92,6 +93,7 @@ export default function PropertyCard(props: any) {
         {bedrooms && (
           <div>
             <Image src={IbedIcon} alt="" />
+            {/* <Ibed/> */}
             {bedrooms} bedrooms
           </div>
         )}

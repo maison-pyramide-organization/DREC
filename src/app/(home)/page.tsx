@@ -1,6 +1,4 @@
 import s from "./_s.module.css";
-// import Image from "next/image";
-// import vph from "@/assets/images/vph.png";
 import Map from "./map";
 import Lifestyle from "./lifestyle";
 import Cursor from "@/components/cursor";
@@ -12,15 +10,14 @@ import Animation from "./_animation";
 export default function Home() {
   return (
     <>
-      <div id="p" className={s.p} style={{ opacity: 0 }}>
+      <div id="p" className={s.p}>
         <section className={s.he}>
           <h1 a-t="title">
             COMFORT, CONNECTION
             <span>& CONVENIENCE</span>
-            ACROSS DUBAI
+            <span>ACROSS DUBAI</span>
           </h1>
           <figure>
-            {/* <Image src={vph} alt="" /> */}
             <video
               className={s.v}
               autoPlay

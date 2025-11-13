@@ -1,6 +1,6 @@
 import s from "./_s.module.css";
-import lifestyle1 from "@/assets/images/lifestyle1.png";
-import lifestyle2 from "@/assets/images/lifestyle2.png";
+import lifestyle1 from "@/assets/images/home/lifestyle1.png";
+import lifestyle2 from "@/assets/images/home/lifestyle2.png";
 import Image from "next/image";
 
 export default function Lifestyle() {
@@ -12,12 +12,12 @@ export default function Lifestyle() {
           life around you."
         </h2>
 
-        <figure data-animation="pi">
+        <figure data-animation="pi" data-speed="1.1">
           <Image src={lifestyle1} alt="" />
         </figure>
       </div>
       <div className={s.r}>
-        <figure data-animation="pi">
+        <figure data-animation="pi" data-speed="1.2">
           <Image src={lifestyle2} alt="" />
         </figure>
       </div>

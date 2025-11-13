@@ -24,7 +24,7 @@ export default function Accordion(props: any) {
   return (
     <div onClick={handleClick}>
       <div className={s.item_t}>
-        <span>{title}</span>
+        <span a-t="r">{title}</span>
         {active ? <MinusI /> : <AddI />}
       </div>
 

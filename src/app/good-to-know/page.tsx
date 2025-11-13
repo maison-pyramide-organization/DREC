@@ -9,18 +9,19 @@ import Igplay from "@/assets/images/gtk/gplay.png";
 import Iappstore from "@/assets/images/gtk/appstore.png";
 import bg1 from "@/assets/images/gtk/gtk-bg-1.png";
 import bg2 from "@/assets/images/gtk/gtk-bg-2.png";
+import Animation from "./_animation";
 
 export default function GTK() {
   return (
     <>
       <section className={s.g0}>
         <div>
-          <h1>
+          <h1 a-t="r">
             WHAT TO EXPECT
             <br />
             FROM DREC
           </h1>
-          <p>
+          <p a-t="r">
             From first viewing to handover and beyond, we coordinate the details
             so you do not have to. Our team sets the standards for clear
             processes, responsive service and steady follow-through. The aim is
@@ -35,11 +36,11 @@ export default function GTK() {
 
       <section className={s.g1}>
         <div>
-          <h2>LEASING</h2>
+          <h2 a-t="r">LEASING</h2>
           <figure>
             <Image src={Igtk1} alt="DREC" />
           </figure>
-          <h2>
+          <h2 a-t="r">
             & MOVE-IN <br />
             FAQS
           </h2>
@@ -55,9 +56,9 @@ export default function GTK() {
 
       <section className={s.g2}>
         <div>
-          <h2>YOUR DREC TENANTS PORTAL</h2>
-          <h3>DOWNLOAD OUR APP</h3>
-          <p>
+          <h2 a-t="r">YOUR DREC TENANTS PORTAL</h2>
+          <h3 a-t="r">DOWNLOAD OUR APP</h3>
+          <p a-t="r">
             Submit maintenance, book facilities, request permits, book shared
             spaces and message the management office in one place.
           </p>
@@ -79,7 +80,7 @@ export default function GTK() {
       </section>
 
       <section className={s.g3}>
-        <h2>
+        <h2 a-t="r">
           <div>
             click here <span>to view</span>
           </div>
@@ -91,6 +92,7 @@ export default function GTK() {
           <Image src={Igtk3} alt="" />
         </figure>
       </section>
+      <Animation />
     </>
   );
 }

@@ -1,13 +1,19 @@
 "use client";
 
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import { useContext } from "react";
+import { WindowContext } from "@/contexts/windowContext";
+
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Animation() {
-  const animation = () => {
-    // ANALYTICS NUMBERS ANIMATION
+  const { fontLoaded } = useContext(WindowContext);
+
+  // ANALYTICS NUMBERS ANIMATION
+  const analyticsA = () => {
+    console.log("dd");
 
     gsap.from("#an span", {
       innerText: 0,
@@ -19,30 +25,12 @@ export default function Animation() {
         start: "top 90%",
       },
     });
-
-    // GET IMAGE
-    gsap.utils.toArray('[data-animation="pi"]').forEach((el: any) => {
-      gsap.from(el, {
-        opacity: 0,
-        duration: 1,
-        ease: "power1.out",
-        scrollTrigger: {
-          trigger: el, // 👈 each element triggers its own animation
-          start: "top 80%",
-        },
-      });
-    });
   };
 
   useGSAP(() => {
-    document.fonts.ready
-      .then(() => {
-        animation();
-      })
-      .catch((error) => {
-        console.error("Error loading fonts:", error);
-      });
+    if (!fontLoaded) return;
+    analyticsA();
   });
 
-  return <></>;
+  return null;
 }

@@ -5,7 +5,7 @@ import s from "./_s.module.css";
 import { GoogleMap, Marker } from "@react-google-maps/api";
 import places from "@/data/places";
 
-export default function Popup1(props) {
+export default function Popup(props) {
   const { closePopup } = props;
   const containerStyle = { width: "100%", height: "100%" };
   const defaultZoom = 10;

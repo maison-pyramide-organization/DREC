@@ -1,8 +1,14 @@
 import s from "./_s.module.css";
 import Link from "next/link";
 
-export default function Menu(props: any) {
-  const { close } = props;
+interface Iprops {
+  close: () => void;
+  isOpened: boolean;
+}
+
+export default function Menu(props: Iprops) {
+  const { close, isOpened } = props;
+
   const links = [
     { name: "properties", link: "/properties" },
     { name: "beach center", link: "/beach-center" },
@@ -12,13 +18,17 @@ export default function Menu(props: any) {
   ];
 
   return (
-    <div className={s.menu}>
+    <div id="menu" className={`${s.menu} ${isOpened ? "opened" : ""}`}>
       <ul>
         {links.map((l, i) => (
           <li key={i}>
             <Link href={l.link} onClick={close}>
-              {l.name}
-              <span>0{i + 1}</span>
+              <div className="y_">
+                <span g-s="y">{l.name}</span>
+              </div>
+              <div g-s="i" className="y_">
+                <span g-s="y">0{i + 1}</span>
+              </div>
             </Link>
           </li>
         ))}

@@ -88,6 +88,9 @@
   font-size: 14rem;
   font-weight: 300;
 }
+.pc_features svg {
+  width: 22rem;
+}
 .pc_features img {
   width: 22rem;
 }

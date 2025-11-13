@@ -1,12 +1,12 @@
 "use client";
 
 import s from "./_s.module.css";
-import Image from "next/image";
-import map from "@/assets/images/map.png";
 import { useLoadScript } from "@react-google-maps/api";
 import { useState } from "react";
 import { disableScrolling, enableScrolling } from "@/utils/scrolling";
-import Popup1 from "./Popup1";
+import Image from "next/image";
+import map from "@/assets/images/home/map.png";
+import Popup from "./Popup1";
 
 export default function Map() {
   const [isOpened, setIsOpened] = useState(false);
@@ -48,7 +48,7 @@ export default function Map() {
           onMouseEnter={show}
           onMouseLeave={hide}
         >
-          {isOpened && <Popup1 closePopup={closePopup} />}
+          {isOpened && <Popup closePopup={closePopup} />}
         </div>
         <figure>
           <Image src={map} alt="DREC Map" />

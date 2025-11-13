@@ -5,6 +5,7 @@ import Link from "next/link";
 import Logo from "@/assets/icons/logo.svg";
 import Menu from "./menu";
 import { useState } from "react";
+import Animation from "./_animation";
 
 export default function Header() {
   const [isOpened, setIsOpened] = useState(false);
@@ -27,9 +28,10 @@ export default function Header() {
               <span></span>
             </div>
           </button>
-          {isOpened && <Menu close={handleClick} />}
+          <Menu close={handleClick} isOpened={isOpened} />
         </div>
       </header>
+      <Animation isOpened={isOpened} />
     </>
   );
 }
