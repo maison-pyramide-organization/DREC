@@ -5,7 +5,6 @@
   --c-gold: #c09470;
 }
 
-
 /*******************
 *  GLOBAL  */
 /******************/
@@ -16,6 +15,12 @@
 
 .y_ {
   overflow: hidden;
+}
+.b-f {
+  aspect-ratio: 138/62;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 /*******************

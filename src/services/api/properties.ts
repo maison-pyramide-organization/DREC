@@ -34,6 +34,7 @@ const getProperties = async () => {
           _system_ {
             id
           }
+          index
           name
           description
           location
@@ -69,11 +70,13 @@ const getProperties = async () => {
   const data = await kontentClient.request(query);
   const properties = data.property_All.items;
 
-  const fProperties = properties.map((prp) => {
-    const type = prp.type.items[0]?._system_.name || "";
-    prp.type = type;
-    return prp;
-  });
+  const fProperties = properties
+    .map((prp) => {
+      const type = prp.type.items[0]?._system_.name || "";
+      prp.type = type;
+      return prp;
+    })
+    .sort((a, b) => a.index - b.index);
 
   return fProperties;
 };

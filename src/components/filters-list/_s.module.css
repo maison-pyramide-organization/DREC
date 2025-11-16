@@ -5,6 +5,19 @@
   gap: 26rem;
 }
 
+.filters-list > button {
+  font-size: 13rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  & svg {
+    width: 16rem;
+  }
+}
+
+/*************** 
+FILTER
+****************/
 .filter:global(.active) .dropdown {
   display: block;
 }
@@ -25,6 +38,9 @@
   }
 }
 
+/*************** 
+DROPDOWN LIST
+****************/
 .dropdown {
   display: none;
   position: absolute;
@@ -99,4 +115,32 @@ RANGE SLIDER
     border: 1px solid #ddd;
     border-radius: 50%;
   }
+}
+
+.mm {
+  padding: 24rem 20rem;
+  display: flex;
+  align-items: center;
+  gap: 24rem;
+}
+
+.mm > div {
+  flex: 1;
+}
+
+.mm h3 {
+  color: var(--c-gold);
+  font-size: 13rem;
+  font-weight: normal;
+}
+
+.mm input {
+  margin-top: 12rem;
+  padding: 12rem;
+  border: 1px solid var(--c-black);
+  width: 100%;
+  background-color: transparent;
+}
+.mm span {
+  margin-top: 24rem;
 }

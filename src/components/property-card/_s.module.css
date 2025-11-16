@@ -74,6 +74,9 @@
 .pc_h button {
   width: 20rem;
   aspect-ratio: 1;
+  & svg.saved {
+    fill: var(--c-gold);
+  }
 }
 .pc_features {
   margin-top: 12rem;

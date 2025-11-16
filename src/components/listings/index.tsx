@@ -4,6 +4,7 @@ import FiltersList from "../filters-list";
 import SearchBar from "../search-bar";
 import PropertyCard from "@/components/property-card";
 import { useState } from "react";
+import { updateFilters, filterPrps } from "../filters-list/utils/filter";
 
 interface Iprops {
   title: string;
@@ -11,44 +12,36 @@ interface Iprops {
   properties: any[];
 }
 
+const initFilters = {
+  area: null,
+  type: null,
+  bedrooms: null,
+  min_price: null,
+  max_price: null,
+};
+
 export default function Listings(props: Iprops) {
   const { title, description, properties } = props;
 
   // store filtered list
+  const [filters, setFilters] = useState(initFilters);
   const [filteredProperties, setFilteredProperties] = useState(properties);
 
   // main filter function
+
   const handleFilter = (filterName: string, filterValue: any) => {
-    let result = [...properties];
-    // console.log("hf",filterName, filterValue);
+    // Update filters object only
 
-    switch (filterName) {
-      case "area":
-        result = result.filter(
-          (prp) => prp.location.toLowerCase() === filterValue.toLowerCase()
-        );
-        break;
+    const updatedFilters = updateFilters(filters, filterName, filterValue);
+    const updatedPrps = filterPrps(updatedFilters, properties);
 
-      case "property-type":
-        result = result.filter(
-          (prp) => prp.type.toLowerCase() === filterValue.toLowerCase()
-        );
-        break;
+    setFilters(updatedFilters);
+    setFilteredProperties(updatedPrps);
+  };
 
-      case "bedrooms":
-        result = result.filter((prp) => prp.bedrooms === Number(filterValue));
-        break;
-
-      case "price":
-        const [min, max] = filterValue; // e.g. [1000, 3000]
-        result = result.filter((prp) => prp.price >= min && prp.price <= max);
-        break;
-
-      default:
-        break;
-    }
-
-    setFilteredProperties(result);
+  const handleClear = () => {
+    setFilters(initFilters);
+    setFilteredProperties(properties);
   };
 
   return (
@@ -58,7 +51,7 @@ export default function Listings(props: Iprops) {
           <SearchBar />
         </div>
         <div className={s.r}>
-          <FiltersList onFilter={handleFilter} />
+          <FiltersList onFilter={handleFilter} onClear={handleClear} />
         </div>
       </div>
       <div className={s.listings_intro}>

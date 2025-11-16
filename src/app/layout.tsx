@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Lenis>
+        {/* <Lenis> */}
         <WindowProvider>
           <div id="smooth-wrapper">
             <div className="_">
@@ -32,7 +32,7 @@ export default function RootLayout({
           </div>
         </WindowProvider>
         {/* <SmoothScroller /> */}
-        </Lenis>
+        {/* </Lenis> */}
       </body>
     </html>
   );

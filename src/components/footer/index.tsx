@@ -65,7 +65,7 @@ const nav = [
 
 export default function Footer() {
   return (
-    <footer className={s.f}>
+    <footer className={s.f} id="footer">
       <div className={s.f_t}>
         <div className={s.f_lo}>
           <Logo />

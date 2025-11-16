@@ -13,8 +13,6 @@ export default function Animation() {
 
   // ANALYTICS NUMBERS ANIMATION
   const analyticsA = () => {
-    console.log("dd");
-
     gsap.from("#an span", {
       innerText: 0,
       duration: 1,
@@ -29,7 +27,7 @@ export default function Animation() {
 
   useGSAP(() => {
     if (!fontLoaded) return;
-    analyticsA();
+    // analyticsA();
   });
 
   return null;

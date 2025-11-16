@@ -12,14 +12,23 @@ import "swiper/css";
 import Istar from "@ic/star.svg";
 import Ichev from "@ic/chev.svg";
 import { Navigation } from "swiper/modules";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import formatPrice from "@/utils/formatPrice";
+import { isSavedId, toggleSavedPropertyId } from "../filters-list/utils/saved";
 // import Ibed from '@/assets/icons/bed.svg'
 
 export default function PropertyCard(props: any) {
   const { prp, i } = props;
   const { gallery, name, bedrooms, bathrooms, area, price } = prp;
   const prpId = prp._system_.id;
+  const [isSaved, setIsSaved] = useState(false);
+
+  const handleStarClick = (e) => {
+    e.preventDefault(); // stop the href navigation
+    e.stopPropagation(); // stop bubbling to the <a>
+    toggleSavedPropertyId(prpId);
+    setIsSaved((prev) => !prev);
+  };
 
   const onNavBtnClick = (e) => {
     e.preventDefault(); // stop the href navigation
@@ -36,6 +45,10 @@ export default function PropertyCard(props: any) {
       swiper.params.navigation.nextEl = nextBtnRef.current;
     }
   };
+
+  useEffect(() => {
+    setIsSaved(isSavedId(prpId)); // runs only in browser
+  }, []);
 
   return (
     <Link className={s.pc} href={`/properties/${prpId}`}>
@@ -84,8 +97,8 @@ export default function PropertyCard(props: any) {
           <h3>{name}</h3>
           <p>{formatPrice(price)}</p>
         </div>
-        <button>
-          <Istar />
+        <button type="button" onClick={handleStarClick}>
+          <Istar className={`${isSaved ? s.saved : ""}`} />
         </button>
       </div>
 

@@ -46,8 +46,8 @@ const Overview = (props: any) => {
 const Location = (props: any) => {
   const { location } = props;
   return (
-    <div className={s.map}>
-      <iframe
+    <div className={s.map} dangerouslySetInnerHTML={{ __html: location }}>
+      {/* <iframe
         title="Google Map"
         src={location}
         width="100%"
@@ -56,7 +56,7 @@ const Location = (props: any) => {
         loading="lazy"
         allowFullScreen
         referrerPolicy="no-referrer-when-downgrade"
-      />
+      /> */}
     </div>
   );
 };

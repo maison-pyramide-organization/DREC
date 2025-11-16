@@ -5,6 +5,7 @@ import Link from "next/link";
 import StarI from "@/assets/icons/star.svg";
 import getProperties from "@/services/api/properties";
 import Listings from "@/components/listings";
+import Animation from "./_animation";
 
 export default async function Properties() {
   const properties = await getProperties();
@@ -19,12 +20,12 @@ export default async function Properties() {
   return (
     <>
       <div className={s.he}>
-        <h1>
-          46 PROPERTIES
-          <span>15 LOCATIONS</span>
-          30+ YEARS OF EXPERIENCE
+        <h1 g-s="ti">
+          <span>46 PROPERTIES</span>
+          <span className={s.m}>15 LOCATIONS</span>
+          <span>30+ YEARS OF EXPERIENCE</span>
         </h1>
-        <figure>
+        <figure className="b-f">
           <Image src={bannerI} alt="DREC" />
         </figure>
       </div>
@@ -36,16 +37,13 @@ export default async function Properties() {
           SAVED SEARCHES
         </Link>
 
-        {/* <div className={s.filter}>
-          <FiltersList />
-        </div> */}
-
         <Listings
           title={title}
           description={description}
           properties={properties}
         />
       </div>
+      <Animation />
     </>
   );
 }

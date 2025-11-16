@@ -13,6 +13,8 @@
   font-weight: normal;
   & span {
     display: block;
+  }
+  & .m {
     margin-left: 183rem;
   }
 }

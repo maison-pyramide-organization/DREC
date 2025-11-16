@@ -2,9 +2,10 @@ import s from "./_s.module.css";
 import { Filter } from "./filter";
 import { useEffect, useState } from "react";
 import { areas, prpType } from "@/data/filters";
+import Iclose from "@ic/close.svg";
 
 export default function FiltersList(props: any) {
-  const { onFilter } = props;
+  const { onFilter, onClear } = props;
 
   const [openedF, setOpenedF] = useState<any>(null);
 
@@ -27,7 +28,7 @@ export default function FiltersList(props: any) {
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLDivElement>) => {
     const target = e.target as HTMLInputElement;
-    if (!target.name || !target.value) return;
+    // if (!target.name || !target.value) return;
     onFilter(target.name, target.value);
   };
 
@@ -39,27 +40,30 @@ export default function FiltersList(props: any) {
     >
       <Filter
         name="area"
+        type="options"
         options={areas}
         active={openedF === "area"}
         open={openF}
       />
       <Filter
-        name="property-type"
+        text="property type"
+        name="type"
+        type="options"
         options={prpType}
-        active={openedF === "property-type"}
+        active={openedF === "type"}
         open={openF}
       />
       <Filter
         type="range"
         name="bedrooms"
         min={0}
-        max={10}
+        max={6}
         step={1}
         active={openedF === "bedrooms"}
         open={openF}
       />
       <Filter
-        type="range"
+        type="minmax"
         name="price"
         min={10000}
         max={500000}
@@ -67,6 +71,10 @@ export default function FiltersList(props: any) {
         active={openedF === "price"}
         open={openF}
       />
+      <button type="button" onClick={onClear}>
+        CLEAR FILTERS
+        <Iclose />
+      </button>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { getPropertyById } from "@/services/api/properties";
 import Image from "next/image";
 import StarI from "@/assets/icons/star.svg";
 import bg from "@/assets/images/prp-bg.png";
+import Animation from "./_animation";
 
 export default async function Property(props: any) {
   const { params } = props;
@@ -44,6 +45,7 @@ export default async function Property(props: any) {
         </section>
       </div>
       <Cursor />
+      <Animation />
     </>
   );
 }
