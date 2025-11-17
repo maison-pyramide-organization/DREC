@@ -11,12 +11,12 @@ export default function About() {
       <Analytics />
       <div className={s.ab_in}>
         <div className={s.l}>
-          <h3>
+          <h3 a-t='r'>
             We design for the long term
             <br />
             so life works in the short term.
           </h3>
-          <p>
+          <p a-t='r'>
             Since 1991, DREC has created and cared for homes and workspaces
             designed around people. As part of A.R.M. Holding, we pair a
             citywide portfolio with a people-first approach to lift the everyday

@@ -21,18 +21,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <Lenis> */}
-        <WindowProvider>
-          <div id="smooth-wrapper">
-            <div className="_">
-              <Header />
-              {children}
-              <Footer />
+        <Lenis>
+          <WindowProvider>
+            <div id="smooth-wrapper">
+              <div className="_">
+                <Header />
+                {children}
+                <Footer />
+              </div>
             </div>
-          </div>
-        </WindowProvider>
-        {/* <SmoothScroller /> */}
-        {/* </Lenis> */}
+          </WindowProvider>
+        </Lenis>
       </body>
     </html>
   );

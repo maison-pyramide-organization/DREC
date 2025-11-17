@@ -1,26 +1,30 @@
 "use client";
 
 import { WindowContext } from "@/contexts/windowContext";
+import { textsA } from "@/utils/animations";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger, SplitText } from "gsap/all";
+import { GSDevTools, ScrollTrigger, SplitText } from "gsap/all";
 import { useContext } from "react";
 
 export default function Animation(props: any) {
   const { fontLoaded } = useContext(WindowContext);
   const { isOpened } = props;
 
-  gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
+  gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText, GSDevTools);
 
-  const menuItemsA = () => {
+  const headerA = () => {};
+
+  const menuA = () => {
     const tl = gsap.timeline({
-      defaults: { duration: 0.4, ease: "sine.out" },
+      defaults: { duration: 0.8, ease: "power3.inOut" },
     });
 
     const $menu = document.getElementById("menu");
+
     gsap.from($menu, {
       height: 0,
-      duration: 0.4,
+      duration: 0.6,
       ease: "power2.out",
     });
 
@@ -38,11 +42,13 @@ export default function Animation(props: any) {
 
   useGSAP(() => {
     if (!fontLoaded || !isOpened) return;
-    // bgA()
-    console.log("run");
-
-    menuItemsA();
+    menuA();
   }, [fontLoaded, isOpened]);
+
+  useGSAP(() => {
+    if (!fontLoaded) return;
+    textsA();
+  }, [fontLoaded]);
 
   return null;
 }

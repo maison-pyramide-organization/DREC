@@ -22,10 +22,10 @@ const textsA = () => {
   gsap.utils.toArray('[a-t="r"]').forEach((el: any) => {
     const t_split = SplitText.create(el, { type: "lines", mask: "lines" });
     gsap.from(t_split.lines, {
-      y: "100%",
-      duration: 1.6,
+      yPercent: 100,
+      duration: 1.2,
       ease: "power4.out",
-      stagger: 0.08,
+      stagger: 0.05,
       scrollTrigger: {
         trigger: el, // 👈 each element triggers its own animation
         start: "top 90%",

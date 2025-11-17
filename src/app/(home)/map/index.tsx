@@ -1,37 +1,33 @@
 "use client";
 
 import s from "./_s.module.css";
-import { useLoadScript } from "@react-google-maps/api";
 import { useState } from "react";
-import { disableScrolling, enableScrolling } from "@/utils/scrolling";
 import Image from "next/image";
-import map from "@/assets/images/home/map.png";
-import Popup from "./Popup1";
+import map from "@/assets/images/home/map2.png";
+import Popup from "./popup";
+import { useLenis } from "lenis/react";
 
 export default function Map() {
   const [isOpened, setIsOpened] = useState(false);
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
-  });
+  const lenis = useLenis();
 
-  if (!isLoaded) return <p>Loading map…</p>;
-
-  const closePopup = () => {
+  function closePopup() {
     setIsOpened(false);
-    enableScrolling();
-  };
-  const handleClick = () => {
+    lenis?.start();
+  }
+  function handleClick() {
+    const $cursor = document?.getElementById("cursor") as any;
     setIsOpened(true);
-    disableScrolling();
+    // disableScrolling();
+    lenis?.stop();
     $cursor.classList.add("close");
-  };
-
-  const $cursor = document?.getElementById("cursor") as any;
-
+  }
   function show() {
+    const $cursor = document?.getElementById("cursor") as any;
     $cursor.classList.add("v");
   }
   function hide() {
+    const $cursor = document?.getElementById("cursor") as any;
     $cursor.classList.remove("v");
   }
 

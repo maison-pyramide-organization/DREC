@@ -1,11 +1,11 @@
-  const disableScrolling = () => {
-    const $body = document.body
-    $body.classList.add('ds')
-}
+const disableScrolling = () => {
+  const $body = document.body;
+  $body.classList.add("d-s");
+};
 
-  const enableScrolling = () => {
-    const $body = document.body
-    $body.classList.remove('ds')
-}
+const enableScrolling = () => {
+  const $body = document.body;
+  $body.classList.remove("d-s");
+};
 
-export {enableScrolling, disableScrolling}
+export { enableScrolling, disableScrolling };
