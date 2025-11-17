@@ -6,6 +6,10 @@ import { useState } from "react";
 export default function () {
   const [selectedPlace, setSelectedPlace] = useState<any>(null);
 
+  const handleClose = (e) => {
+    setSelectedPlace(null);
+  };
+
   return (
     <>
       {places.map((p) => (
@@ -28,7 +32,7 @@ export default function () {
               height: -40,
             },
           }}
-          onCloseClick={() => setSelectedPlace(null)}
+          onCloseClick={handleClose}
         >
           <div className={s.infoW}>
             <h3>{selectedPlace.name}</h3>

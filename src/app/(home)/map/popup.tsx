@@ -18,7 +18,8 @@ export default function Popup(props) {
 
   const handleClick = (e: any) => {
     e.stopPropagation();
-    if (e.currentTarget == e.target) closePopup();
+    if (e.currentTarget != e.target) return;
+    closePopup();
     const $cursor = document.getElementById("cursor") as any;
     $cursor.classList.remove("close", "v");
   };
