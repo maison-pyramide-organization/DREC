@@ -2,6 +2,7 @@ import s from "./_s.module.css";
 import Image from "next/image";
 import contactI from "@/assets/images/contact/contact.png";
 import bg from "@/assets/images/contact/contact-bg.png";
+import Animation from "./_animation";
 
 export default function contact() {
   return (
@@ -90,6 +91,7 @@ export default function contact() {
           </div>
         </form>
       </section>
+      <Animation />
     </>
   );
 }

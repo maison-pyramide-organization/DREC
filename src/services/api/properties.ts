@@ -72,7 +72,9 @@ const getProperties = async () => {
 
   const fProperties = properties
     .map((prp) => {
+      const id = prp._system_.id;
       const type = prp.type.items[0]?._system_.name || "";
+      prp.id = id;
       prp.type = type;
       return prp;
     })

@@ -1,6 +1,30 @@
 .listings {
   margin-top: 90rem;
 }
+
+.listings > button {
+  width: fit-content;
+  padding: 8rem 26rem;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+  font-size: 14rem;
+  color: var(--c-gold);
+  border: 1px solid var(--c-gold);
+  & svg {
+    width: 18rem;
+    fill: var(--c-gold);
+  }
+}
+.listings > button.active {
+  background-color: var(--c-gold);
+  color: white;
+  & svg {
+    fill: white;
+  }
+}
+
 .listings_h {
   margin-top: 60rem;
   display: flex;

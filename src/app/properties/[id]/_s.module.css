@@ -51,3 +51,7 @@
   line-height: 15rem;
   font-weight: 300;
 }
+
+:global(#footer) {
+  margin-top: 60rem !important;
+}

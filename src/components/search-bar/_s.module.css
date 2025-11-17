@@ -9,7 +9,7 @@
   width: 30rem;
 }
 .search input {
-  font-size: 24rem;
+  font-size: 20rem;
   &::placeholder {
     color: var(--c-black);
   }

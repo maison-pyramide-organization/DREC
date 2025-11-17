@@ -29,12 +29,21 @@ FILTER
   gap: 16rem;
   font-size: 13rem;
   text-transform: uppercase;
+  color: #555;
   & svg {
     transform: rotate(90deg);
     & path {
-      stroke: var(--c-black);
+      stroke: #555;
     }
     width: 12rem;
+  }
+}
+.filter.selected {
+  & button {
+    color: var(--c-black);
+  }
+  & path {
+    stroke: var(--c-black);
   }
 }
 
@@ -61,6 +70,10 @@ OPTIONS LIST
   &:not(:first-child) {
     border-top: 1px solid #d9d9d9;
   }
+}
+.optionsList li.selected label {
+  background-color: var(--c-gold);
+  color: white;
 }
 .optionsList input {
   display: none;

@@ -23,14 +23,18 @@ export default function Animation() {
 
     tl.from($banner_img, {
       width: 0,
-      ease: "power1.inOut",
+      ease: "power2.inOut",
       duration: 1,
-    }).from(title_split.lines, {
-      y: "100%",
-      duration: 1.6,
-      stagger: 0.1,
-      ease: "power4.out",
-    });
+    }).from(
+      title_split.lines,
+      {
+        y: "100%",
+        duration: 1.6,
+        stagger: 0.1,
+        ease: "power4.out",
+      },
+      "-=.2"
+    );
   };
 
   const initA = () => {

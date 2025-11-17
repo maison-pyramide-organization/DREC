@@ -14,13 +14,13 @@ import Ichev from "@ic/chev.svg";
 import { Navigation } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
 import formatPrice from "@/utils/formatPrice";
-import { isSavedId, toggleSavedPropertyId } from "../filters-list/utils/saved";
+import { isSavedId, toggleSavedPropertyId } from "../listings/utils/saved";
 // import Ibed from '@/assets/icons/bed.svg'
 
 export default function PropertyCard(props: any) {
   const { prp, i } = props;
   const { gallery, name, bedrooms, bathrooms, area, price } = prp;
-  const prpId = prp._system_.id;
+  const prpId = prp.id;
   const [isSaved, setIsSaved] = useState(false);
 
   const handleStarClick = (e) => {

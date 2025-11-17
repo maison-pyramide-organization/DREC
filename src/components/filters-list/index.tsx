@@ -5,7 +5,7 @@ import { areas, prpType } from "@/data/filters";
 import Iclose from "@ic/close.svg";
 
 export default function FiltersList(props: any) {
-  const { onFilter, onClear } = props;
+  const { onFilter, onClear, filters } = props;
 
   const [openedF, setOpenedF] = useState<any>(null);
 
@@ -44,6 +44,7 @@ export default function FiltersList(props: any) {
         options={areas}
         active={openedF === "area"}
         open={openF}
+        selected={filters.area}
       />
       <Filter
         text="property type"
@@ -52,6 +53,7 @@ export default function FiltersList(props: any) {
         options={prpType}
         active={openedF === "type"}
         open={openF}
+        selected={filters.type}
       />
       <Filter
         type="range"
@@ -61,6 +63,7 @@ export default function FiltersList(props: any) {
         step={1}
         active={openedF === "bedrooms"}
         open={openF}
+        selected={!!filters.bedrooms}
       />
       <Filter
         type="minmax"
@@ -70,6 +73,7 @@ export default function FiltersList(props: any) {
         step={10000}
         active={openedF === "price"}
         open={openF}
+        selected={!!filters.min_price || !!filters.max_price}
       />
       <button type="button" onClick={onClear}>
         CLEAR FILTERS

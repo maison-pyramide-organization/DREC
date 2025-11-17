@@ -13,10 +13,13 @@ interface Iprops {
   max?: number;
   step?: number;
   active: boolean;
+  selected: boolean | string | null;
   open: (name: string | null) => void;
 }
 export function Filter(props: Iprops) {
-  const { text, type, name, options, min, max, step, active, open } = props;
+  const { text, type, name, options, min, max, step, active, open, selected } =
+    props;
+
 
   const handleClick = (e) => {
     // e.stopPropagation();
@@ -24,7 +27,11 @@ export function Filter(props: Iprops) {
   };
 
   return (
-    <div className={`${s.filter} ${active ? "active" : ""}`}>
+    <div
+      className={`${s.filter} ${active ? "active" : ""} ${
+        selected ? s.selected : ""
+      }`}
+    >
       <button onClick={handleClick}>
         {text || name}
         <ChevI />
@@ -39,6 +46,7 @@ export function Filter(props: Iprops) {
             options={options!}
             name={name}
             closeF={() => open(null)}
+            selected={selected}
           />
         )}
 

@@ -1,13 +1,17 @@
 export const areas = [
   "Al Safa",
-  "Al Safouh 1",
-  "Al Raffa",
-  "Al Karama",
   "Deira",
-  "Mina Rashid",
+  "Al Karama",
+  "Al Jaddaf",
+  "Al Raffa",
+  "Al Sufouh",
   "Jumeirah",
   "Al Mankhool",
+  "Bur Dubai",
+  "Al Quoz",
+  "Jabal Ali",
 ];
+
 export const prpType = [
   "Residential",
   "Commercial",

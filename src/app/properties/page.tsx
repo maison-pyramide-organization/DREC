@@ -1,14 +1,20 @@
 import s from "./_s.module.css";
 import Image from "next/image";
 import bannerI from "@/assets/images/ps-banner.png";
-import Link from "next/link";
-import StarI from "@/assets/icons/star.svg";
 import getProperties from "@/services/api/properties";
 import Listings from "@/components/listings";
 import Animation from "./_animation";
 
 export default async function Properties() {
   const properties = await getProperties();
+
+  // const invalidItems = properties.map(
+  //   (item) => !item.type || !item.location || !item.googleMapsLink
+  // );
+  // console.log("inv", invalidItems);
+  // const types = [...new Set(properties.map((i) => i.location))];
+  // console.log(types);
+
   const title = "CITYWIDE COMMUNITIES, THOUGHTFULLY MANAGED";
   const description = `
             Every DREC address starts with comfort, safety and connection. We
@@ -32,11 +38,6 @@ export default async function Properties() {
 
       <div className={s.prs}>
         <h2 className={s.prs_title}>PROPERTIES</h2>
-        <Link href="" className={s.prs_saved}>
-          <StarI />
-          SAVED SEARCHES
-        </Link>
-
         <Listings
           title={title}
           description={description}
