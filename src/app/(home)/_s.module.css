@@ -12,10 +12,10 @@
   font-weight: normal;
   font-size: 100rem;
   line-height: 90%;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   & span {
     display: block;
-    color: white;
+    /* color: white; */
   }
   & span:first-child {
     margin-left: 380rem;

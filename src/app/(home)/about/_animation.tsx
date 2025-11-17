@@ -14,10 +14,11 @@ export default function Animation() {
   // ANALYTICS NUMBERS ANIMATION
   const analyticsA = () => {
     gsap.from("#an span", {
-      innerText: 0,
+      opacity: 0,
+      textContent: 0,
       duration: 1,
       ease: "power1.out",
-      snap: { innerText: 1 }, // rounds to whole numbers
+      snap: { textContent: 1 }, // rounds to whole numbers
       scrollTrigger: {
         trigger: "#an h3",
         start: "top 90%",
@@ -27,8 +28,8 @@ export default function Animation() {
 
   useGSAP(() => {
     if (!fontLoaded) return;
-    // analyticsA();
-  });
+    analyticsA();
+  }, [fontLoaded]);
 
   return null;
 }
