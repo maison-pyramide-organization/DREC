@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <div id="p" className={s.p}>
         <section className={s.he}>
-          <h1 a-t="title">
+          <h1 g-s="he_ti">
             COMFORT, CONNECTION
             <span>& CONVENIENCE</span>
             <span>ACROSS DUBAI</span>
@@ -23,6 +23,7 @@ export default function Home() {
           <figure>
             <video
               className={s.v}
+              g-s="he-v"
               autoPlay
               loop
               muted

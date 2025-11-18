@@ -6,21 +6,26 @@ export default async function Highlights() {
 
   return (
     <section className={s.hi}>
-      <h1>HIGHLIGHTS</h1>
+      <h1 a-t="r">HIGHLIGHTS</h1>
 
       <ul className="h-s">
         {highlights.map((hi) => (
           <li key={hi.title}>
-            <figure>
-              <img src={`${hi.image.url}?w=1500&fm=webp&q=100`} alt={hi.image.description || "DREC"} />
+            <figure a-i="r">
+              <img
+                src={`${hi.image.url}?w=1500&fm=webp&q=100`}
+                alt={hi.image.description || "DREC"}
+              />
             </figure>
-            <div className={s.type}>{hi.type}</div>
+            <div className={s.type} a-t="r">
+              {hi.type}
+            </div>
             <div className={s.b}>
               <div className={s.b_l}>
-                <h3>{hi.title}</h3>
+                <h3 a-t="r">{hi.title}</h3>
               </div>
               <div className={s.b_r}>
-                <p>{hi.body}</p>
+                <p a-t="r">{hi.body}</p>
               </div>
             </div>
           </li>

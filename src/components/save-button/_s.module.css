@@ -1,0 +1,11 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  font-size: 14rem;
+  font-weight: bold;
+}
+
+.btn.saved svg {
+  fill: var(--c-gold);
+}

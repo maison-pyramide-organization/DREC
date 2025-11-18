@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { SplitText, ScrollTrigger, CustomEase } from "gsap/all";
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
+gsap.registerPlugin(SplitText, ScrollTrigger, CustomEase);
 CustomEase.create("io2", ".45,0,.55,1");
 
 const imagesA = () => {

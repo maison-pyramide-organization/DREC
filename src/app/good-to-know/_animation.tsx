@@ -1,7 +1,7 @@
 "use client";
 
 import { WindowContext } from "@/contexts/windowContext";
-import { textsA } from "@/utils/animations";
+import { imagesA, textsA } from "@/utils/animations";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
@@ -20,12 +20,9 @@ export default function Animation() {
 
   useGSAP(() => {
     if (!fontLoaded) return;
-    // bgA()
-    // console.log("run");
-    initA()
+    initA();
     textsA();
-
-    // menuItemsA();
+    imagesA();
   }, [fontLoaded]);
 
   return null;

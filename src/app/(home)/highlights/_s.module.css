@@ -5,13 +5,13 @@
 }
 .hi h1 {
   position: absolute;
-  top: -32rem;
+  top: -57rem;
   left: 29rem;
   font-family: "bu";
   font-size: 80rem;
-  line-height: 50rem;
   font-weight: normal;
   color: var(--c-gold);
+  z-index: 1;
 }
 .hi ul {
   display: flex;

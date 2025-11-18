@@ -6,7 +6,7 @@ import Iabout11 from "@/assets/images/about/about1.1.png";
 import Iabout12 from "@/assets/images/about/about1.2.png";
 import Iabout31 from "@/assets/images/about/about3.1.png";
 import Iabout41 from "@/assets/images/about/about4.1.png";
-import bg1 from "@/assets/images/about/ab-bg-1.png";
+import bg1 from "@/assets/images/about/bg1.png";
 import bg2 from "@/assets/images/about/ab-bg-2.png";
 import Animation from "./_animation";
 
@@ -14,13 +14,13 @@ export default function About() {
   return (
     <>
       <section className={s.s_a0}>
-        <h1>WHO WE ARE</h1>
+        <h1 a-t="r">WHO WE ARE</h1>
 
-        <figure>
+        <figure a-i="r">
           <Image src={Iabout} alt="About DREC" />
         </figure>
 
-        <p>BUILDING COMMUNITIES SINCE 1991</p>
+        <p a-t="r">BUILDING COMMUNITIES SINCE 1991</p>
       </section>
 
       <section className={s.s_a1}>
@@ -51,13 +51,14 @@ export default function About() {
       </section>
 
       <section className={s.s_a2}>
-        <h2>
+        <h2 a-t="r">
           WHAT WE
           <span>STAND FOR</span>
         </h2>
 
-        <div g-s='s2-c' className={s.c}>
+        <div g-s="s2-c" className={s.c}>
           <div>
+            <span g-s="line" />
             <h3>DESIGN THAT SERVES DAILY LIFE</h3>
             <p>
               Good light, practical layouts and durable finishes come first.
@@ -66,6 +67,7 @@ export default function About() {
             </p>
           </div>
           <div>
+            <span g-s="line" />
             <h3>
               CARE THAT
               <br /> LASTS
@@ -77,6 +79,7 @@ export default function About() {
             </p>
           </div>
           <div>
+            <span g-s="line" />
             <h3>
               COMMUNITY AT
               <br /> THE CENTRE
@@ -93,7 +96,7 @@ export default function About() {
       </section>
 
       <section className={s.s_a3}>
-        <h2>
+        <h2 a-t="r">
           DREC
           <br />
           COMMUNITIES
@@ -112,7 +115,7 @@ export default function About() {
 
       <section className={s.s_a4}>
         <div className={s.h}>
-          <h2>
+          <h2 a-t="r">
             <div>
               FIND YOUR <span>NEXT HOME</span>
             </div>

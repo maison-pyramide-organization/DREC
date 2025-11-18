@@ -24,7 +24,7 @@ export default function About() {
           <Link href="/about-us">LEARN MORE</Link>
         </div>
         <div className={s.r}>
-          <figure data-animation="pi">
+          <figure a-i="r">
             <Image src={ab_image} alt="" />
           </figure>
         </div>

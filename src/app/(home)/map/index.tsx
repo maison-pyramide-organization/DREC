@@ -34,7 +34,7 @@ export default function Map() {
   return (
     <>
       <section className={s.map}>
-        <h2>
+        <h2 a-t='r'>
           LIFE WELL <br />
           PLACED
         </h2>

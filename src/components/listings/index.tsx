@@ -7,7 +7,6 @@ import PropertyCard from "@/components/property-card";
 import { useEffect, useState } from "react";
 import { updateFilters, filterPrps } from "./utils/filter";
 import { getSavedIds } from "./utils/saved";
-// import places from "@/data/places";
 
 interface Iprops {
   title: string;
@@ -127,9 +126,9 @@ export default function Listings(props: Iprops) {
   //     document.body.removeChild(a);
   //   }
 
-    // arrayToCSV(places, "users.csv");
+  // arrayToCSV(places, "users.csv");
 
-    // Output: { lat: 25.1826168, lng: 55.0928353 }
+  // Output: { lat: 25.1826168, lng: 55.0928353 }
   // }, []);
 
   let properties = prps;
@@ -218,7 +217,7 @@ export default function Listings(props: Iprops) {
 
       <ul className={s.prps}>
         {filteredProperties.map((prp, i) => (
-          <li key={i}>
+          <li key={prp.id}>
             <PropertyCard prp={prp} i={i} />
           </li>
         ))}

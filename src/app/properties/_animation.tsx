@@ -5,7 +5,6 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import { useContext } from "react";
 import { WindowContext } from "@/contexts/windowContext";
-import { textsA } from "@/utils/animations";
 
 export default function Animation() {
   const { fontLoaded } = useContext(WindowContext);

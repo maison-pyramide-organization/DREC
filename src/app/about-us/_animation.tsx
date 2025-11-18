@@ -15,6 +15,8 @@ export default function Animation() {
   const s2A = () => {
     const $tiltes = document.querySelectorAll("[g-s='s2-c'] h3");
     const $paras = document.querySelectorAll("[g-s='s2-c'] p");
+    const $lines = document.querySelectorAll("[g-s='line']");
+
     const titles_tl = gsap.timeline({
       scrollTrigger: {
         trigger: '[g-s="s2-c"]',
@@ -34,16 +36,24 @@ export default function Animation() {
         mask: "lines",
       }).lines;
 
-      titles_tl.from(
-        title_lines,
-        {
-          yPercent: 100,
-          duration: 1,
-          ease: "power4.inOut",
-          stagger: 0.1,
-        },
-        i * 0.2
-      );
+      titles_tl
+        .from(
+          title_lines,
+          {
+            yPercent: 100,
+            duration: 1.2,
+            ease: "power4.inOut",
+            stagger: 0.1,
+          },
+          i * 0.2
+        )
+        .from(
+          $lines[i],
+          {
+            height: 0,
+          },
+          i * 0.2 + 0.1
+        );
     });
     $paras.forEach(($title, i) => {
       const title_lines = SplitText.create($title, {

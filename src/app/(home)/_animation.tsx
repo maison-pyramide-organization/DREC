@@ -35,10 +35,27 @@ export default function Animation() {
       mask: "lines",
     });
 
-    gsap.from(title_split.lines, {
+    gsap;
+  };
+
+  const heA = () => {
+    const $he_v = document.querySelector("[g-s='he-v']");
+    // const $tilte = document.querySelector()
+    const title_split = SplitText.create('[g-s="he_ti"]', {
+      type: "lines",
+      mask: "lines",
+    });
+    const tl = gsap.timeline();
+
+    tl.from($he_v, {
+      width: 0,
+      ease: "power2.inOut",
+      duration: 1,
+    }).from(title_split.lines, {
       y: "100%",
-      duration: 0.4,
-      stagger: 0.1,
+      duration: 1.2,
+      stagger: 0.05,
+      ease: "power4.inOut",
     });
   };
 
@@ -53,6 +70,7 @@ export default function Animation() {
     initA();
     textsA();
     imagesA();
+    heA();
     analyticsA();
   }, [fontLoaded]);
 

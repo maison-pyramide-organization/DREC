@@ -27,13 +27,9 @@
 .data_r {
   width: 520rem;
 }
-.data_r button {
+.prp_sb {
+  width: fit-content;
   margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 10rem;
-  font-size: 14rem;
-  font-weight: bold;
   & svg {
     width: 18rem;
   }

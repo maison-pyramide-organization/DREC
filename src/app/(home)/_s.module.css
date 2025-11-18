@@ -5,7 +5,7 @@
 
 .he h1 {
   position: absolute;
-  top: -90rem;
+  top: -78rem;
   left: 130rem;
   width: fit-content;
   font-family: "bu";
@@ -25,6 +25,8 @@
 .he figure {
   padding-inline: var(--p-i);
   aspect-ratio: 138/62;
+  display: flex;
+  justify-content: center;
 }
 .bg2 {
   top: unset;

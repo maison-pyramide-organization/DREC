@@ -125,6 +125,7 @@
   position: absolute;
   left: 393rem;
   top: -16rem;
+  z-index: 1;
   & div {
     display: flex;
     justify-content: space-between;

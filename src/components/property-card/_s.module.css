@@ -71,12 +71,10 @@
   font-weight: 300;
   /* margin-top: -6rem; */
 }
-.pc_h button {
+.pc_sb svg {
   width: 20rem;
-  aspect-ratio: 1;
-  & svg.saved {
-    fill: var(--c-gold);
-  }
+  /* width: 20rem;
+  aspect-ratio: 1; */
 }
 .pc_features {
   margin-top: 12rem;

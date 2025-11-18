@@ -81,6 +81,7 @@ export default function Gallery(props: any) {
         <div className={`${s.g} ${layout2 ? s.l2 : ""}`} id="g">
           {gallery.items.map((img, i) => (
             <figure
+              a-i="r"
               key={i}
               onClick={() => onImageClick(i)}
               onMouseEnter={onEnter}

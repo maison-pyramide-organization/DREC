@@ -11,6 +11,7 @@
   position: absolute;
   top: -30rem;
   left: 100rem;
+  z-index: 1;
 }
 
 .s_a0 figure {
@@ -21,11 +22,12 @@
 .s_a0 p {
   position: absolute;
   width: 500rem;
-  right: 90rem;
+  right: 85rem;
   bottom: -38rem;
   font-family: "bu";
   font-size: 40rem;
   line-height: 35rem;
+  z-index: 1;
 }
 
 .s_a1 {
@@ -97,7 +99,17 @@
 .s_a2 .c > div {
   width: 343rem;
   padding-left: 20rem;
-  border-left: 1px solid var(--c-black);
+  /* border-left: 1px solid var(--c-black); */
+  position: relative;
+}
+
+.s_a2 .c > div > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: black;
 }
 .s_a2 .c h3 {
   font-size: 30rem;

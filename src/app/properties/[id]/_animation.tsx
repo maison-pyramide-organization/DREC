@@ -1,6 +1,7 @@
 "use client";
 
 import { WindowContext } from "@/contexts/windowContext";
+import { imagesA, textsA } from "@/utils/animations";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useContext } from "react";
@@ -18,6 +19,8 @@ export default function Animation() {
 
   useGSAP(() => {
     if (!fontLoaded) return;
+    imagesA();
+    textsA();
     initA();
   }, [fontLoaded]);
 

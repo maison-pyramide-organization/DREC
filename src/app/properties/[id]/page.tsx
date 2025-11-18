@@ -5,21 +5,19 @@ import Gallery from "./gallery";
 import Cursor from "@/components/cursor";
 import { getPropertyById } from "@/services/api/properties";
 import Image from "next/image";
-import StarI from "@/assets/icons/star.svg";
 import bg from "@/assets/images/prp-bg.png";
 import Animation from "./_animation";
+import SaveButton from "@/components/save-button";
 
 export default async function Property(props: any) {
   const { params } = props;
-
   const { id } = await params;
-
   const prp = await getPropertyById(id);
 
   return (
     <>
       <div className={s.prp}>
-        <h1>
+        <h1 a-t="r">
           {prp?.name}
           <br />
           {prp?.location}
@@ -34,12 +32,12 @@ export default async function Property(props: any) {
             <Info prp={prp} />
           </div>
           <div className={s.data_r}>
-            <button>
-              <StarI />
-              SAVE
-            </button>
-            <p className={s.data_desc}>{prp?.description}</p>
-            {/* <p className={s.data_com}>{prp?.community}</p> */}
+            <div className={s.prp_sb}>
+              <SaveButton prpId={id} wt={true} />
+            </div>
+            <p className={s.data_desc} a-t="r">
+              {prp?.description}
+            </p>
           </div>
           <Image className="bg" src={bg} alt="" />
         </section>

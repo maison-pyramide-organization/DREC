@@ -28,7 +28,7 @@ export default function GTK() {
             straightforward living that stays reliable.
           </p>
         </div>
-        <figure>
+        <figure a-i="r">
           <Image src={Igtk0} alt="DREC" />
         </figure>
         <Image className="bg" src={bg1} alt="" />
@@ -37,7 +37,7 @@ export default function GTK() {
       <section className={s.g1}>
         <div>
           <h2 a-t="r">LEASING</h2>
-          <figure>
+          <figure a-i="r">
             <Image src={Igtk1} alt="DREC" />
           </figure>
           <h2 a-t="r">
@@ -64,10 +64,16 @@ export default function GTK() {
           </p>
           <p>AVAILABLE NOW ON</p>
           <div className={s.download}>
-            <a href="/">
+            <a
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=com.drec.ae&hl=en&gl=US&pli=1"
+            >
               <Image src={Igplay} alt="" />
             </a>
-            <a href="/">
+            <a
+              target="_blank"
+              href="https://apps.apple.com/ae/app/drec-eservices/id1663713914"
+            >
               <Image src={Iappstore} alt="" />
             </a>
           </div>
@@ -88,7 +94,7 @@ export default function GTK() {
             <span>our terms</span>& conditions
           </div>
         </h2>
-        <figure>
+        <figure a-i="r">
           <Image src={Igtk3} alt="" />
         </figure>
       </section>
