@@ -12,6 +12,9 @@
   opacity: 0;
   visibility: hidden;
 }
+.w {
+  position: relative;
+}
 
 .y_ {
   overflow: hidden;

@@ -6,6 +6,9 @@ import Highlights from "./highlights";
 import Places from "./places";
 import About from "./about";
 import Animation from "./_animation";
+import Image from "next/image";
+import bg1 from "@im/home/bg1.png";
+import bg2 from "@im/home/bg2.png";
 
 export default function Home() {
   return (
@@ -31,9 +34,13 @@ export default function Home() {
           </figure>
         </section>
 
-        <About />
-        <Places />
-        <Lifestyle />
+        <div className="w">
+          <About />
+          <Places />
+          <Image className="bg" src={bg1} alt="" />
+          <Lifestyle />
+          <Image className={`${s.bg2} bg`} src={bg2} alt="" />
+        </div>
         <Map />
         <Highlights />
       </div>

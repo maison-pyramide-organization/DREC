@@ -1,15 +1,15 @@
 import gsap from "gsap";
-import { SplitText, ScrollTrigger } from "gsap/all";
+import { SplitText, ScrollTrigger, CustomEase } from "gsap/all";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
+CustomEase.create("io2", ".45,0,.55,1");
 
 const imagesA = () => {
   gsap.utils.toArray('[a-i="r"]').forEach((el: any) => {
     gsap.from(el, {
       duration: 1,
       opacity: 0,
-      ease: "sine.out",
-      //   ease: "io2",
+      ease: "io2",
       scrollTrigger: {
         trigger: el, // 👈 each element triggers its own animation
         start: "top 90%",

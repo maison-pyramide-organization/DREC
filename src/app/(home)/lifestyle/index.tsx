@@ -7,17 +7,17 @@ export default function Lifestyle() {
   return (
     <section className={s.ls}>
       <div className={s.l}>
-        <h2>
+        <h2 a-t="r">
           "Comfort, safety and connection guide every decision. We build for the
           life around you."
         </h2>
 
-        <figure data-animation="pi" data-speed="1.1">
+        <figure a-i="r">
           <Image src={lifestyle1} alt="" />
         </figure>
       </div>
       <div className={s.r}>
-        <figure data-animation="pi" data-speed="1.2">
+        <figure a-i="r">
           <Image src={lifestyle2} alt="" />
         </figure>
       </div>

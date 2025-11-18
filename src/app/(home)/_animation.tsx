@@ -5,11 +5,27 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import { useContext } from "react";
 import { WindowContext } from "@/contexts/windowContext";
+import { imagesA, textsA } from "@/utils/animations";
 
 gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger);
 
 export default function Animation() {
   const { fontLoaded } = useContext(WindowContext);
+
+  // ANALYTICS NUMBERS ANIMATION
+  const analyticsA = () => {
+    gsap.from("#an span", {
+      opacity: 0,
+      textContent: 0,
+      duration: 1,
+      ease: "power1.out",
+      snap: { textContent: 1 }, // rounds to whole numbers
+      scrollTrigger: {
+        trigger: "#an h3",
+        start: "top 90%",
+      },
+    });
+  };
 
   const animation = () => {
     const $title = document.querySelector('h1[a-t="title"]');
@@ -34,12 +50,10 @@ export default function Animation() {
 
   useGSAP(() => {
     if (!fontLoaded) return;
-    // bgA()
-    // console.log("run");
     initA();
-    // animation();
-
-    // menuItemsA();
+    textsA();
+    imagesA();
+    analyticsA();
   }, [fontLoaded]);
 
   return null;

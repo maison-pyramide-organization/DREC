@@ -1,7 +1,6 @@
 "use client";
 
 import { WindowContext } from "@/contexts/windowContext";
-import { textsA } from "@/utils/animations";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { GSDevTools, ScrollTrigger, SplitText } from "gsap/all";
@@ -13,7 +12,7 @@ export default function Animation(props: any) {
 
   gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText, GSDevTools);
 
-  const headerA = () => {};
+  // const headerA = () => {};
 
   const menuA = () => {
     const tl = gsap.timeline({
@@ -44,11 +43,6 @@ export default function Animation(props: any) {
     if (!fontLoaded || !isOpened) return;
     menuA();
   }, [fontLoaded, isOpened]);
-
-  useGSAP(() => {
-    if (!fontLoaded) return;
-    textsA();
-  }, [fontLoaded]);
 
   return null;
 }

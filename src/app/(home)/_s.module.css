@@ -26,3 +26,7 @@
   padding-inline: var(--p-i);
   aspect-ratio: 138/62;
 }
+.bg2 {
+  top: unset;
+  bottom: 0 !important;
+}

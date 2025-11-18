@@ -7,7 +7,7 @@ import PropertyCard from "@/components/property-card";
 import { useEffect, useState } from "react";
 import { updateFilters, filterPrps } from "./utils/filter";
 import { getSavedIds } from "./utils/saved";
-import places from "@/data/places";
+// import places from "@/data/places";
 
 interface Iprops {
   title: string;
@@ -26,114 +26,111 @@ const initFilters = {
 export default function Listings(props: Iprops) {
   const { title, description, properties: prps } = props;
 
-  useEffect(() => {
-    const x = properties.map((prp) => {
-      const link = prp.googleMapsLink;
-      const latLng = extractLatLng(link);
-      return {
-        name: prp.name.toLowerCase(),
-        link: prp.googleMapsLink,
-        lng: latLng?.lng,
-        lat: latLng?.lat,
-      };
-    });
+  // useEffect(() => {
+  //   const x = properties.map((prp) => {
+  //     const link = prp.googleMapsLink;
+  //     const latLng = extractLatLng(link);
+  //     return {
+  //       name: prp.name.toLowerCase(),
+  //       link: prp.googleMapsLink,
+  //       lng: latLng?.lng,
+  //       lat: latLng?.lat,
+  //     };
+  //   });
 
-    const map = new Map();
-    x.forEach((prp) => {
-      const key = prp.name.toLowerCase();
+  //   const map = new Map();
+  //   x.forEach((prp) => {
+  //     const key = prp.name.toLowerCase();
 
-      const lng = prp?.lng;
-      const lat = prp?.lat;
+  //     const lng = prp?.lng;
+  //     const lat = prp?.lat;
 
-      map.set(key, {
-        name: key,
-        link: prp.link,
-        lng,
-        lat,
-        gml: createGML(lat, lng),
-      });
-    });
+  //     map.set(key, {
+  //       name: key,
+  //       link: prp.link,
+  //       lng,
+  //       lat,
+  //       gml: createGML(lat, lng),
+  //     });
+  //   });
 
-    const deduplicatedArray = Array.from(map.values());
+  //   const deduplicatedArray = Array.from(map.values());
 
-    console.log(deduplicatedArray);
-    function extractLatLng(iframe) {
-      // Match the Google Maps embed URL inside the iframe
-      const srcMatch = iframe.match(/src="([^"]+)"/);
-      if (!srcMatch) return null;
+  //   function extractLatLng(iframe) {
+  //     // Match the Google Maps embed URL inside the iframe
+  //     const srcMatch = iframe.match(/src="([^"]+)"/);
+  //     if (!srcMatch) return null;
 
-      const url = srcMatch[1];
+  //     const url = srcMatch[1];
 
-      // Match latitude and longitude in the URL (look for "!3dLAT!2dLNG" pattern)
-      const latMatch = url.match(/!3d([-\d.]+)!2d([-\d.]+)/);
-      if (latMatch) {
-        return {
-          lat: parseFloat(latMatch[1]),
-          lng: parseFloat(latMatch[2]),
-        };
-      }
+  //     // Match latitude and longitude in the URL (look for "!3dLAT!2dLNG" pattern)
+  //     const latMatch = url.match(/!3d([-\d.]+)!2d([-\d.]+)/);
+  //     if (latMatch) {
+  //       return {
+  //         lat: parseFloat(latMatch[1]),
+  //         lng: parseFloat(latMatch[2]),
+  //       };
+  //     }
 
-      // Some URLs might have "!2dLNG!3dLAT" pattern instead
-      const altMatch = url.match(/!2d([-\d.]+)!3d([-\d.]+)/);
-      if (altMatch) {
-        return {
-          lat: parseFloat(altMatch[2]),
-          lng: parseFloat(altMatch[1]),
-        };
-      }
+  //     // Some URLs might have "!2dLNG!3dLAT" pattern instead
+  //     const altMatch = url.match(/!2d([-\d.]+)!3d([-\d.]+)/);
+  //     if (altMatch) {
+  //       return {
+  //         lat: parseFloat(altMatch[2]),
+  //         lng: parseFloat(altMatch[1]),
+  //       };
+  //     }
 
-      return null; // if no coordinates found
-    }
-    function createGML(lat, lng) {
-      return `https://www.google.com/maps?q=${lat},${lng}`;
-    }
-    function arrayToCSV(data, filename = "data.csv") {
-      if (!data || !data.length) {
-        console.error("Empty array provided");
-        return;
-      }
+  //     return null; // if no coordinates found
+  //   }
+  //   function createGML(lat, lng) {
+  //     return `https://www.google.com/maps?q=${lat},${lng}`;
+  //   }
+  //   function arrayToCSV(data, filename = "data.csv") {
+  //     if (!data || !data.length) {
+  //       console.error("Empty array provided");
+  //       return;
+  //     }
 
-      // Get the headers (keys of the first object)
-      const headers = Object.keys(data[0]) as any;
-      const csvRows = [] as any;
+  //     // Get the headers (keys of the first object)
+  //     const headers = Object.keys(data[0]) as any;
+  //     const csvRows = [] as any;
 
-      // Add headers row
-      csvRows.push(headers.join(","));
+  //     // Add headers row
+  //     csvRows.push(headers.join(","));
 
-      // Add data rows
-      for (const row of data) {
-        const values = headers.map((header) => {
-          const val =
-            row[header] === null || row[header] === undefined
-              ? ""
-              : row[header];
-          // Escape quotes
-          return `"${String(val).replace(/"/g, '""')}"`;
-        });
-        csvRows.push(values.join(","));
-      }
+  //     // Add data rows
+  //     for (const row of data) {
+  //       const values = headers.map((header) => {
+  //         const val =
+  //           row[header] === null || row[header] === undefined
+  //             ? ""
+  //             : row[header];
+  //         // Escape quotes
+  //         return `"${String(val).replace(/"/g, '""')}"`;
+  //       });
+  //       csvRows.push(values.join(","));
+  //     }
 
-      const csvString = csvRows.join("\n");
+  //     const csvString = csvRows.join("\n");
 
-      // Create a Blob and download it
-      const blob = new Blob([csvString], { type: "text/csv" });
-      const url = URL.createObjectURL(blob);
+  //     // Create a Blob and download it
+  //     const blob = new Blob([csvString], { type: "text/csv" });
+  //     const url = URL.createObjectURL(blob);
 
-      const a = document.createElement("a");
-      a.setAttribute("hidden", "");
-      a.setAttribute("href", url);
-      a.setAttribute("download", filename);
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    }
+  //     const a = document.createElement("a");
+  //     a.setAttribute("hidden", "");
+  //     a.setAttribute("href", url);
+  //     a.setAttribute("download", filename);
+  //     document.body.appendChild(a);
+  //     a.click();
+  //     document.body.removeChild(a);
+  //   }
 
-    // Example usage:
-
-    arrayToCSV(places, "users.csv");
+    // arrayToCSV(places, "users.csv");
 
     // Output: { lat: 25.1826168, lng: 55.0928353 }
-  }, []);
+  // }, []);
 
   let properties = prps;
   const savedIds = getSavedIds();

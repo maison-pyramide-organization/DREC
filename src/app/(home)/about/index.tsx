@@ -3,7 +3,6 @@ import Link from "next/link";
 import ab_image from "@/assets/images/home/about.png";
 import Image from "next/image";
 import Analytics from "./Analytics";
-import Animation from "./_animation";
 
 export default function About() {
   return (
@@ -11,12 +10,12 @@ export default function About() {
       <Analytics />
       <div className={s.ab_in}>
         <div className={s.l}>
-          <h3 a-t='r'>
+          <h3 a-t="r">
             We design for the long term
             <br />
             so life works in the short term.
           </h3>
-          <p a-t='r'>
+          <p a-t="r">
             Since 1991, DREC has created and cared for homes and workspaces
             designed around people. As part of A.R.M. Holding, we pair a
             citywide portfolio with a people-first approach to lift the everyday
@@ -30,7 +29,6 @@ export default function About() {
           </figure>
         </div>
       </div>
-      <Animation />
     </section>
   );
 }

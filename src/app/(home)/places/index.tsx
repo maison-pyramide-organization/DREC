@@ -46,7 +46,7 @@ export default function Places() {
       </div>
 
       <div className={s.pl_c}>
-        <h2>
+        <h2 a-t="r">
           FIND A PLACE
           <br />
           THAT FITS YOU
