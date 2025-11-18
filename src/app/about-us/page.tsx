@@ -25,14 +25,16 @@ export default function About() {
 
       <section className={s.s_a1}>
         <div className={s.l}>
-          <h2>We create and care for liveable communities across Dubai.</h2>
-          <figure>
+          <h2 a-t="r">
+            We create and care for liveable communities across Dubai.
+          </h2>
+          <figure a-i="r">
             <Image src={Iabout11} alt="DREC" />
           </figure>
         </div>
 
         <div className={s.r}>
-          <p>
+          <p a-t="r">
             DREC develops and manages homes and workspaces that put people
             first. We favour human scale, clear design and locations that keep
             daily life simple. As part of A.R.M. Holding, we consider the
@@ -41,7 +43,7 @@ export default function About() {
             connected.
           </p>
           <a href="/">LEARN ABOUT A.R.M. HOLDING</a>
-          <figure>
+          <figure a-i="r">
             <Image src={Iabout12} alt="DREC" />
           </figure>
         </div>
@@ -54,7 +56,7 @@ export default function About() {
           <span>STAND FOR</span>
         </h2>
 
-        <div className={s.c}>
+        <div g-s='s2-c' className={s.c}>
           <div>
             <h3>DESIGN THAT SERVES DAILY LIFE</h3>
             <p>
@@ -96,10 +98,10 @@ export default function About() {
           <br />
           COMMUNITIES
         </h2>
-        <figure>
+        <figure a-i="r">
           <Image src={Iabout31} alt="DREC" />
         </figure>
-        <p>
+        <p a-t="r">
           Across Dubai, DREC builds human-centred communities where tenants come
           first. Our homes and workspaces are planned for your routines: curated
           locations, useful amenities and locations that put parks, schools and
@@ -120,11 +122,11 @@ export default function About() {
           </h2>
           <Link href="/properties">DISCOVER OUR PROPERTIES</Link>
         </div>
-        <figure>
+        <figure a-i="r">
           <Image src={Iabout41} alt="DREC" />
         </figure>
       </section>
-      <Animation/>
+      <Animation />
     </>
   );
 }

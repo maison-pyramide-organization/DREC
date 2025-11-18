@@ -94,7 +94,7 @@
   justify-content: center;
 }
 
-.s_a2 .c div {
+.s_a2 .c > div {
   width: 343rem;
   padding-left: 20rem;
   border-left: 1px solid var(--c-black);
@@ -124,6 +124,7 @@
   line-height: 60rem;
   left: 30rem;
   top: -30rem;
+  z-index: 1;
 }
 .s_a3 figure {
   width: 1130rem;
