@@ -17,7 +17,6 @@ export default function Header() {
   return (
     <>
       <header id="h">
-
         <Link href="/" className={`${s.lo} y_`}>
           <Logo g-s="he_lo" />
         </Link>
@@ -27,8 +26,7 @@ export default function Header() {
         </div>
 
         <div className={s.menu_}>
-
-          <button id="menu-btn" onClick={handleClick} g-s='mb'>
+          <button id="menu-btn" onClick={handleClick} g-s="mb">
             <div className={`${s.menu_i} ${isOpened ? s.open : ""}`}>
               <span></span>
               <span></span>

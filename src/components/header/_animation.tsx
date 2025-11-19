@@ -15,7 +15,7 @@ export default function Animation(props: any) {
   const headerA = () => {
     const $logo = document.querySelector('#h [g-s="he_lo"]');
     const $t = document.querySelector('#h [g-s="he_t"]');
-    const $mb = document.querySelector('#h [g-s="mb"]');
+    const $mb_lines = document.querySelectorAll('#h [g-s="mb"] span');
     const tl = gsap.timeline();
 
     tl.from($logo, {
@@ -28,11 +28,16 @@ export default function Animation(props: any) {
         duration: 0.5,
         ease: "power4.out",
       })
-      .from($mb, {
-        opacity: 0,
-        duration: 0.2,
-        ease: "power4.out",
-      });
+      .from(
+        $mb_lines,
+        {
+          width: "0%",
+          duration: 0.4,
+          ease: "power4.out",
+          stagger: 0.1,
+        },
+        "<"
+      );
   };
 
   const menuA = () => {
