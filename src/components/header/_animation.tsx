@@ -12,7 +12,28 @@ export default function Animation(props: any) {
 
   gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText, GSDevTools);
 
-  // const headerA = () => {};
+  const headerA = () => {
+    const $logo = document.querySelector('#h [g-s="he_lo"]');
+    const $t = document.querySelector('#h [g-s="he_t"]');
+    const $mb = document.querySelector('#h [g-s="mb"]');
+    const tl = gsap.timeline();
+
+    tl.from($logo, {
+      yPercent: 100,
+      duration: 0.3,
+      ease: "power4.out",
+    })
+      .from($t, {
+        yPercent: 100,
+        duration: 0.5,
+        ease: "power4.out",
+      })
+      .from($mb, {
+        opacity: 0,
+        duration: 0.2,
+        ease: "power4.out",
+      });
+  };
 
   const menuA = () => {
     const tl = gsap.timeline({
@@ -43,6 +64,10 @@ export default function Animation(props: any) {
     if (!fontLoaded || !isOpened) return;
     menuA();
   }, [fontLoaded, isOpened]);
+  useGSAP(() => {
+    if (!fontLoaded) return;
+    headerA();
+  }, [fontLoaded]);
 
   return null;
 }

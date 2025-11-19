@@ -17,17 +17,24 @@ export default function Header() {
   return (
     <>
       <header id="h">
-        <Link href="/" className={s.lo}>
-          <Logo />
+
+        <Link href="/" className={`${s.lo} y_`}>
+          <Logo g-s="he_lo" />
         </Link>
-        <div className={s.t}>A SUBSIDIARY OF A.R.M. HOLDING</div>
+
+        <div className={`${s.t} y_`}>
+          <span g-s="he_t">A SUBSIDIARY OF A.R.M. HOLDING</span>
+        </div>
+
         <div className={s.menu_}>
-          <button id="menu-btn" onClick={handleClick}>
+
+          <button id="menu-btn" onClick={handleClick} g-s='mb'>
             <div className={`${s.menu_i} ${isOpened ? s.open : ""}`}>
               <span></span>
               <span></span>
             </div>
           </button>
+
           <Menu close={handleClick} isOpened={isOpened} />
         </div>
       </header>

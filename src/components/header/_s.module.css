@@ -15,6 +15,9 @@
   font-size: 15rem;
   font-family: "so";
   letter-spacing: 0.25em;
+  & span {
+    display: block;
+  }
 }
 
 .menu_ {

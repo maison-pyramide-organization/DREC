@@ -51,12 +51,16 @@ export default function Animation() {
       width: 0,
       ease: "power2.inOut",
       duration: 1,
-    }).from(title_split.lines, {
-      y: "100%",
-      duration: 1.2,
-      stagger: 0.05,
-      ease: "power4.inOut",
-    });
+    }).from(
+      title_split.lines,
+      {
+        y: "100%",
+        duration: 1.2,
+        stagger: 0.05,
+        ease: "power4.inOut",
+      },
+      "<-0.1"
+    );
   };
 
   const initA = () => {

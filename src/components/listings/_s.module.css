@@ -34,6 +34,8 @@
 
 .listings_intro {
   margin-top: 88rem;
+  width: 1150rem;
+  margin-inline: auto;
 }
 
 .listings_intro h2 {
