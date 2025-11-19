@@ -33,7 +33,7 @@ export default function Places() {
 
   return (
     <section className={s.pl}>
-      <div className={s.pl_s} onClick={onClick}>
+      <div className={s.pl_s} onClick={onClick} g-s='pl'>
         <figure slide-i="1">
           <Image src={iSl1} alt="" />
         </figure>

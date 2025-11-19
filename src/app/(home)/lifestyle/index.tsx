@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Lifestyle() {
   return (
-    <section className={s.ls}>
+    <section className={s.ls} >
       <div className={s.l}>
         <h2 a-t="r">
           "Comfort, safety and connection guide every decision. We build for the

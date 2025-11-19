@@ -27,17 +27,6 @@ export default function Animation() {
     });
   };
 
-  const animation = () => {
-    const $title = document.querySelector('h1[a-t="title"]');
-
-    const title_split = SplitText.create($title, {
-      type: "lines",
-      mask: "lines",
-    });
-
-    gsap;
-  };
-
   const heA = () => {
     const $he_v = document.querySelector("[g-s='he-v']");
     // const $tilte = document.querySelector()
@@ -63,6 +52,20 @@ export default function Animation() {
     );
   };
 
+  const plA = () => {
+    const $pl_figures = document.querySelectorAll('[g-s="pl"] figure');
+    gsap.from($pl_figures, {
+      top: 0,
+      left: 0,
+      duration: 0.8,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: '[g-s="pl"]',
+        start: "top 60%",
+      },
+    });
+  };
+
   const initA = () => {
     gsap.set("._", {
       autoAlpha: 1,
@@ -76,6 +79,7 @@ export default function Animation() {
     imagesA();
     heA();
     analyticsA();
+    plA();
   }, [fontLoaded]);
 
   return null;
