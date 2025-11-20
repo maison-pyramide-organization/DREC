@@ -21,6 +21,7 @@ export default function PropertyCard(props: any) {
   const { prp, i } = props;
   const { gallery, name, bedrooms, bathrooms, area, price } = prp;
   const prpId = prp.id;
+  const isFac = prp.type.toLowerCase() == "facilities";
   const router = useRouter();
 
   const onNavBtnClick = (e) => {
@@ -92,7 +93,7 @@ export default function PropertyCard(props: any) {
       <div className={s.pc_h}>
         <div>
           <h3>{name}</h3>
-          <p>{formatPrice(price)}</p>
+          {!isFac && <p>{formatPrice(price)}</p>}
         </div>
         <div className={s.pc_sb}>
           <SaveButton prpId={prpId} wt={false} />
