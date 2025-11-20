@@ -11,15 +11,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Ichev from "@ic/chev.svg";
 import { Navigation } from "swiper/modules";
-import {  useRef } from "react";
+import { useRef } from "react";
 import formatPrice from "@/utils/formatPrice";
 import SaveButton from "../save-button";
+import { useRouter } from "next/navigation";
 // import Ibed from '@/assets/icons/bed.svg'
 
 export default function PropertyCard(props: any) {
   const { prp, i } = props;
   const { gallery, name, bedrooms, bathrooms, area, price } = prp;
   const prpId = prp.id;
+  const router = useRouter();
 
   const onNavBtnClick = (e) => {
     e.preventDefault(); // stop the href navigation
@@ -37,8 +39,16 @@ export default function PropertyCard(props: any) {
     }
   };
 
+  let href = `/properties/${prpId}`;
+  if (prp.type.toLowerCase() == "facilities") href = "";
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (href) router.push(href);
+  };
+
   return (
-    <Link className={s.pc} href={`/properties/${prpId}`}>
+    <Link href={href} className={s.pc} onClick={handleClick}>
       <span className={s.pc_index}>{i < 9 ? `0${i + 1}` : `${i + 1}`}</span>
       <div className={s.pc_gallery}>
         <Swiper
