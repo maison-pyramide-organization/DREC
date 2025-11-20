@@ -23,15 +23,13 @@ export default function RootLayout({
       <body>
         <Lenis>
           <WindowProvider>
-            <div id="smooth-wrapper">
-              <div className="_">
-                <Header />
-                {children}
-                <Footer />
-              </div>
+            <div className="_">
+              <Header />
+              {children}
+              <Footer />
             </div>
           </WindowProvider>
-        </Lenis>
+      </Lenis>
       </body>
     </html>
   );

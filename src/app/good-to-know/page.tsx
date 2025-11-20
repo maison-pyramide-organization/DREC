@@ -4,12 +4,12 @@ import faqs from "@/data/faqs";
 import Accordion from "@/components/accordion";
 import Igtk0 from "@/assets/images/gtk/gtk0.png";
 import Igtk1 from "@/assets/images/gtk/gtk1.png";
-import Igtk3 from "@/assets/images/gtk/gtk3.png";
 import Igplay from "@/assets/images/gtk/gplay.png";
 import Iappstore from "@/assets/images/gtk/appstore.png";
 import bg1 from "@/assets/images/gtk/gtk-bg-1.png";
 import bg2 from "@/assets/images/gtk/gtk-bg-2.png";
 import Animation from "./_animation";
+import Terms from "./terms";
 
 export default function GTK() {
   return (
@@ -84,20 +84,8 @@ export default function GTK() {
         </video>
         <Image className="bg" src={bg2} alt="" />
       </section>
+      <Terms />
 
-      <section className={s.g3}>
-        <h2 a-t="r">
-          <div>
-            click here <span>to view</span>
-          </div>
-          <div>
-            <span>our terms</span>& conditions
-          </div>
-        </h2>
-        <figure a-i="r">
-          <Image src={Igtk3} alt="" />
-        </figure>
-      </section>
       <Animation />
     </>
   );

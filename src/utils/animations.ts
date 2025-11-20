@@ -21,6 +21,7 @@ const imagesA = () => {
 const textsA = () => {
   gsap.utils.toArray('[a-t="r"]').forEach((el: any) => {
     const t_split = SplitText.create(el, { type: "lines", mask: "lines" });
+
     gsap.from(t_split.lines, {
       yPercent: 100,
       duration: 1.2,
@@ -29,6 +30,11 @@ const textsA = () => {
       scrollTrigger: {
         trigger: el, // 👈 each element triggers its own animation
         start: "top 90%",
+      },
+      onComplete: () => {
+        t_split.masks.forEach((mask: any) => {
+          mask.style.overflow = "";
+        });
       },
     });
   });
