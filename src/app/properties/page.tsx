@@ -13,6 +13,7 @@ export default async function Properties({ searchParams }) {
     properties = properties.filter((prp) => prp.type.toLowerCase() == type);
 
 
+
   // const invalidItems = properties.map(
   //   (item) => !item.type || !item.location || !item.googleMapsLink
   // );

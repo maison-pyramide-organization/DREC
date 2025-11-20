@@ -23,7 +23,7 @@ const initFilters = {
 };
 
 export default function Listings(props: Iprops) {
-  const { title, description, properties: prps } = props;
+  const { title, description, properties } = props;
 
   // useEffect(() => {
   //   const x = properties.map((prp) => {
@@ -131,13 +131,17 @@ export default function Listings(props: Iprops) {
   // Output: { lat: 25.1826168, lng: 55.0928353 }
   // }, []);
 
-  let properties = prps;
+  // let properties = prps;
   const savedIds = getSavedIds();
   let savedPrps = properties.filter((prp) => savedIds.includes(prp.id));
 
   const [saveView, setSaveView] = useState(false);
   const [filters, setFilters] = useState(initFilters);
   const [filteredProperties, setFilteredProperties] = useState(properties);
+
+  useEffect(() => {
+    setFilteredProperties(properties);
+  }, [properties]);
 
   useEffect(() => {
     //reset filters
