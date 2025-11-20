@@ -2,14 +2,15 @@
   width: 465rem;
   display: flex;
   align-items: center;
-  gap: 16rem;
+  gap: 12rem;
   border-bottom: 1px solid var(--c-black);
+  padding-bottom: 2px;
 }
 .search svg {
-  width: 30rem;
+  width: 20rem;
 }
 .search input {
-  font-size: 20rem;
+  font-size: 16rem;
   &::placeholder {
     color: var(--c-black);
   }

@@ -1,12 +1,13 @@
 "use client";
 
-import { createContext, useEffect, useState, ReactNode } from "react";
+import { createContext, useEffect, useState, ReactNode, useRef } from "react";
 
 type Window = {
   width: number;
   height: number;
   isMobile: boolean | null;
   fontLoaded: boolean;
+  firstLoad: boolean;
 };
 
 export const WindowContext = createContext<Window>({
@@ -14,6 +15,7 @@ export const WindowContext = createContext<Window>({
   height: 0,
   isMobile: null,
   fontLoaded: false,
+  firstLoad: true,
 });
 
 export function WindowProvider({ children }: { children: ReactNode }) {
@@ -22,6 +24,7 @@ export function WindowProvider({ children }: { children: ReactNode }) {
   const [fontLoaded, setFontLoaded] = useState<boolean>(
     () => !!(typeof window !== "undefined" && (window as any).__fontsReady)
   );
+  const firstLoad = useRef(true);
 
   useEffect(() => {
     const update = () => {
@@ -31,7 +34,10 @@ export function WindowProvider({ children }: { children: ReactNode }) {
       });
       window.innerWidth > 770 ? setIsMobile(false) : setIsMobile(true);
     };
-
+    if (firstLoad.current) {
+      console.log("🚀 First website load");
+      firstLoad.current = false;
+    }
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
@@ -55,7 +61,14 @@ export function WindowProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <WindowContext.Provider value={{ ...dimensions, isMobile, fontLoaded }}>
+    <WindowContext.Provider
+      value={{
+        ...dimensions,
+        isMobile,
+        fontLoaded,
+        firstLoad: firstLoad.current,
+      }}
+    >
       {children}
     </WindowContext.Provider>
   );

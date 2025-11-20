@@ -84,7 +84,7 @@
     margin-top: 26rem;
     display: grid;
     grid-template-columns: repeat(3, 200rem);
-    gap: 53rem;
+    gap: 32rem;
   }
   & h3 {
     font-size: 14rem;
