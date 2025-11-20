@@ -14,7 +14,7 @@ export default function Popup(props) {
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
   });
 
-  if (!isLoaded) return <p>Loading map…</p>;
+  if (!isLoaded) return null;
 
   const handleClick = (e: any) => {
     e.stopPropagation();

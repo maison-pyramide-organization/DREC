@@ -2,8 +2,8 @@
   margin-top: 150rem;
   border-top: 14rem solid var(--c-black);
   padding-inline: var(--p-i);
-  padding-top: 40rem;
-  padding-bottom: 50rem;
+  padding-top: 32rem;
+  padding-bottom: 24rem;
   background-color: white;
 }
 .f_t {
@@ -21,23 +21,23 @@
   gap: 172rem;
 }
 .f_n h3 {
-  font-size: 18rem;
+  font-size: 14rem;
   font-weight: 400;
 }
 .f_n ul {
-  margin-top: 24rem;
+  margin-top: 16rem;
 }
 .f_n li {
   font-size: 12rem;
   font-weight: 300;
   &:not(:first-child) {
-    margin-top: 12rem;
+    margin-top: 10rem;
   }
 }
 
 .f_b {
   display: flex;
-  margin-top: 50rem;
+  margin-top: 40rem;
 }
 .socials {
   flex-basis: calc(3 / 7 * 100%);
@@ -61,4 +61,5 @@
 }
 .inq a {
   font-size: 10rem;
+  text-decoration: underline;
 }

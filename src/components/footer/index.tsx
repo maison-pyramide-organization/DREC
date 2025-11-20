@@ -10,24 +10,20 @@ const nav = [
     title: "properties",
     links: [
       {
-        name: "villas",
-        link: "/properties/residential",
-      },
-      {
-        name: "apartments",
-        link: "/properties/residential",
+        name: "residential",
+        link: "/properties?type=residential",
       },
       {
         name: "commercial",
-        link: "/properties/residential",
+        link: "/properties?type=commercial",
       },
       {
         name: "retail",
-        link: "/properties/residential",
+        link: "/properties?type=retail",
       },
       {
         name: "warehouse",
-        link: "/properties/residential",
+        link: "/properties?type=warehouse",
       },
     ],
   },

@@ -78,10 +78,12 @@ const getProperties = async () => {
       prp.type = type;
       return prp;
     })
+    .filter((prp) => prp.type.toLowerCase() != "facilities")
     .sort((a, b) => a.index - b.index);
 
   return fProperties;
 };
+
 
 export const getFacilities = async () => {
   const query = gql`

@@ -4,9 +4,14 @@ import bannerI from "@/assets/images/ps-banner.png";
 import getProperties from "@/services/api/properties";
 import Listings from "@/components/listings";
 import Animation from "./_animation";
+// import { headers } from "next/headers";
 
-export default async function Properties() {
-  const properties = await getProperties();
+export default async function Properties({ searchParams }) {
+  let properties = await getProperties();
+  const type = await searchParams.type;
+  if (type)
+    properties = properties.filter((prp) => prp.type.toLowerCase() == type);
+
 
   // const invalidItems = properties.map(
   //   (item) => !item.type || !item.location || !item.googleMapsLink
