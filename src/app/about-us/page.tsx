@@ -42,7 +42,7 @@ export default function About() {
             quality that lasts and communities that feel calm, safe and
             connected.
           </p>
-          <a href="/">LEARN ABOUT A.R.M. HOLDING</a>
+          <a href="https://www.armholding.ae/">LEARN ABOUT A.R.M. HOLDING</a>
           <figure a-i="r">
             <Image src={Iabout12} alt="DREC" />
           </figure>
