@@ -22,7 +22,9 @@ export default function Header() {
         </Link>
 
         <div className={`${s.t} y_`}>
-          <span g-s="he_t">A SUBSIDIARY OF A.R.M. HOLDING</span>
+          <span g-s="he_t">
+            A SUBSIDIARY OF <br /> A.R.M. HOLDING
+          </span>
         </div>
 
         <div className={s.menu_}>

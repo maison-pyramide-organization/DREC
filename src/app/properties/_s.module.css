@@ -1,31 +1,61 @@
 .he {
   position: relative;
-  margin-top: 200rem;
+  margin-top: 80rem;
   padding-inline: var(--p-i);
+  @media (width > 770px) {
+    margin-top: 200rem;
+  }
 }
 .he h1 {
+  padding-inline: var(--p-i);
   position: absolute;
-  top: -54rem;
-  left: 290rem;
-  font-size: 70rem;
-  line-height: 60rem;
+  top: -24rem;
+  left: 0;
+  font-size: 30rem;
+  line-height: 28rem;
   font-family: "bu";
   font-weight: normal;
   & span {
     display: block;
   }
   & .m {
-    margin-left: 183rem;
+    text-align: right;
+  }
+  @media (width > 770px) {
+    padding-inline: 0;
+    top: -54rem;
+    left: 290rem;
+    font-size: 70rem;
+    line-height: 60rem;
+    & .m {
+      margin-left: 183rem;
+    }
+  }
+}
+
+.b-f {
+  aspect-ratio: 3.5/3;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  @media (width > 770px) {
+    aspect-ratio: 138/62;
   }
 }
 .prs {
-  margin-top: 40rem;
+  margin-top: 30rem;
   padding-inline: var(--p-i);
+  @media (width > 770px) {
+    margin-top: 40rem;
+  }
 }
 .prs_title {
-  font-size: 55rem;
+  font-size: 20rem;
   font-family: "bu";
   font-weight: normal;
+  @media (width > 770px) {
+    font-size: 55rem;
+  }
 }
 .prs_saved {
   width: fit-content;

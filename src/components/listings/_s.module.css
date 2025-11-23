@@ -33,30 +33,49 @@
 }
 
 .listings_intro {
-  margin-top: 88rem;
-  width: 1150rem;
+  margin-top: 48rem;
+  padding-inline: var(--p-i);
   margin-inline: auto;
+  @media (width > 700px) {
+    margin-top: 88rem;
+    max-width: 1150rem;
+  }
 }
 
 .listings_intro h2 {
-  font-size: 35rem;
-  line-height: 30rem;
+  font-size: 18rem;
+  line-height: 20rem;
   font-weight: normal;
   text-align: center;
+  @media (width > 700px) {
+    font-size: 35rem;
+    line-height: 30rem;
+  }
 }
 
 .listings_intro p {
-  margin-top: 40rem;
-  font-size: 20rem;
-  line-height: 30rem;
+  margin-top: 24rem;
+  font-size: 15rem;
+  line-height: 1;
   font-weight: 300;
   text-align: center;
+  @media (width > 700px) {
+    margin-top: 40rem;
+    font-size: 20rem;
+    line-height: 30rem;
+  }
 }
 .prps {
   margin-top: 88rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 40rem;
+  @media (width > 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (width > 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .prps li {
   min-width: 0;

@@ -4,7 +4,10 @@
 .g {
   width: fit-content;
   display: flex;
-  gap: 20rem;
+  gap: 12rem;
+  @media (width > 770px) {
+    gap: 20rem;
+  }
 }
 .g.l2 figure {
   width: unset;
@@ -15,11 +18,14 @@
 .g figure {
   flex-shrink: 0;
   cursor: none;
-  width: 510rem;
+  width: 315rem;
   aspect-ratio: 5/4;
   overflow: hidden;
   & img {
     position: static !important;
+  }
+  @media (width > 770px) {
+    width: 510rem;
   }
 }
 .gp_ {

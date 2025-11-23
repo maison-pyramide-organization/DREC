@@ -1,31 +1,58 @@
 .prp {
-  margin-top: 185rem;
+  margin-top: 48rem;
+  @media (width > 770px) {
+    margin-top: 185rem;
+  }
 }
 .prp h1 {
   font-family: "bu";
-  font-size: 40rem;
-  line-height: 35rem;
+  font-size: 24rem;
+  line-height: 1;
   font-weight: 300;
-  padding-inline: 62rem;
+  padding-inline: var(--p-i);
+  text-align: center;
+  @media (width > 770px) {
+    font-size: 40rem;
+    line-height: 35rem;
+    padding-inline: 62rem;
+    text-align: left;
+  }
 }
 
 .prp_g {
-  margin-top: 12rem;
+  margin-top: 40rem;
+  @media (width > 770px) {
+    margin-top: 12rem;
+  }
 }
 
 .prp_data {
   position: relative;
-  padding-top: 50rem;
-  padding-inline: 60rem;
+  padding-top: 40rem;
+  padding-inline: var(--p-i);
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  gap: 56rem;
+  @media (width > 770px) {
+    flex-direction: row;
+    padding-top: 50rem;
+    padding-inline: 60rem;
+    gap: unset;
+  }
 }
 
 .data_l {
-  width: 750rem;
+  @media (width > 770px) {
+    width: 750rem;
+  }
 }
 .data_r {
-  width: 520rem;
+  order: -1;
+  @media (width > 770px) {
+    order: unset;
+    width: 520rem;
+  }
 }
 .prp_sb {
   width: fit-content;
@@ -36,10 +63,15 @@
 }
 
 .data_desc {
-  margin-top: 90rem;
-  font-size: 20rem;
-  line-height: 25rem;
+  margin-top: 20rem;
+  font-size: 14rem;
+  line-height: 16rem;
   font-weight: 300;
+  @media (width > 770px) {
+    margin-top: 90rem;
+    font-size: 20rem;
+    line-height: 25rem;
+  }
 }
 .data_com {
   margin-top: 14rem;

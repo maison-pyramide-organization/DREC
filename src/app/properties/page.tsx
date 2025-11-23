@@ -12,8 +12,6 @@ export default async function Properties({ searchParams }) {
   if (type)
     properties = properties.filter((prp) => prp.type.toLowerCase() == type);
 
-
-
   // const invalidItems = properties.map(
   //   (item) => !item.type || !item.location || !item.googleMapsLink
   // );
@@ -37,7 +35,7 @@ export default async function Properties({ searchParams }) {
           <span className={s.m}>15 LOCATIONS</span>
           <span>30+ YEARS OF EXPERIENCE</span>
         </h1>
-        <figure className="b-f">
+        <figure className={s["b-f"]}>
           <Image src={bannerI} alt="DREC" />
         </figure>
       </div>
@@ -50,7 +48,7 @@ export default async function Properties({ searchParams }) {
           properties={properties}
         />
       </div>
-      <Animation />
+      {/* <Animation /> */}
     </>
   );
 }

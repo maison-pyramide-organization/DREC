@@ -3,7 +3,7 @@ import s from "./_s.module.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Ichev from "@/assets/icons/chev.svg";
 import { Navigation } from "swiper/modules";
 import iProp1 from "@/assets/images/prp1.png";
@@ -16,6 +16,8 @@ export default function Gallery(props: any) {
   if (gallery.items.length == 0) {
     gallery.items = [iProp1, iProp2, iProp3];
   }
+
+  const galleryR = useRef(null);
 
   const layout2 = gallery.items.length == 2;
 
@@ -61,6 +63,13 @@ export default function Gallery(props: any) {
   };
 
   useEffect(() => {
+    const updateGalleryScroll = () => {
+      const $gallery = galleryR.current! as HTMLElement;
+      const midpoint = $gallery.scrollWidth - window.visualViewport!.width;
+      if (midpoint) $gallery.scroll(midpoint / 2, 0);
+    };
+    if (!layout2) updateGalleryScroll();
+
     const handleMove = (e) => {
       const box = document.getElementById("g");
       const $cursor = document.getElementById("cursor") as any;
@@ -76,7 +85,7 @@ export default function Gallery(props: any) {
 
   return (
     <>
-      <div className={`${s.g_} h-s`}>
+      <div className={`${s.g_} h-s`} ref={galleryR}>
         <div className={`${s.g} ${layout2 ? s.l2 : ""}`} id="g">
           {gallery.items.map((img, i) => (
             <figure
@@ -90,6 +99,8 @@ export default function Gallery(props: any) {
             </figure>
           ))}
         </div>
+
+        {/* ZOOMED GALLERY POPUP */}
         {slide >= 0 && (
           <div className={s.gp_} onClick={onContainerClick}>
             <div

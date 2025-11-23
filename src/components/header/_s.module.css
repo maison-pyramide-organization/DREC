@@ -1,22 +1,36 @@
 :global(#h) {
-  padding-top: 40rem;
+  padding-top: 24rem;
   padding-inline: var(--p-i);
   display: flex;
   align-items: center;
+  @media (width > 770px) {
+    padding-top: 40rem;
+  }
 }
 .lo {
   flex-basis: 100%;
 }
 .lo svg {
-  width: 52rem;
+  width: 24rem;
+  @media (width > 770px) {
+    width: 52rem;
+  }
 }
 .t {
   flex-shrink: 0;
-  font-size: 15rem;
+  font-size: 10rem;
   font-family: "so";
   letter-spacing: 0.25em;
+  text-align: center;
+  line-height: 1.2;
   & span {
     display: block;
+  }
+  @media (width > 770px) {
+    font-size: 15rem;
+    & br {
+      display: none;
+    }
   }
 }
 
@@ -33,8 +47,11 @@
 
 .menu_i {
   position: relative;
-  width: 45rem;
+  width: 24rem;
   height: 20rem;
+  @media (width > 770px) {
+    width: 45rem;
+  }
 }
 
 .menu_i span {
@@ -71,13 +88,17 @@
 
 .menu {
   display: none;
-  width: 1280rem;
+  width: 100%;
   background-color: #c09470;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 99;
+  padding-block: 120rem 40rem;
+  @media (width > 770px) {
   padding-block: 160rem 60rem;
+    width: 1280rem;
+  }
 }
 .menu:global(.opened) {
   display: block;
@@ -86,21 +107,32 @@
 .menu ul {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 32rem;
+  @media (width > 770px) {
+    gap: 8rem;
+  }
 }
 
 .menu li {
+  padding-left: 24rem;
   font-family: "bu";
-  font-size: 70rem;
+  font-size: 35rem;
   text-transform: uppercase;
-  padding-left: 50rem;
+  @media (width > 770px) {
+    font-size: 70rem;
+    padding-left: 50rem;
+  }
 }
 .menu a {
   position: relative;
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   &:hover {
     color: #eec4a2;
+  }
+  @media (width > 770px) {
+    justify-content: unset;
   }
 }
 .menu span {
@@ -108,5 +140,8 @@
 }
 
 .menu li div:last-child {
-  font-size: 20rem;
+  font-size: 12rem;
+  @media (width > 770px) {
+    font-size: 20rem;
+  }
 }

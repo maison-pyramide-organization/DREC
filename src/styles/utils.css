@@ -1,10 +1,10 @@
 :root {
-  --p-i: 30rem;
+  --p-i: 12rem;
   --c-gray: #77726d;
   --c-black: #1b1b27;
   --c-gold: #c09470;
   @media (width > 770px) {
-    --p-i: 12rem;
+    --p-i: 30rem;
   }
 }
 
@@ -12,8 +12,8 @@
 *  GLOBAL  */
 /******************/
 ._ {
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0;
+  visibility: hidden; */
 }
 .w {
   position: relative;
@@ -21,12 +21,6 @@
 
 .y_ {
   overflow: hidden;
-}
-.b-f {
-  aspect-ratio: 138/62;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
 }
 
 /*******************
