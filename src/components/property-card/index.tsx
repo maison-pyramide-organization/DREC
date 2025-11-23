@@ -54,6 +54,9 @@ export default function PropertyCard(props: any) {
       <div className={s.pc_gallery}>
         <Swiper
           slidesPerView={1}
+          spaceBetween={0.5}
+          roundLengths={true}
+          centeredSlides={false}
           modules={[Navigation]}
           onBeforeInit={onBeforeInit}
           onSwiper={(sw) => {

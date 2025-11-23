@@ -50,10 +50,14 @@
 
 .inq {
   flex-basis: calc(4 / 7 * 100%);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .inq h3 {
   font-size: 18rem;
   font-weight: 400;
+  flex-basis: 100%;
 }
 .inq p {
   font-size: 12rem;

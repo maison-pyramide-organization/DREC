@@ -3,6 +3,9 @@
   --c-gray: #77726d;
   --c-black: #1b1b27;
   --c-gold: #c09470;
+  @media (width > 770px) {
+    --p-i: 12rem;
+  }
 }
 
 /*******************

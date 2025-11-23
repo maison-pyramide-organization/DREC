@@ -1,5 +1,5 @@
-import Link from "next/link";
 import s from "./_s.module.css";
+import Link from "next/link";
 import Logo from "@/assets/icons/logo2.svg";
 import Fb from "@/assets/icons/fb.svg";
 import Ig from "@/assets/icons/ig.svg";
