@@ -48,7 +48,7 @@ export default async function Properties({ searchParams }) {
           properties={properties}
         />
       </div>
-      {/* <Animation /> */}
+      <Animation />
     </>
   );
 }

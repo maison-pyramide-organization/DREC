@@ -12,8 +12,8 @@
 *  GLOBAL  */
 /******************/
 ._ {
-  /* opacity: 0;
-  visibility: hidden; */
+  opacity: 0;
+  visibility: hidden;
 }
 .w {
   position: relative;
