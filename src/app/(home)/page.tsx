@@ -17,7 +17,7 @@ export default function Home() {
         <section className={s.he}>
           <h1 g-s="he_ti">
             COMFORT, CONNECTION
-            <span>& CONVENIENCE</span>
+            <span className={s.m}>& CONVENIENCE</span>
             <span>ACROSS DUBAI</span>
           </h1>
           <figure>

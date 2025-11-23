@@ -17,7 +17,7 @@
     display: block;
     /* color: white; */
   }
-  & span:first-child {
+  & .m {
     margin-left: 380rem;
   }
 }
