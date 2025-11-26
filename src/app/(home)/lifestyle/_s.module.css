@@ -1,26 +1,49 @@
 .ls {
-  margin-top: 10rem;
+  margin-top: 48rem;
   padding-inline: var(--p-i);
   display: flex;
+  justify-content: space-between;
+  @media (width > 770px) {
+    margin-top: 10rem;
+    justify-content: unset;
+  }
 }
 
 .l {
-  margin-left: 90rem;
+  @media (width > 770px) {
+    margin-left: 90rem;
+  }
 }
 .l h2 {
-  width: 515rem;
-  font-size: 40rem;
-  line-height: 45rem;
+  width: 160rem;
+  font-size: 15rem;
+  line-height: 1;
   font-weight: 300;
+  @media (width > 770px) {
+    width: 515rem;
+    font-size: 40rem;
+    line-height: 45rem;
+  }
 }
 .l figure {
-  margin-top: 148rem;
+  margin-top: 32rem;
+  width: 155rem;
   aspect-ratio: 520 / 300;
+  @media (width > 770px) {
+    width: unset;
+    margin-top: 148rem;
+  }
 }
 
 .r {
-  margin-left: 215rem;
+  @media (width > 770px) {
+    margin-left: 215rem;
+  }
 }
 .r figure {
   aspect-ratio: 520/740;
+  width: 155rem;
+  @media (width > 770px) {
+    width: unset;
+  }
 }

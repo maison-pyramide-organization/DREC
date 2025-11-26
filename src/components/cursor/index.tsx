@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import s from "./_s.module.css";
 import Iplus from "@/assets/icons/plus.svg";
+import { WindowContext } from "@/contexts/windowContext";
 
 export default function Cursor() {
   const cursorRef = useRef(null);
+  const { isMobile } = useContext(WindowContext);
 
   const mouseX = useRef(0);
   const mouseY = useRef(0);
@@ -13,6 +15,8 @@ export default function Cursor() {
   const currY = useRef(0);
   const ease = 0.5;
   const size = 34;
+
+  console.log(isMobile);
 
   useEffect(() => {
     let rafId = 0;
@@ -46,6 +50,8 @@ export default function Cursor() {
       if (rafId != null) cancelAnimationFrame(rafId);
     };
   }, []);
+
+  if (isMobile) return null;
 
   return (
     <div id="cursor" className={s.cursor} ref={cursorRef}>

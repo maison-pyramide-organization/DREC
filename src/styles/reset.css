@@ -54,11 +54,11 @@
 }
 html {
   overscroll-behavior: none;
-  font-size: calc(100vw / 1440);
+  font-size: calc(100vw / 393);
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
-  @media (width < 770px) {
-    font-size: calc(100vw / 393);
+  @media (width > 770px) {
+    font-size: calc(100vw / 1440);
   }
 }
 body {

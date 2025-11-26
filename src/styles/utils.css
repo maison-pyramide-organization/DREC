@@ -12,8 +12,8 @@
 *  GLOBAL  */
 /******************/
 ._ {
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0;
+  visibility: hidden; */
 }
 .w {
   position: relative;
@@ -31,6 +31,16 @@
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
+}
+.m-o {
+  @media (width > 770px) {
+    display: none !important;
+  }
+}
+.d-o {
+  @media (width <= 770px) {
+    display: none !important;
+  }
 }
 .h-s {
   overflow: auto;

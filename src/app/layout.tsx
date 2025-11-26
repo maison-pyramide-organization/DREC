@@ -29,7 +29,7 @@ export default function RootLayout({
               <Footer />
             </div>
           </WindowProvider>
-      </Lenis>
+        </Lenis>
       </body>
     </html>
   );

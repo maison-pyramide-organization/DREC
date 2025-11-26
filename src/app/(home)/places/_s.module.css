@@ -1,6 +1,10 @@
 .pl {
-  margin-top: 315rem;
-  display: flex;
+  margin-top: 48rem;
+  @media (width > 770px) {
+    display: flex;
+    margin-top: 315rem;
+    flex-direction: row;
+  }
 }
 :global(.cc) {
   top: 0 !important;
@@ -9,12 +13,31 @@
   transition: all 0.2s linear;
 }
 
+.pl h2 {
+  font-size: 20rem;
+  line-height: 18rem;
+  font-family: "bu";
+  font-weight: normal;
+  text-align: center;
+  @media (width > 770px) {
+    font-size: 60rem;
+    line-height: 100%;
+    text-align: left;
+  }
+}
+
 .pl_s {
   position: relative;
-  margin-left: 133rem;
-  top: -195rem;
-  width: 475rem;
+  width: 180rem;
+  margin-top: 32rem;
+  margin-left: 88rem;
   aspect-ratio: 5/7;
+  @media (width > 770px) {
+    width: 475rem;
+    margin-top: 0;
+    margin-left: 133rem;
+    top: -195rem;
+  }
 }
 .pl_s figure {
   width: 100%;
@@ -22,12 +45,20 @@
   top: 0;
   left: 0;
   &:nth-child(2) {
-    top: 40rem;
-    left: 50rem;
+    top: 16rem;
+    left: 20rem;
+    @media (width > 770px) {
+      top: 32rem;
+      left: 40rem;
+    }
   }
   &:nth-child(3) {
-    top: 80rem;
-    left: 100rem;
+    top: 40rem;
+    left: 50rem;
+    @media (width > 770px) {
+      top: 80rem;
+      left: 100rem;
+    }
   }
 
   [slide-i="1"] {
@@ -42,46 +73,59 @@
 }
 
 .pl_c {
-  /* margin-left: 835rem; */
-  margin-left: 225rem;
+  margin-top: 68rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @media (width > 770px) {
+    margin-left: 225rem;
+    align-items: flex-start;
+    text-align: unset;
+  }
 }
 
-.pl h2 {
-  font-size: 60rem;
-  line-height: 100%;
-  font-family: "bu";
-  font-weight: normal;
-}
-.pl a {
+.pl_c a {
   display: block;
   margin-top: 16rem;
+  font-size: 10rem;
   color: var(--c-gold);
-  font-size: 20rem;
   text-decoration: underline;
+  @media (width > 770px) {
+    font-size: 20rem;
+  }
 }
-.pl a svg {
+.pl_c a svg {
   display: inline;
-  width: 18rem;
-  margin-left: 14rem;
+  width: 8rem;
+  margin-left: 4rem;
   vertical-align: middle;
   & path {
     stroke: var(--c-gold);
   }
+  @media (width > 770px) {
+    width: 18rem;
+    margin-left: 14rem;
+  }
 }
-
-.pr {
-  margin-top: 105rem;
+.pl_c h3 {
+  margin-top: 32rem;
+  font-size: 15rem;
+  @media (width > 770px) {
+    margin-top: 105rem;
+    font-size: 20rem;
+  }
 }
-.pr h3 {
-  font-size: 20rem;
-}
-.pr p {
+.pl_c p {
   width: 345rem;
-  margin-top: 16rem;
+  margin-top: 10rem;
   font-size: 12rem;
   line-height: 14rem;
+  @media (width > 770px) {
+    margin-top: 16rem;
+  }
 }
-.pr button {
+.pl_c button {
   font-size: 12rem;
   margin-top: 24rem;
   display: flex;

@@ -1,182 +1,344 @@
 .s_a0 {
-  margin-top: 150rem;
+  margin-top: 56rem;
   position: relative;
+  padding-inline: 36rem;
+  @media (width > 770px) {
+    padding-inline: unset;
+    margin-top: 150rem;
+  }
 }
 
 .s_a0 h1 {
-  font-size: 70rem;
+  position: absolute;
+  left: 0;
+  top: -14rem;
+  width: 100%;
+  z-index: 1;
+  font-size: 20rem;
   font-family: "bu";
   font-weight: normal;
-  line-height: 60rem;
-  position: absolute;
-  top: -30rem;
-  left: 100rem;
-  z-index: 1;
+  text-align: center;
+  @media (width > 770px) {
+    width: unset;
+    top: -30rem;
+    left: 100rem;
+    font-size: 70rem;
+    line-height: 60rem;
+  }
 }
 
 .s_a0 figure {
-  margin-inline: auto;
-  width: 1090rem;
+  @media (width > 770px) {
+    width: 1090rem;
+    margin-inline: auto;
+  }
 }
 
 .s_a0 p {
-  position: absolute;
-  width: 500rem;
-  right: 85rem;
-  bottom: -38rem;
+  margin-top: 8rem;
+  margin-inline: auto;
+  width: 210rem;
   font-family: "bu";
-  font-size: 40rem;
-  line-height: 35rem;
+  font-size: 15;
+  line-height: 1;
+  text-align: center;
   z-index: 1;
+  @media (width > 770px) {
+    margin-top: 0;
+    margin-inline: 0;
+    position: absolute;
+    width: 500rem;
+    right: 85rem;
+    bottom: -38rem;
+    font-size: 40rem;
+    line-height: 35rem;
+    text-align: left;
+  }
 }
 
 .s_a1 {
-  padding-top: 215rem;
-  padding-inline: var(--p-i);
+  padding-top: 40rem;
+  padding-inline: 36rem;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 20rem;
+  @media (width > 770px) {
+    padding-top: 215rem;
+    flex-direction: row;
+    gap: 0;
+  }
 }
 .s_a1 .l {
-  width: 680rem;
+  @media (width > 770px) {
+    width: 680rem;
+  }
 }
 
 .s_a1 h2 {
-  font-size: 35rem;
-  line-height: 30rem;
+  font-size: 15rem;
+  line-height: 1;
   font-weight: normal;
+  width: 210rem;
+  margin-inline: auto;
+  text-align: center;
+  @media (width > 770px) {
+    font-size: 35rem;
+    line-height: 30rem;
+    width: unset;
+    text-align: left;
+    margin-inline: 0;
+  }
 }
 .s_a1 .l figure {
-  margin-top: 24rem;
+  margin-top: 16rem;
+  @media (width > 770px) {
+    margin-top: 24rem;
+  }
 }
 
 .s_a1 .r {
-  width: 600rem;
   display: flex;
   flex-direction: column;
+  @media (width > 770px) {
+    width: 600rem;
+  }
 }
-.s_a1 p {
-  font-size: 20rem;
-  line-height: 30rem;
+.s_a1 .r p {
+  font-size: 12rem;
+  line-height: 14rem;
   font-weight: 300;
+  text-align: center;
+  @media (width > 770px) {
+    font-size: 20rem;
+    line-height: 30rem;
+    text-align: left;
+  }
 }
 
-.s_a1 a {
+.s_a1 .r a {
   display: block;
-  margin-top: 24rem;
+  margin-top: 20rem;
   font-size: 13rem;
   color: var(--c-gold);
   text-decoration: underline;
+  text-align: center;
+  @media (width > 770px) {
+    margin-top: 24rem;
+    text-align: left;
+  }
 }
 
 .s_a1 .r figure {
-  margin-top: auto;
+  margin-top: 20rem;
+  @media (width > 770px) {
+    margin-top: auto;
+  }
 }
 
 .s_a2 {
-  padding-top: 100rem;
+  padding-top: 48rem;
   position: relative;
+  @media (width > 770px) {
+    padding-top: 100rem;
+  }
 }
 .s_a2 h2 {
   font-family: "bu";
-  font-size: 70rem;
-  line-height: 60rem;
-  margin-left: 105rem;
+  font-size: 20rem;
+  line-height: 1;
+  margin-left: 100rem;
   font-weight: normal;
   & span {
     display: block;
-    margin-left: 175rem;
+    margin-left: 48rem;
+  }
+  @media (width > 770px) {
+    font-size: 70rem;
+    line-height: 60rem;
+    margin-left: 105rem;
+    & span {
+      margin-left: 175rem;
+    }
   }
 }
 
 .s_a2 .c {
-  margin-top: 150rem;
+  width: 280rem;
+  margin-inline: auto;
+  margin-top: 48rem;
   display: flex;
-  gap: 100rem;
-  justify-content: center;
+  flex-direction: column;
+  gap: 40rem;
+  @media (width > 770px) {
+    width: unset;
+    margin-inline: unset;
+    margin-top: 150rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100rem;
+  }
 }
 
 .s_a2 .c > div {
-  width: 343rem;
-  padding-left: 20rem;
   /* border-left: 1px solid var(--c-black); */
   position: relative;
+  @media (width > 770px) {
+    width: 343rem;
+    padding-left: 20rem;
+  }
 }
 
 .s_a2 .c > div > span {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 1px;
   height: 100%;
   background-color: black;
+  @media (width > 770px) {
+    display: block;
+  }
 }
 .s_a2 .c h3 {
-  font-size: 30rem;
-  line-height: 35rem;
+  padding-bottom: 8rem;
+  border-bottom: 1px solid var(--c-black);
+  font-size: 15rem;
+  line-height: 20rem;
   font-weight: normal;
+  text-align: center;
+  @media (width > 770px) {
+    font-size: 30rem;
+    line-height: 35rem;
+    text-align: left;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 }
 .s_a2 .c p {
-  margin-top: 56rem;
-  font-size: 20rem;
-  line-height: 25rem;
+  margin-top: 20rem;
+  font-size: 10rem;
+  line-height: 14rem;
   font-weight: 300;
+  text-align: center;
+  @media (width > 770px) {
+    margin-top: 56rem;
+    font-size: 20rem;
+    line-height: 25rem;
+    text-align: left;
+  }
 }
 
 .s_a3 {
-  margin-top: 180rem;
+  margin-top: 64rem;
   position: relative;
+  padding-inline: var(--p-i);
+  @media (width > 770px) {
+    margin-top: 180rem;
+    padding-inline: unset;
+  }
 }
 
 .s_a3 h2 {
-  position: absolute;
-  font-size: 70rem;
+  font-size: 20rem;
+  line-height: 1;
   font-family: "bu";
   font-weight: normal;
-  line-height: 60rem;
-  left: 30rem;
-  top: -30rem;
-  z-index: 1;
+  text-align: center;
+  @media (width > 770px) {
+    font-size: 70rem;
+    line-height: 60rem;
+    position: absolute;
+    left: 30rem;
+    top: -30rem;
+    z-index: 1;
+    text-align: left;
+  }
 }
 .s_a3 figure {
-  width: 1130rem;
-  margin-left: auto;
+  margin-top: 8rem;
+  @media (width > 770px) {
+    margin-top: unset;
+    margin-left: auto;
+    width: 1130rem;
+  }
 }
 .s_a3 p {
-  font-size: 20rem;
-  line-height: 25rem;
-  font-weight: 300;
-  margin-top: 50rem;
-  width: 710rem;
+  width: 300rem;
+  margin-top: 24rem;
   margin-inline: auto 30rem;
+  font-size: 10rem;
+  line-height: 12rem;
+  font-weight: 300;
+  text-align: center;
+  @media (width > 770px) {
+    margin-top: 50rem;
+    width: 710rem;
+    font-size: 20rem;
+    line-height: 25rem;
+    text-align: left;
+  }
 }
 
 .s_a4 {
-  margin-top: 135rem;
+  margin-top: 48rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (width > 770px) {
+    display: block;
+    margin-top: 135rem;
+  }
 }
 .s_a4 .h {
   padding-inline: var(--p-i);
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  order: 3;
+  @media (width > 770px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    order: unset;
+  }
 }
 .s_a4 h2 {
-  width: 1040rem;
-  font-size: 70rem;
+  width: 284rem;
+  font-size: 20rem;
+  line-height: 1;
   font-family: "bu";
   font-weight: normal;
-  line-height: 60rem;
-  & div {
-    display: flex;
-    justify-content: space-between;
+  text-align: center;
+  @media (width > 770px) {
+    width: 1040rem;
+    font-size: 70rem;
+    line-height: 60rem;
+    text-align: left;
+    & div {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
 .s_a4 a {
+  margin-top: 24rem;
   text-decoration: underline;
   font-size: 13rem;
   color: var(--c-gold);
+  @media (width > 770px) {
+    margin-top: 0;
+  }
 }
+
 .s_a4 figure {
-  margin-top: 60rem;
+  margin-top: 8rem;
+  height: 170rem;
+  @media (width > 770px) {
+    height: unset;
+    margin-top: 60rem;
+  }
 }

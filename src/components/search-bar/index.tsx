@@ -1,5 +1,5 @@
-import SearchI from "@/assets/icons/search.svg";
 import s from "./_s.module.css";
+import SearchI from "@/assets/icons/search.svg";
 import { useEffect, useRef } from "react";
 
 interface Iprops {

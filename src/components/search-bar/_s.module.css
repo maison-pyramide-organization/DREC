@@ -1,17 +1,26 @@
 .search {
-  width: 465rem;
+  width: 255rem;
   display: flex;
   align-items: center;
   gap: 12rem;
   border-bottom: 1px solid var(--c-black);
   padding-bottom: 2px;
+  @media (width > 700px) {
+    width: 465rem;
+  }
 }
 .search svg {
-  width: 20rem;
+  width: 18rem;
+  @media (width > 700px) {
+    width: 20rem;
+  }
 }
 .search input {
-  font-size: 16rem;
+  font-size: 12rem;
   &::placeholder {
     color: var(--c-black);
+  }
+  @media (width > 700px) {
+    font-size: 16rem;
   }
 }

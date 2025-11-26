@@ -1,8 +1,37 @@
 .filters-list {
   /* width: 500rem; */
+  padding-block: 32rem;
   position: relative;
-  display: flex;
   gap: 26rem;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  max-height: 50vh;
+  overflow: auto;
+  @media (width > 770px) {
+    padding-block: unset;
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+    flex-direction: row;
+    z-index: 999;
+    background-color: unset;
+    backdrop-filter: unset;
+    display: flex;
+    max-height: unset;
+    overflow: unset;
+  }
+}
+
+.filters-list:global(.active) {
+  display: flex;
 }
 
 .filters-list > button {
@@ -52,13 +81,15 @@ DROPDOWN LIST
 ****************/
 .dropdown {
   display: none;
-  position: absolute;
-  top: calc(100% + 8rem);
-  left: 0;
   width: 100%;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
+  @media (width > 770px) {
+    position: absolute;
+    top: calc(100% + 8rem);
+    left: 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+  }
 }
 
 /*************** 
@@ -86,8 +117,10 @@ OPTIONS LIST
   color: var(--c-gold);
   cursor: pointer;
   &:hover {
-    background-color: var(--c-gold);
-    color: white;
+    @media (pointer: fine) {
+      background-color: var(--c-gold);
+      color: white;
+    }
   }
 }
 

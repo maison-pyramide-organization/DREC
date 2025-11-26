@@ -43,17 +43,23 @@
 }
 
 .gp {
-  width: 900px;
+  width: 369rem;
   position: relative;
   cursor: default;
+  @media (width > 770px) {
+    width: 900rem;
+  }
 }
 
 .gp figure {
-  width: 900px;
+  width: 369rem;
   aspect-ratio: 5/4;
   overflow: hidden;
   & img {
     position: static !important;
+  }
+  @media (width > 770px) {
+    width: 900rem;
   }
 }
 
@@ -66,6 +72,9 @@
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
+  @media (width > 770px) {
+    padding-inline: 8rem;
+  }
 }
 
 .gp_n button {
@@ -76,7 +85,6 @@
   &:first-child svg {
     transform: rotate(180deg);
   }
-
   & svg {
     width: 20rem;
   }

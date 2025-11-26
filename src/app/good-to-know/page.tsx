@@ -15,19 +15,17 @@ export default function GTK() {
   return (
     <>
       <section className={s.g0}>
-        <div>
-          <h1 a-t="r">
-            WHAT TO EXPECT
-            <br />
-            FROM DREC
-          </h1>
-          <p a-t="r">
-            From first viewing to handover and beyond, we coordinate the details
-            so you do not have to. Our team sets the standards for clear
-            processes, responsive service and steady follow-through. The aim is
-            straightforward living that stays reliable.
-          </p>
-        </div>
+        <h1 a-t="r">
+          WHAT TO EXPECT
+          <br />
+          FROM DREC
+        </h1>
+        <p a-t="r">
+          From first viewing to handover and beyond, we coordinate the details
+          so you do not have to. Our team sets the standards for clear
+          processes, responsive service and steady follow-through. The aim is
+          straightforward living that stays reliable.
+        </p>
         <figure a-i="r">
           <Image src={Igtk0} alt="DREC" />
         </figure>
@@ -35,7 +33,7 @@ export default function GTK() {
       </section>
 
       <section className={s.g1}>
-        <div>
+        <div className={s.l}>
           <h2 a-t="r">LEASING</h2>
           <figure a-i="r">
             <Image src={Igtk1} alt="DREC" />
@@ -55,8 +53,14 @@ export default function GTK() {
       </section>
 
       <section className={s.g2}>
+        <h2 className="m-o" a-t="r">
+          YOUR DREC <br />
+          TENANTS PORTAL
+        </h2>
         <div>
-          <h2 a-t="r">YOUR DREC TENANTS PORTAL</h2>
+          <h2 className="d-o" a-t="r">
+            YOUR DREC TENANTS PORTAL
+          </h2>
           <h3 a-t="r">DOWNLOAD OUR APP</h3>
           <p a-t="r">
             Submit maintenance, book facilities, request permits, book shared

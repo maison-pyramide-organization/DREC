@@ -33,25 +33,42 @@
 ****************/
 .ov {
   display: flex;
+  flex-wrap: wrap;
   gap: 24rem;
+  @media (width > 770px) {
+    flex-wrap: unset;
+  }
 }
 .ov > div {
   width: 135rem;
-  font-size: 14rem;
+  font-size: 12rem;
+  @media (width > 770px) {
+    font-size: 14rem;
+  }
 }
 .ov h3 {
   color: var(--c-gold);
+  font-size: 12rem;
+  @media (width > 770px) {
+    font-size: 14rem;
+  }
 }
 .ov p {
-  margin-top: 28rem;
+  margin-top: 8rem;
+  @media (width > 770px) {
+    margin-top: 28rem;
+  }
 }
 
 /****************
 *** LOCATION
 ****************/
 .map {
-  width: 600rem;
-  height: 335rem;
+  height: 240rem;
+  @media (width > 770px) {
+    width: 600rem;
+    height: 335rem;
+  }
 }
 .map iframe {
   width: 100%;
@@ -68,40 +85,81 @@
   width: 135rem;
 }
 .contact h3 {
-  font-size: 14rem;
+  font-size: 12rem;
   color: var(--c-gold);
+  @media (width > 770px) {
+    font-size: 14rem;
+  }
 }
 .contact a {
   margin-top: 28rem;
-  font-size: 14rem;
+  font-size: 12rem;
   text-decoration: underline;
+  @media (width > 770px) {
+    font-size: 14rem;
+  }
 }
+
 /****************
 *** AMENITIES
 ****************/
-.amenities {
-  & > div {
-    margin-top: 26rem;
-    display: grid;
-    grid-template-columns: repeat(3, 200rem);
-    gap: 32rem;
-  }
-  & h3 {
+.amenities h3 {
+  @media (width > 770px) {
     font-size: 14rem;
     color: var(--c-gold);
   }
 }
-.amenity {
+
+.amenities ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32rem;
+  @media (width > 770px) {
+    margin-top: 26rem;
+    grid-template-columns: repeat(3, 200rem);
+  }
+}
+.amenities li {
   display: flex;
   align-items: center;
-  gap: 10rem;
+  gap: 8rem;
   & h4 {
-    font-size: 14rem;
+    font-size: 12rem;
     font-weight: normal;
     text-transform: capitalize;
   }
   & svg {
-    width: 28rem;
+    width: 20rem;
+  }
+  @media (width > 770px) {
+    gap: 10rem;
+    & h4 {
+      font-size: 14rem;
+      font-weight: normal;
+      text-transform: capitalize;
+    }
+    & svg {
+      width: 28rem;
+    }
   }
 }
 
+/****************
+*** MOBILE INFO
+****************/
+
+.info_c_m {
+  display: flex;
+  flex-direction: column;
+  gap: 48;
+}
+
+.info_c_m > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24;
+}
+
+.info_c_m > div > h3 {
+  font-size: 14rem;
+}

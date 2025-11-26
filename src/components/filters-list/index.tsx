@@ -6,14 +6,11 @@ import Iclose from "@ic/close.svg";
 
 export default function FiltersList(props: any) {
   const { onFilter, onClear, filters } = props;
-
   const [openedF, setOpenedF] = useState<any>(null);
-
   const openF = (name) => {
     if (name == openedF) setOpenedF(null);
     else setOpenedF(name);
   };
-
   useEffect(() => {
     const $filters_list = document.getElementById("filters") as HTMLElement;
     const handleClickOutside = (e: MouseEvent) => {

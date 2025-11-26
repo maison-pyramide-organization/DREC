@@ -1,29 +1,52 @@
 .he {
-  margin-top: 208rem;
+  margin-top: 68rem;
+  padding-inline: var(--p-i);
   position: relative;
+  @media (width > 770px) {
+    margin-top: 208rem;
+  }
 }
 
 .he h1 {
   position: absolute;
-  top: -78rem;
-  left: 130rem;
-  width: fit-content;
+  top: -27rem;
+  left: var(--p-i);
+  right: var(--p-i);
+  font-size: 35rem;
+  line-height: 30rem;
   font-family: "bu";
   font-weight: normal;
-  font-size: 100rem;
-  line-height: 90%;
   /* mix-blend-mode: difference; */
-  & span {
-    display: block;
-    /* color: white; */
+  & > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
   }
-  & .m {
-    margin-left: 380rem;
+  & > div:last-of-type {
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  @media (width > 770px) {
+    width: fit-content;
+    top: -78rem;
+    left: 130rem;
+    font-size: 100rem;
+    line-height: 90%;
+    & .m {
+      display: block;
+      margin-left: 380rem;
+    }
+    & span {
+      display: block;
+    }
+    & > div:last-of-type {
+      width: fit-content;
+      margin-left: unset;
+    }
   }
 }
 
 .he figure {
-  padding-inline: var(--p-i);
   aspect-ratio: 138/62;
   display: flex;
   justify-content: center;

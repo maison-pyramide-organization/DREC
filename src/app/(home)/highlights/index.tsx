@@ -21,12 +21,8 @@ export default async function Highlights() {
               {hi.type}
             </div>
             <div className={s.b}>
-              <div className={s.b_l}>
                 <h3 a-t="r">{hi.title}</h3>
-              </div>
-              <div className={s.b_r}>
                 <p a-t="r">{hi.body}</p>
-              </div>
             </div>
           </li>
         ))}

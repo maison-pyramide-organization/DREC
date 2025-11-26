@@ -1,6 +1,7 @@
 "use client";
 import s from "./_s.module.css";
 import StarI from "@/assets/icons/star.svg";
+import FiltersI from "@/assets/icons/filters.svg";
 import FiltersList from "../filters-list";
 import SearchBar from "../search-bar";
 import PropertyCard from "@/components/property-card";
@@ -188,6 +189,11 @@ export default function Listings(props: Iprops) {
     setSaveView((prev) => !prev);
   };
 
+  const handleBtnClick = () => {
+    const $fl = document.getElementById("filters");
+    $fl?.classList.toggle("active");
+  };
+
   return (
     <div className={s.listings}>
       <button
@@ -204,6 +210,7 @@ export default function Listings(props: Iprops) {
         <div className={s.l}>
           <SearchBar onSearch={handleSearch} />
         </div>
+
         <div className={s.r}>
           <FiltersList
             onFilter={handleFilter}
@@ -211,6 +218,10 @@ export default function Listings(props: Iprops) {
             filters={filters}
           />
         </div>
+        <button className={`m-o`} onClick={handleBtnClick}>
+          Filters
+          <FiltersI />
+        </button>
       </div>
 
       {/* TITLE AND DESCRIPTION */}

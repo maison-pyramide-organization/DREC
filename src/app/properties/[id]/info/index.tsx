@@ -82,7 +82,7 @@ const Amenity = (props: any) => {
 
   return (
     <>
-      <div className={s.amenity}>
+      <li className={s.amenity}>
         {amenity == "gym" && <GymI />}
         {amenity == "access to playground" && <PlaygroundI />}
         {amenity == "pool" && <PoolI />}
@@ -99,7 +99,7 @@ const Amenity = (props: any) => {
         {amenity == "central ac" && <AcI />}
         {amenity == "storage" && <StorageI />}
         <h4>{amenity}</h4>
-      </div>
+      </li>
     </>
   );
 };
@@ -112,7 +112,7 @@ export default function Info(props: any) {
 
   return (
     <>
-      <nav className={s.info_n}>
+      <nav className={`${s.info_n} d-o`}>
         {tabs.map((tab) => (
           <div
             className={activeTab == tab ? s.active : ""}
@@ -123,7 +123,7 @@ export default function Info(props: any) {
           </div>
         ))}
       </nav>
-      <div className={s.info_c}>
+      <div className={`${s.info_c} d-o`}>
         {activeTab == "overview" && (
           <Overview
             bedrooms={prp.bedrooms}
@@ -137,13 +137,44 @@ export default function Info(props: any) {
         {activeTab == "property details" && (
           <div className={s.amenities}>
             <h3>AMENTIES</h3>
-            <div>
+            <ul>
               {amenities.map((amen) => (
                 <Amenity amenity={amen} key={amen} />
               ))}
-            </div>
+            </ul>
           </div>
         )}
+      </div>
+
+      <div className={`${s.info_c_m} m-o`}>
+        <div>
+          <h3>OVERVIEW</h3>
+          <Overview
+            bedrooms={prp.bedrooms}
+            bathrooms={prp.bathrooms}
+            area={prp.area}
+            price={prp.price}
+          />
+        </div>
+
+        <div className={s.amenities}>
+          <h3>AMENTIES</h3>
+          <ul>
+            {amenities.map((amen) => (
+              <Amenity amenity={amen} key={amen} />
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3>LOCATION</h3>
+          <Location location={prp.googleMapsLink} />
+        </div>
+
+        <div>
+          <h3>CONTACT</h3>
+          <Contact />
+        </div>
       </div>
     </>
   );

@@ -1,29 +1,41 @@
 .map {
   padding-inline: var(--p-i);
   position: relative;
-  margin-top: 190rem;
+  margin-top: 66rem;
+  @media (width > 770px) {
+    margin-top: 190rem;
+  }
 }
 
 .map h2 {
   position: absolute;
-  top: -78rem;
-  left: 461rem;
-  text-align: right;
-  font-family: "bu";
-  font-size: 100rem;
+  top: -28rem;
+  left: 95rem;
+  font-size: 40rem;
+  line-height: 30rem;
   font-weight: normal;
-  line-height: 90rem;
+  font-family: "bu";
+  text-align: right;
+  @media (width > 770px) {
+    font-size: 100rem;
+    line-height: 90rem;
+    top: -78rem;
+    left: 461rem;
+  }
 }
 
 .mb {
   position: absolute;
-  width: 1380rem;
   height: 100%;
   top: 0;
   left: var(--p-i);
+  right: var(--p-i);
   cursor: none;
   &:hover .cursor {
     opacity: 1;
+  }
+  @media (width > 770px) {
+    width: 1380rem;
   }
 }
 
@@ -41,12 +53,17 @@
   left: 0;
   z-index: 999;
   display: grid;
-  place-content: center;
+  grid-template-columns: 1fr;
+  place-items: center;
 }
 .map_ {
-  width: 1100rem;
   /* aspect-ratio: 9/6; */
+  width: 100%;
+  aspect-ratio: 6/9;
+  @media (width > 770px) {
+    width: 1100rem;
   aspect-ratio: 9/5;
+  }
 }
 
 .infoW {

@@ -66,7 +66,8 @@ export default function Footer() {
         <div className={s.f_lo}>
           <Logo />
         </div>
-        <div className={s.f_n}>
+
+        <div className={`${s.f_n} d-o`}>
           {nav.map((n) => (
             <div key={n.title} className={s.f_n_c}>
               <h3>{n.title.toUpperCase()}</h3>
@@ -81,6 +82,7 @@ export default function Footer() {
           ))}
         </div>
       </div>
+
       <div className={s.f_b}>
         <div className={s.socials}>
           <a target="_blank" href="/">

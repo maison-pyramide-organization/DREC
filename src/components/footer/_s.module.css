@@ -1,18 +1,31 @@
 .f {
-  margin-top: 150rem;
-  border-top: 14rem solid var(--c-black);
+  margin-top: 80rem;
+  border-top: 10rem solid var(--c-black);
   padding-inline: var(--p-i);
   padding-top: 32rem;
   padding-bottom: 24rem;
   background-color: white;
+  @media (width > 770px) {
+    margin-top: 110rem;
+    border-top: 14rem solid var(--c-black);
+  }
 }
 .f_t {
   display: flex;
+  justify-content: center;
+  @media (width > 770px) {
+    justify-content: unset;
+  }
 }
 .f_lo {
-  flex-basis: calc(3 / 7 * 100%);
   & svg {
-    width: 110rem;
+    width: 80rem;
+  }
+  @media (width > 770px) {
+    flex-basis: calc(3 / 7 * 100%);
+    & svg {
+      width: 110rem;
+    }
   }
 }
 .f_n {
@@ -36,34 +49,70 @@
 }
 
 .f_b {
-  display: flex;
   margin-top: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
+  @media (width > 770px) {
+    flex-direction: row;
+    gap: unset;
+  }
 }
 .socials {
   flex-basis: calc(3 / 7 * 100%);
   display: flex;
+  justify-content: center;
   gap: 10rem;
+  order: 2;
   & svg {
-    width: 26rem;
+    width: 20rem;
+  }
+  @media (width > 770px) {
+    order: unset;
+    justify-content: unset;
+    & svg {
+      width: 26rem;
+    }
   }
 }
 
 .inq {
-  flex-basis: calc(4 / 7 * 100%);
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  @media (width > 770px) {
+    flex-direction: row;
+    flex-basis: calc(4 / 7 * 100%);
+    align-items: unset;
+    flex-wrap: wrap;
+  }
 }
 .inq h3 {
-  font-size: 18rem;
+  font-size: 14rem;
   font-weight: 400;
-  flex-basis: 100%;
+  @media (width > 770px) {
+    font-size: 18rem;
+    flex-basis: 100%;
+  }
 }
 .inq p {
-  font-size: 12rem;
+  margin-top: 8rem;
+  font-size: 10rem;
   font-weight: 300;
+  text-align: center;
+  width: 300rem;
+  @media (width > 770px) {
+    margin-top: unset;
+    font-size: 12rem;
+    width: unset;
+    text-align: left;
+  }
 }
 .inq a {
+  margin-top: 10rem;
   font-size: 10rem;
   text-decoration: underline;
+  @media (width > 770px) {
+    margin-top: unset;
+  }
 }

@@ -8,7 +8,7 @@ import iSl2 from "@/assets/images/home/sl-2.png";
 import iSl3 from "@/assets/images/home/sl-3.png";
 import Image from "next/image";
 import gsap from "gsap";
-import { act, use, useState } from "react";
+import { useState } from "react";
 
 export default function Places() {
   const [running, setRunning] = useState(false);
@@ -62,6 +62,12 @@ export default function Places() {
 
   return (
     <section className={s.pl}>
+      <h2 a-t="r" className="m-o">
+        FIND A PLACE
+        <br />
+        THAT FITS YOU
+      </h2>
+
       <div className={s.pl_s} g-s="pl">
         <figure data-i="0" slide-i="1">
           <Image src={iSl1} alt="" />
@@ -75,7 +81,7 @@ export default function Places() {
       </div>
 
       <div className={s.pl_c}>
-        <h2 a-t="r">
+        <h2 a-t="r" className="d-o">
           FIND A PLACE
           <br />
           THAT FITS YOU
@@ -84,14 +90,12 @@ export default function Places() {
           DISCOVER ALL PROPERTIES
           <Chev />
         </Link>
-        <div className={s.pr}>
-          <h3 a-t="r">{activeS.name}</h3>
-          <p a-t="r">{activeS.desc}</p>
-          <button onClick={shuffle}>
-            Next
-            <Chev />
-          </button>
-        </div>
+        <h3 a-t="r">{activeS.name}</h3>
+        <p a-t="r">{activeS.desc}</p>
+        <button onClick={shuffle} className="d-o">
+          Next
+          <Chev />
+        </button>
       </div>
     </section>
   );

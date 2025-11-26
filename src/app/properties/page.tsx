@@ -12,13 +12,6 @@ export default async function Properties({ searchParams }) {
   if (type)
     properties = properties.filter((prp) => prp.type.toLowerCase() == type);
 
-  // const invalidItems = properties.map(
-  //   (item) => !item.type || !item.location || !item.googleMapsLink
-  // );
-  // console.log("inv", invalidItems);
-  // const types = [...new Set(properties.map((i) => i.location))];
-  // console.log(types);
-
   const title = "CITYWIDE COMMUNITIES, THOUGHTFULLY MANAGED";
   const description = `
             Every DREC address starts with comfort, safety and connection. We

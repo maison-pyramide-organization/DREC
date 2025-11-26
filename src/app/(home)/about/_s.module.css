@@ -3,61 +3,114 @@
   padding-inline: var(--p-i);
 }
 
+/* ANALYTICS */
+
 .ab_an {
-  padding-top: 36rem;
+  /* display: none; */
+  @media (width > 770px) {
+    padding-top: 36rem;
+  }
 }
 .ab_an ul {
-  margin-left: 596rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24rem;
+  @media (width > 770px) {
+    margin-left: 596rem;
+    flex-wrap: unset;
+    gap: unset;
+  }
 }
 .ab_an li {
   width: 152rem;
 }
+
 .ab_an h3 {
-  font-size: 35rem;
-  font-weight: normal;
+  font-size: 20rem;
   line-height: 1;
-  color: var(--c-black);
+  font-weight: normal;
+  @media (width > 770px) {
+    font-size: 35rem;
+  }
 }
 .ab_an p {
-  margin-top: 14rem;
+  margin-top: 10rem;
   font-size: 12rem;
   font-weight: normal;
   line-height: 15rem;
   color: var(--c-gray);
+  @media (width > 770px) {
+    margin-top: 14rem;
+  }
 }
 
+/* INFO */
 .ab_in {
-  margin-top: 76rem;
-  display: flex;
-}
-.ab_in .l {
-  flex-basis: calc(3 / 7 * 100%);
+  margin-top: 32rem;
   display: flex;
   flex-direction: column;
-  & h3 {
+  gap: 24rem;
+  @media (width > 770px) {
+    margin-top: 76rem;
+    flex-direction: row;
+    gap: unset;
+  }
+}
+.ab_in .l {
+  display: flex;
+  flex-direction: column;
+  @media (width > 700px) {
+    flex-basis: calc(3 / 7 * 100%);
+  }
+}
+.ab_in .l h3 {
+  width: 160rem;
+  font-size: 15rem;
+  line-height: 1;
+  font-weight: 400;
+  @media (width > 770px) {
+    width: unset;
     font-size: 35rem;
     line-height: 30rem;
-    font-weight: 400;
-    color: var(--c-black);
   }
-  & p {
-    margin-top: auto;
+}
+.ab_in .l > div {
+  width: 185rem;
+  align-self: end;
+  @media (width > 770px) {
     width: 370rem;
-    font-weight: 300;
+    margin-top: auto;
+    align-self: unset;
+  }
+}
+.ab_in .l p {
+  font-size: 10rem;
+  line-height: 12rem;
+  font-weight: 300;
+  @media (width > 770px) {
     font-size: 20rem;
     line-height: 30rem;
-    color: var(--c-black);
   }
-  & a {
+}
+.ab_in .l a {
+  display: block;
+  margin-top: 10rem;
+  font-size: 10rem;
+  line-height: 1rem;
+  color: var(--c-gold);
+  text-decoration: underline;
+  @media (width > 770px) {
     margin-top: 35rem;
-    color: var(--c-gold);
-    text-decoration: underline;
     line-height: 30rem;
+    font-size: 15rem;
   }
 }
 .ab_in .r {
-  flex-basis: calc(4 / 7 * 100%);
+  order: -1;
+  @media (width > 770px) {
+    order: unset;
+    flex-basis: calc(4 / 7 * 100%);
+  }
 }

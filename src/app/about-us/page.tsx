@@ -59,7 +59,9 @@ export default function About() {
         <div g-s="s2-c" className={s.c}>
           <div>
             <span g-s="line" />
-            <h3>DESIGN THAT SERVES DAILY LIFE</h3>
+            <h3>
+              DESIGN THAT SERVES <br /> DAILY LIFE
+            </h3>
             <p>
               Good light, practical layouts and durable finishes come first.
               Shared areas are welcoming and easy to use. Every choice supports
@@ -114,8 +116,13 @@ export default function About() {
       </section>
 
       <section className={s.s_a4}>
+        <h2 className="m-o">
+          FIND YOUR NEXT HOME NOW.
+          <br />
+          START THE SEARCH
+        </h2>
         <div className={s.h}>
-          <h2 a-t="r">
+          <h2 className="d-o" a-t="r">
             <div>
               FIND YOUR <span>NEXT HOME</span>
             </div>

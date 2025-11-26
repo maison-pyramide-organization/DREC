@@ -1,20 +1,35 @@
 .listings {
-  margin-top: 90rem;
+  margin-top: 0;
+  @media (width > 700px) {
+    margin-top: 90rem;
+  }
 }
 
 .listings > button {
   width: fit-content;
-  padding: 8rem 26rem;
+  padding: 6rem 16rem;
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 12rem;
-  font-size: 14rem;
+  gap: 8rem;
+  font-size: 10rem;
+  line-height: 1;
   color: var(--c-gold);
   border: 1px solid var(--c-gold);
+  transform: translateY(-90%);
   & svg {
-    width: 18rem;
+    width: 14rem;
     fill: var(--c-gold);
+  }
+  @media (width > 700px) {
+    padding: 8rem 26rem;
+    font-size: 14rem;
+    line-height: unset;
+    gap: 12rem;
+    transform: unset;
+    & svg {
+      width: 18rem;
+    }
   }
 }
 .listings > button.active {
@@ -26,10 +41,21 @@
 }
 
 .listings_h {
-  margin-top: 60rem;
+  margin-top: 40rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  @media (width > 700px) {
+    margin-top: 60rem;
+    position: unset;
+  }
+}
+.listings_h button {
+  display: flex;
+  align-items: center;
+  font-size: 12rem;
+  gap: 12rem;
 }
 
 .listings_intro {
@@ -66,11 +92,12 @@
   }
 }
 .prps {
-  margin-top: 88rem;
+  margin-top: 40rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 40rem;
   @media (width > 700px) {
+    margin-top: 88rem;
     grid-template-columns: repeat(2, 1fr);
   }
   @media (width > 1200px) {

@@ -51,6 +51,7 @@ export default function contact() {
             </div>
           </div>
         </div>
+
         <Image className="bg" src={bg} alt="" />
       </section>
 

@@ -1,19 +1,29 @@
 .item_t {
-  padding-block:30rem;
+  padding-block: 16rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid var(--c-black);
   cursor: pointer;
+  @media (width > 770px) {
+    padding-block: 30rem;
+  }
 }
 .item_t span {
-  font-size: 22rem;
-  line-height: 35rem;
+  font-size: 12rem;
+  line-height: 14rem;
   text-transform: uppercase;
+  @media (width > 770px) {
+    font-size: 22rem;
+    line-height: 35rem;
+  }
 }
 .item_t svg {
-  width: 18rem;
-  height: 18rem;
+  width: 16rem;
+  aspect-ratio: 1;
+  @media (width > 770px) {
+    width: 18rem;
+  }
 }
 
 .item_b_ {
@@ -24,7 +34,11 @@
 
 .item_b {
   padding-bottom: 24rem;
-  font-size: 20rem;
-  line-height: 30rem;
+  font-size: 12rem;
+  line-height: 16rem;
   font-weight: 300;
+  @media (width > 770px) {
+    font-size: 20rem;
+    line-height: 30rem;
+  }
 }

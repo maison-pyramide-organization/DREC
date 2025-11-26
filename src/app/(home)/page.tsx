@@ -15,7 +15,17 @@ export default function Home() {
     <>
       <div id="p" className={s.p}>
         <section className={s.he}>
-          <h1 g-s="he_ti">
+          <h1 g-s="he_ti" className="m-o">
+            COMFORT,
+            <br />
+            <div>
+              CONNECTION
+              <span>&</span>
+            </div>
+            <div>CONVENIENCE</div>
+            ACROSS DUBAI
+          </h1>
+          <h1 g-s="he_ti" className="d-o">
             COMFORT, CONNECTION
             <span className={s.m}>& CONVENIENCE</span>
             <span>ACROSS DUBAI</span>
