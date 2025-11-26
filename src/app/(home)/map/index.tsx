@@ -24,17 +24,17 @@ export default function Map() {
   }
   function show() {
     const $cursor = document?.getElementById("cursor") as any;
-    $cursor.classList.add("v");
+    $cursor?.classList.add("v");
   }
   function hide() {
     const $cursor = document?.getElementById("cursor") as any;
-    $cursor.classList.remove("v");
+    $cursor?.classList.remove("v");
   }
 
   return (
     <>
       <section className={s.map}>
-        <h2 a-t='r'>
+        <h2 a-t="r">
           LIFE WELL <br />
           PLACED
         </h2>
