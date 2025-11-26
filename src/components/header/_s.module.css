@@ -96,7 +96,7 @@
   z-index: 99;
   padding-block: 120rem 40rem;
   @media (width > 770px) {
-  padding-block: 160rem 60rem;
+    padding-block: 160rem 60rem;
     width: 1280rem;
   }
 }
@@ -114,7 +114,6 @@
 }
 
 .menu li {
-  padding-left: 24rem;
   font-family: "bu";
   font-size: 35rem;
   text-transform: uppercase;
@@ -129,7 +128,9 @@
   align-items: flex-start;
   justify-content: center;
   &:hover {
-    color: #eec4a2;
+    @media (pointer: fine) {
+      color: #eec4a2;
+    }
   }
   @media (width > 770px) {
     justify-content: unset;

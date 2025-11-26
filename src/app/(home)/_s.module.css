@@ -16,12 +16,13 @@
   line-height: 30rem;
   font-family: "bu";
   font-weight: normal;
+  z-index: 1;
   /* mix-blend-mode: difference; */
-  & > div:first-of-type {
+  & .l1 {
     display: flex;
     justify-content: space-between;
   }
-  & > div:last-of-type {
+  .l2 {
     width: fit-content;
     margin-left: auto;
   }
