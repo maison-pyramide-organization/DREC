@@ -86,8 +86,8 @@
   }
 }
 .ab_in .l p {
-  font-size: 12rem;
-  line-height: 13rem;
+  font-size: 14rem;
+  line-height: 16rem;
   font-weight: 300;
   @media (width > 770px) {
     font-size: 20rem;
