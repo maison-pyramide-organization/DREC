@@ -77,7 +77,7 @@
   }
 }
 .ab_in .l > div {
-  width: 185rem;
+  width: 300rem;
   align-self: end;
   @media (width > 770px) {
     width: 370rem;
@@ -86,8 +86,8 @@
   }
 }
 .ab_in .l p {
-  font-size: 14rem;
-  line-height: 16rem;
+  font-size: 16rem;
+  line-height: 1.4;
   font-weight: 300;
   @media (width > 770px) {
     font-size: 20rem;
