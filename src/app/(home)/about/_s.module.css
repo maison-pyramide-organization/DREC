@@ -66,7 +66,7 @@
   }
 }
 .ab_in .l h3 {
-  width: 160rem;
+  width: 158rem;
   font-size: 15rem;
   line-height: 1;
   font-weight: 400;
@@ -86,8 +86,8 @@
   }
 }
 .ab_in .l p {
-  font-size: 10rem;
-  line-height: 12rem;
+  font-size: 12rem;
+  line-height: 13rem;
   font-weight: 300;
   @media (width > 770px) {
     font-size: 20rem;
@@ -98,7 +98,7 @@
   display: block;
   margin-top: 10rem;
   font-size: 10rem;
-  line-height: 1rem;
+  line-height: 1;
   color: var(--c-gold);
   text-decoration: underline;
   @media (width > 770px) {

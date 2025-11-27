@@ -23,7 +23,7 @@ export default function RootLayout({
       <body>
         <Lenis>
           <WindowProvider>
-            <div className="_">
+            <div className="_" style={{ opacity: 0 }}>
               <Header />
               {children}
               <Footer />

@@ -38,7 +38,10 @@ export default function GTK() {
           <figure a-i="r">
             <Image src={Igtk1} alt="DREC" />
           </figure>
-          <h2 a-t="r">
+          <h2 a-t="r" className="m-o">
+            & MOVE-IN FAQS
+          </h2>
+          <h2 a-t="r" className="d-o">
             & MOVE-IN <br />
             FAQS
           </h2>

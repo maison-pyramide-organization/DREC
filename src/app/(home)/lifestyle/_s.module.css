@@ -1,24 +1,32 @@
 .ls {
-  margin-top: 48rem;
+  margin-top: 80rem;
   padding-inline: var(--p-i);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24rem;
   @media (width > 770px) {
     margin-top: 10rem;
-    justify-content: unset;
+    flex-direction: row;
+    align-items: unset;
+    gap: unset;
   }
 }
 
 .l {
+  position: relative;
   @media (width > 770px) {
     margin-left: 90rem;
   }
 }
 .l h2 {
-  width: 160rem;
-  font-size: 15rem;
-  line-height: 1;
+  width: 220rem;
+  font-size: 20rem;
+  line-height: 22rem;
   font-weight: 300;
+  position: absolute;
+  top: 280rem;
+  left: 0;
   @media (width > 770px) {
     width: 515rem;
     font-size: 40rem;
@@ -26,11 +34,9 @@
   }
 }
 .l figure {
-  margin-top: 32rem;
-  width: 155rem;
   aspect-ratio: 520 / 300;
   @media (width > 770px) {
-    width: unset;
+    margin-top: 32rem;
     margin-top: 148rem;
   }
 }
@@ -42,7 +48,7 @@
 }
 .r figure {
   aspect-ratio: 520/740;
-  width: 155rem;
+  width: 210rem;
   @media (width > 770px) {
     width: unset;
   }

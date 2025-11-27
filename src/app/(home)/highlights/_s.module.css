@@ -1,6 +1,6 @@
 .hi {
+  margin-top: 80rem;
   position: relative;
-  margin-top: 68rem;
   padding-inline: 30rem;
   @media (width > 770px) {
     margin-top: 155rem;
@@ -10,7 +10,7 @@
 }
 .hi h1 {
   position: absolute;
-  top: -32rem;
+  top: -20rem;
   left: 106rem;
   font-size: 30rem;
   font-weight: normal;
@@ -72,8 +72,8 @@
 }
 .b h3 {
   width: 230rem;
-  font-size: 15rem;
-  line-height: 12rem;
+  font-size: 16rem;
+  line-height: 14rem;
   font-weight: normal;
   font-family: "bu";
   text-align: center;
@@ -86,14 +86,14 @@
 }
 .b p {
   width: 325rem;
-  font-size: 15rem;
-  line-height: 20rem;
+  font-size: 12rem;
+  line-height: 14rem;
   color: #3d4260;
   text-align: center;
   @media (width > 770px) {
     width: 460rem;
-    font-size: 12rem;
-    line-height: 15rem;
+    font-size: 15rem;
+    line-height: 20rem;
     text-align: unset;
   }
 }

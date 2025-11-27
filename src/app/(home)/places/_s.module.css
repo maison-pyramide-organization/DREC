@@ -1,5 +1,5 @@
 .pl {
-  margin-top: 48rem;
+  margin-top: 80rem;
   @media (width > 770px) {
     display: flex;
     margin-top: 315rem;
@@ -14,8 +14,8 @@
 }
 
 .pl h2 {
-  font-size: 20rem;
-  line-height: 18rem;
+  font-size: 27rem;
+  line-height: 1;
   font-family: "bu";
   font-weight: normal;
   text-align: center;

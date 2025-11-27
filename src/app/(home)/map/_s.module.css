@@ -1,7 +1,7 @@
 .map {
+  margin-top: 80rem;
   padding-inline: var(--p-i);
   position: relative;
-  margin-top: 66rem;
   @media (width > 770px) {
     margin-top: 190rem;
   }
@@ -62,7 +62,7 @@
   aspect-ratio: 6/9;
   @media (width > 770px) {
     width: 1100rem;
-  aspect-ratio: 9/5;
+    aspect-ratio: 9/5;
   }
 }
 

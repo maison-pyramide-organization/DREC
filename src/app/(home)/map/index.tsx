@@ -20,7 +20,7 @@ export default function Map() {
     setIsOpened(true);
     // disableScrolling();
     lenis?.stop();
-    $cursor.classList.add("close");
+    $cursor?.classList.add("close");
   }
   function show() {
     const $cursor = document?.getElementById("cursor") as any;

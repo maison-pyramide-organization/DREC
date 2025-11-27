@@ -23,10 +23,10 @@
 
 .g0 h1 {
   padding-left: var(--p-i);
-  font-size: 20rem;
+  font-size: 27rem;
+  line-height: 1;
   font-family: "bu";
   font-weight: normal;
-  line-height: 1;
   text-align: center;
   @media (width > 770px) {
     font-size: 70rem;
@@ -38,7 +38,7 @@
   padding-right: var(--p-i);
   font-weight: 300;
   font-size: 12rem;
-  line-height: 15rem;
+  line-height: 14rem;
   text-align: center;
   order: 2;
   @media (width > 770px) {
@@ -58,7 +58,7 @@
   }
 }
 .g1 {
-  margin-top: 56rem;
+  margin-top: 80rem;
   padding-inline: 36rem;
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@
 }
 .g1 .l {
   position: relative;
-  width: 200rem;
+  width: 250rem;
   margin-inline: auto;
   @media (width > 770px) {
     margin-inline: 0;
@@ -83,31 +83,28 @@
 }
 
 .g1 h2 {
-  font-size: 20rem;
+  font-size: 27rem;
   font-family: "bu";
   font-weight: normal;
   position: absolute;
   line-height: 1;
+  text-align: right;
+  bottom: -24rem;
+  right: -12rem;
 
   &:first-child {
-    top: -16rem;
+    text-align: left;
+    top: -22rem;
     left: -12rem;
-  }
-  &:last-child {
-    text-align: right;
-    bottom: -38rem;
-    right: -12rem;
   }
   @media (width > 770px) {
     font-size: 70rem;
     line-height: 60rem;
+    bottom: -115rem;
+    right: -50rem;
     &:first-child {
       top: -52rem;
       left: 0rem;
-    }
-    &:last-child {
-      bottom: -115rem;
-      right: -50rem;
     }
   }
 }
@@ -129,7 +126,7 @@
 }
 
 .g2 {
-  margin-top: 48rem;
+  margin-top: 80rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,8 +145,8 @@
   }
 }
 .g2 h2 {
-  font-size: 20rem;
-  line-height: 18rem;
+  font-size: 27rem;
+  line-height: 1;
   font-family: "bu";
   font-weight: normal;
   text-align: center;
@@ -172,10 +169,10 @@
   }
 }
 .g2 p {
-  margin-top: 16rem;
-  font-size: 10rem;
-  line-height: 12rem;
-  max-width: 200rem;
+  margin-top: 8rem;
+  font-size: 12rem;
+  line-height: 13rem;
+  max-width: 250rem;
   text-align: center;
   margin-inline: auto;
   &:last-of-type {
@@ -205,7 +202,7 @@
 }
 
 .download {
-  margin-top: 10rem;
+  margin-top: 16rem;
   display: flex;
   gap: 8rem;
   justify-content: center;
@@ -216,7 +213,7 @@
 
 .download a {
   display: block;
-  width: 70rem;
+  width: 80rem;
   @media (width > 770px) {
     width: 142rem;
   }
@@ -225,7 +222,7 @@
 .g3 {
   width: 280rem;
   margin-inline: auto;
-  margin-top: 48rem;
+  margin-top: 80rem;
   position: relative;
   @media (width > 770px) {
     margin-top: 195rem;

@@ -11,10 +11,10 @@
 .s_a0 h1 {
   position: absolute;
   left: 0;
-  top: -14rem;
+  top: -18rem;
   width: 100%;
   z-index: 1;
-  font-size: 20rem;
+  font-size: 27rem;
   font-family: "bu";
   font-weight: normal;
   text-align: center;
@@ -58,7 +58,7 @@
 
 .s_a1 {
   padding-top: 40rem;
-  padding-inline: 36rem;
+  padding-inline: 30rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -146,7 +146,7 @@
 }
 .s_a2 h2 {
   font-family: "bu";
-  font-size: 20rem;
+  font-size: 27rem;
   line-height: 1;
   margin-left: 100rem;
   font-weight: normal;
@@ -165,7 +165,7 @@
 }
 
 .s_a2 .c {
-  width: 280rem;
+  width: 290rem;
   margin-inline: auto;
   margin-top: 48rem;
   display: flex;
@@ -219,7 +219,7 @@
 }
 .s_a2 .c p {
   margin-top: 20rem;
-  font-size: 10rem;
+  font-size: 12rem;
   line-height: 14rem;
   font-weight: 300;
   text-align: center;
@@ -232,9 +232,9 @@
 }
 
 .s_a3 {
-  margin-top: 64rem;
+  margin-top: 80rem;
   position: relative;
-  padding-inline: var(--p-i);
+  padding-inline: 30rem;
   @media (width > 770px) {
     margin-top: 180rem;
     padding-inline: unset;
@@ -242,11 +242,18 @@
 }
 
 .s_a3 h2 {
-  font-size: 20rem;
-  line-height: 1;
+  position: absolute;
+  left: 30rem;
+  top: -19rem;
+  z-index: 1;
+  font-size: 27rem;
+  line-height: 20rem;
   font-family: "bu";
   font-weight: normal;
-  text-align: center;
+  & span {
+    display: block;
+    margin-left: 24rem;
+  }
   @media (width > 770px) {
     font-size: 70rem;
     line-height: 60rem;
@@ -254,7 +261,9 @@
     left: 30rem;
     top: -30rem;
     z-index: 1;
-    text-align: left;
+    & span {
+      margin-left: unset;
+    }
   }
 }
 .s_a3 figure {
@@ -269,8 +278,8 @@
   width: 300rem;
   margin-top: 24rem;
   margin-inline: auto 30rem;
-  font-size: 10rem;
-  line-height: 12rem;
+  font-size: 12rem;
+  line-height: 14rem;
   font-weight: 300;
   text-align: center;
   @media (width > 770px) {
@@ -283,7 +292,7 @@
 }
 
 .s_a4 {
-  margin-top: 48rem;
+  margin-top: 80rem;
   display: flex;
   flex-direction: column;
   align-items: center;

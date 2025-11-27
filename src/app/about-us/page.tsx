@@ -59,7 +59,8 @@ export default function About() {
         <div g-s="s2-c" className={s.c}>
           <div>
             <span g-s="line" />
-            <h3>
+            <h3 className="m-o">DESIGN THAT SERVES DAILY LIFE</h3>
+            <h3 className="d-o">
               DESIGN THAT SERVES <br /> DAILY LIFE
             </h3>
             <p>
@@ -70,7 +71,12 @@ export default function About() {
           </div>
           <div>
             <span g-s="line" />
-            <h3>
+            <h3 className="m-o">CARE THAT LASTS</h3>
+            <h3 className="d-o">
+              CARE THAT
+              <br /> LASTS
+            </h3>
+            <h3 className="d-o">
               CARE THAT
               <br /> LASTS
             </h3>
@@ -82,7 +88,8 @@ export default function About() {
           </div>
           <div>
             <span g-s="line" />
-            <h3>
+            <h3 className="m-o">COMMUNITY AT THE CENTRE</h3>
+            <h3 className="d-o">
               COMMUNITY AT
               <br /> THE CENTRE
             </h3>
@@ -100,8 +107,7 @@ export default function About() {
       <section className={s.s_a3}>
         <h2 a-t="r">
           DREC
-          <br />
-          COMMUNITIES
+          <span>COMMUNITIES</span>
         </h2>
         <figure a-i="r">
           <Image src={Iabout31} alt="DREC" />

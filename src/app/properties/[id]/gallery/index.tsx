@@ -27,20 +27,20 @@ export default function Gallery(props: any) {
     if (e.currentTarget == e.target) {
       setSlide(-1);
       const $cursor = document.getElementById("cursor") as any;
-      $cursor.classList.remove("v", "close");
+      $cursor?.classList.remove("v", "close");
     }
     document.body.classList.remove("d-s");
   };
 
   const onEnter = () => {
     const $cursor = document.getElementById("cursor") as any;
-    $cursor.classList.add("v");
+    $cursor?.classList.add("v");
   };
 
   const onLeave = () => {
     const $cursor = document.getElementById("cursor") as any;
     if (slide == -1) {
-      $cursor.classList.remove("v");
+      $cursor?.classList.remove("v");
     }
   };
 
@@ -49,17 +49,17 @@ export default function Gallery(props: any) {
   const onImageClick = (i) => {
     setSlide(i);
     const $cursor = document.getElementById("cursor") as any;
-    $cursor.classList.add("v", "close");
+    $cursor?.classList.add("v", "close");
     document.body.classList.add("d-s");
   };
 
   const onNavEnter = () => {
     const $cursor = document.getElementById("cursor") as any;
-    $cursor.classList.remove("v");
+    $cursor?.classList.remove("v");
   };
   const onNavLeave = () => {
     const $cursor = document.getElementById("cursor") as any;
-    $cursor.classList.add("v");
+    $cursor?.classList.add("v");
   };
 
   useEffect(() => {
@@ -74,7 +74,7 @@ export default function Gallery(props: any) {
       const box = document.getElementById("g");
       const $cursor = document.getElementById("cursor") as any;
       const el = document.elementFromPoint(e.clientX, e.clientY);
-      if (box && el && box.contains(el)) $cursor.classList.add("v");
+      if (box && el && box.contains(el)) $cursor?.classList.add("v");
 
       // remove after the first run
       window.removeEventListener("mousemove", handleMove);

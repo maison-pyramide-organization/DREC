@@ -32,11 +32,12 @@
 *** OVERVIEW
 ****************/
 .ov {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32rem;
   @media (width > 770px) {
-    flex-wrap: unset;
+    display: flex;
+    gap: 24rem;
   }
 }
 .ov > div {
