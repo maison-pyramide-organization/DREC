@@ -25,7 +25,7 @@
 }
 
 .map figure {
-  height: 250rem;
+  height: 200rem;
   @media (width > 770px) {
     height: unset;
   }
