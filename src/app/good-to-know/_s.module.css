@@ -35,14 +35,14 @@
   }
 }
 .g0 p {
-  padding-right: var(--p-i);
   font-weight: 300;
-  font-size: 12rem;
-  line-height: 14rem;
+  font-size: 14rem;
+  line-height: 1.4;
   text-align: center;
   order: 2;
   @media (width > 770px) {
     width: 575rem;
+    padding-right: var(--p-i);
     box-sizing: unset;
     font-size: 20rem;
     line-height: 30rem;
@@ -170,9 +170,9 @@
 }
 .g2 p {
   margin-top: 8rem;
-  font-size: 12rem;
-  line-height: 13rem;
-  max-width: 250rem;
+  font-size: 14rem;
+  line-height: 1.4;
+  max-width: 300rem;
   text-align: center;
   margin-inline: auto;
   &:last-of-type {
@@ -213,7 +213,7 @@
 
 .download a {
   display: block;
-  width: 80rem;
+  width: 100rem;
   @media (width > 770px) {
     width: 142rem;
   }

@@ -110,7 +110,8 @@
 }
 .pl_c h3 {
   margin-top: 32rem;
-  font-size: 15rem;
+  font-size: 16rem;
+  line-height: 1.2;
   @media (width > 770px) {
     margin-top: 105rem;
     font-size: 20rem;
@@ -119,8 +120,8 @@
 .pl_c p {
   width: 345rem;
   margin-top: 10rem;
-  font-size: 12rem;
-  line-height: 14rem;
+  font-size: 14rem;
+  line-height: 1.4;
   @media (width > 770px) {
     margin-top: 16rem;
   }

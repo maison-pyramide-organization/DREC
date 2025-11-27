@@ -142,7 +142,7 @@ export default function About() {
           <Image src={Iabout41} alt="DREC" />
         </figure>
       </section>
-      <Animation />
+      {/* <Animation /> */}
     </>
   );
 }

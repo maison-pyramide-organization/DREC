@@ -64,13 +64,13 @@
   gap: 16rem;
   @media (width > 700px) {
     flex-basis: calc(3 / 7 * 100%);
-  gap: unset;
+    gap: unset;
   }
 }
 .ab_in .l h3 {
   width: 250rem;
   font-size: 16rem;
-  line-height: 1.4;
+  line-height: 1.2;
   font-weight: 400;
   @media (width > 770px) {
     width: unset;
@@ -79,7 +79,7 @@
   }
 }
 .ab_in .l > div {
-  width: 300rem;
+  width: 270rem;
   align-self: end;
   @media (width > 770px) {
     width: 370rem;

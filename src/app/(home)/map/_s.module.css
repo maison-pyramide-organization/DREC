@@ -24,6 +24,13 @@
   }
 }
 
+.map figure {
+  height: 250rem;
+  @media (width > 770px) {
+    height: unset;
+  }
+}
+
 .mb {
   position: absolute;
   height: 100%;

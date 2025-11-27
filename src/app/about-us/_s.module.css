@@ -39,7 +39,7 @@
   margin-inline: auto;
   width: 210rem;
   font-family: "bu";
-  font-size: 15;
+  font-size: 16rem;
   line-height: 1;
   text-align: center;
   z-index: 1;
@@ -57,7 +57,7 @@
 }
 
 .s_a1 {
-  padding-top: 40rem;
+  padding-top: 56rem;
   padding-inline: 30rem;
   position: relative;
   display: flex;
@@ -77,10 +77,10 @@
 }
 
 .s_a1 h2 {
-  font-size: 15rem;
-  line-height: 1;
+  font-size: 16rem;
+  line-height: 1.2;
   font-weight: normal;
-  width: 210rem;
+  width: 250rem;
   margin-inline: auto;
   text-align: center;
   @media (width > 770px) {
@@ -106,8 +106,8 @@
   }
 }
 .s_a1 .r p {
-  font-size: 12rem;
-  line-height: 14rem;
+  font-size: 14rem;
+  line-height: 1.4;
   font-weight: 300;
   text-align: center;
   @media (width > 770px) {
@@ -120,25 +120,27 @@
 .s_a1 .r a {
   display: block;
   margin-top: 20rem;
-  font-size: 13rem;
+  font-size: 10rem;
+  line-height: 1;
   color: var(--c-gold);
   text-decoration: underline;
   text-align: center;
   @media (width > 770px) {
+    font-size: 13rem;
     margin-top: 24rem;
     text-align: left;
   }
 }
 
 .s_a1 .r figure {
-  margin-top: 20rem;
+  margin-top: 32rem;
   @media (width > 770px) {
     margin-top: auto;
   }
 }
 
 .s_a2 {
-  padding-top: 48rem;
+  padding-top: 80rem;
   position: relative;
   @media (width > 770px) {
     padding-top: 100rem;
@@ -219,8 +221,8 @@
 }
 .s_a2 .c p {
   margin-top: 20rem;
-  font-size: 12rem;
-  line-height: 14rem;
+  font-size: 14rem;
+  line-height: 1.4;
   font-weight: 300;
   text-align: center;
   @media (width > 770px) {
@@ -275,15 +277,16 @@
   }
 }
 .s_a3 p {
-  width: 300rem;
+  /* width: 350rem; */
   margin-top: 24rem;
-  margin-inline: auto 30rem;
-  font-size: 12rem;
-  line-height: 14rem;
+  margin-inline: auto;
+  font-size: 14rem;
+  line-height: 1.4;
   font-weight: 300;
   text-align: center;
   @media (width > 770px) {
     margin-top: 50rem;
+    margin-inline: auto 30rem;
     width: 710rem;
     font-size: 20rem;
     line-height: 25rem;

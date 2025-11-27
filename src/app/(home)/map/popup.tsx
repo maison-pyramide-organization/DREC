@@ -21,17 +21,17 @@ export default function Popup(props) {
     if (e.currentTarget != e.target) return;
     closePopup();
     const $cursor = document.getElementById("cursor") as any;
-    $cursor.classList.remove("close", "v");
+    $cursor?.classList.remove("close", "v");
   };
 
   const onEnter = () => {
     const $cursor = document.getElementById("cursor") as any;
-    $cursor.classList.remove("v");
+    $cursor?.classList.remove("v");
   };
 
   const onLeave = () => {
     const $cursor = document.getElementById("cursor") as any;
-    $cursor.classList.add("v");
+    $cursor?.classList.add("v");
   };
 
   return (
