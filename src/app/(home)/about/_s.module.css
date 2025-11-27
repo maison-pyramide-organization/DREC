@@ -61,14 +61,16 @@
 .ab_in .l {
   display: flex;
   flex-direction: column;
+  gap: 16rem;
   @media (width > 700px) {
     flex-basis: calc(3 / 7 * 100%);
+  gap: unset;
   }
 }
 .ab_in .l h3 {
-  width: 158rem;
-  font-size: 15rem;
-  line-height: 1;
+  width: 250rem;
+  font-size: 16rem;
+  line-height: 1.4;
   font-weight: 400;
   @media (width > 770px) {
     width: unset;
@@ -86,7 +88,7 @@
   }
 }
 .ab_in .l p {
-  font-size: 16rem;
+  font-size: 14rem;
   line-height: 1.4;
   font-weight: 300;
   @media (width > 770px) {
