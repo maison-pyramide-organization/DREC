@@ -48,9 +48,17 @@
 }
 
 .he figure {
+  width: 100%;
+  overflow: hidden;
+  height: 340rem;
   aspect-ratio: 138/62;
   display: flex;
   justify-content: center;
+  @media (width > 770px) {
+    width: unset;
+    overflow: unset;
+    height: unset;
+  }
 }
 .bg2 {
   top: unset;
