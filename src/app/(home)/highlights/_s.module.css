@@ -23,6 +23,25 @@
     font-size: 80rem;
   }
 }
+.hi nav {
+  width: 100%;
+  position: absolute;
+  top: 70rem;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 8rem;
+
+  & svg {
+    width: 14rem;
+  }
+  & svg:first-of-type {
+    transform: rotate(180deg);
+  }
+  & path {
+    stroke: black;
+  }
+}
 .hi ul {
   display: flex;
   overflow-y: hidden;

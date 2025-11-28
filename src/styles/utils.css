@@ -12,9 +12,9 @@
 *  GLOBAL  */
 /******************/
 ._ {
-  opacity: 1 !important;
-  /* opacity: 0; */
-  /* visibility: hidden; */
+  /* opacity: 1 !important; */
+  opacity: 0;
+  visibility: hidden;
 }
 .w {
   position: relative;
@@ -53,6 +53,7 @@
 }
 
 .bg {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -60,4 +61,7 @@
   height: auto;
   pointer-events: none;
   z-index: -99;
+  @media (width > 770px) {
+    display: unset;
+  }
 }

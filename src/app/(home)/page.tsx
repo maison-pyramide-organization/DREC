@@ -9,8 +9,11 @@ import Animation from "./_animation";
 import Image from "next/image";
 import bg1 from "@im/home/bg1.png";
 import bg2 from "@im/home/bg2.png";
+import getHighlights from "@/services/api/highlights";
 
-export default function Home() {
+export default async function Home() {
+  const highlights = await getHighlights();
+
   return (
     <>
       <div id="p" className={s.p}>
@@ -54,7 +57,7 @@ export default function Home() {
           <Image className={`${s.bg2} bg`} src={bg2} alt="" />
         </div>
         <Map />
-        <Highlights />
+        <Highlights highlights={highlights} />
       </div>
       <Cursor />
       <Animation />
