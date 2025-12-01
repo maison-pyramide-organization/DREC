@@ -36,8 +36,8 @@
 .m > section > ._ {
   position: absolute;
   /* top: var(--h-h); */
-  left: var(--p-i);
   right: var(--p-i);
+  left: var(--p-i);
   bottom: 0;
 }
 
