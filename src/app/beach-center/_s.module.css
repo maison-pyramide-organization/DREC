@@ -132,19 +132,17 @@
 .s2 {
   background-color: #b1875e;
   position: relative;
+  margin-left: auto;
 }
 .s2 p {
-  font-size: 30rem;
-  line-height: 25rem;
-  text-align: right;
   position: absolute;
   bottom: 0;
   left: 910rem;
   z-index: 1;
+  font-size: 30rem;
+  line-height: 25rem;
+  text-align: right;
 }
 .s2 figure {
-  position: absolute;
-  right: var(--p-i);
-  bottom: 0;
   width: 680rem;
 }
