@@ -134,10 +134,25 @@
   position: relative;
   margin-left: auto;
 }
+.s2 h2 {
+  position: absolute;
+  left: 396rem;
+  bottom: 200rem;
+  font-size: 100rem;
+  font-family: "pp";
+  font-weight: 300;
+  & span {
+    position: absolute;
+    top: 76rem;
+    left: 175rem;
+    /* margin-left: 175rem; */
+  }
+}
+
 .s2 p {
   position: absolute;
   bottom: 0;
-  left: 910rem;
+  left: 880rem;
   z-index: 1;
   font-size: 30rem;
   line-height: 25rem;
@@ -145,4 +160,5 @@
 }
 .s2 figure {
   width: 680rem;
+  margin-left: auto;
 }

@@ -94,6 +94,10 @@ export default function BeachCenter() {
         {/* SECTION 2 */}
         <section className={s.s2}>
           <div className={s._}>
+            <h2>
+              BEACH
+              <span>CENTRE</span>
+            </h2>
             <p>
               COMING SOON <br />
               IN 2007
