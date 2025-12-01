@@ -1,0 +1,150 @@
+:global(#h) {
+  position: relative;
+  z-index: 1;
+}
+.p {
+  --c-brown: #a7816b;
+  --c-beige: #e1d5ce;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--c-brown);
+}
+.v {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--c-beige);
+  transition: opacity cubic-bezier(0.45, 0, 0.55, 1);
+}
+.m {
+  display: flex;
+}
+.m > section {
+  position: relative;
+  flex-shrink: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.m > section > ._ {
+  position: absolute;
+  /* top: var(--h-h); */
+  left: var(--p-i);
+  right: var(--p-i);
+  bottom: 0;
+}
+
+.s0 {
+  background-color: var(--c-brown);
+}
+.s0 ._ {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.s0 .l {
+  display: flex;
+  flex-direction: column;
+}
+
+.s0 .l h3 {
+  font-size: 20rem;
+  font-family: "pp";
+}
+.s0 .l figure {
+  margin-top: auto;
+  width: 525rem;
+}
+.s0 .r {
+  position: relative;
+}
+
+.s0 .r h2 {
+  position: absolute;
+  top: -60rem;
+  left: 0;
+  right: 0;
+  font-size: 79rem;
+  line-height: 60rem;
+  font-weight: normal;
+  & div:nth-child(1) {
+    margin-left: 340rem;
+  }
+  & div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+  & div:nth-child(3) {
+    text-align: right;
+  }
+}
+
+.s0 .r figure {
+  width: 740rem;
+}
+
+/* SECTION 1 */
+.s1 {
+  background-color: var(--c-beige);
+}
+
+.s1 ._ {
+  display: flex;
+  justify-content: space-between;
+}
+
+.s1 .l {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40rem;
+}
+.s1 .l h2 {
+  font-size: 70rem;
+  line-height: 60rem;
+  font-weight: normal;
+  font-family: "bu";
+}
+.s1 p:nth-of-type(1) {
+  margin-top: auto;
+  font-size: 35rem;
+  line-height: 30rem;
+}
+.s1 p:nth-of-type(2) {
+  margin-top: 40rem;
+  width: 390rem;
+  font-size: 20rem;
+  line-height: 30rem;
+  font-weight: 300;
+}
+.s1 .r {
+  flex-shrink: 0;
+  width: 810rem;
+}
+
+.s2 {
+  background-color: #b1875e;
+  position: relative;
+}
+.s2 p {
+  font-size: 30rem;
+  line-height: 25rem;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  left: 910rem;
+  z-index: 1;
+}
+.s2 figure {
+  position: absolute;
+  right: var(--p-i);
+  bottom: 0;
+  width: 680rem;
+}

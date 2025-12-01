@@ -41,6 +41,9 @@
   & path {
     stroke: black;
   }
+  @media (width > 770px) {
+    display: none;
+  }
 }
 .hi ul {
   display: flex;

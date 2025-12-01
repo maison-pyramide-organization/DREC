@@ -42,6 +42,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "pp";
+  src: url("@/assets/fonts/pp-r.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /*
 * THIS FILES IS FOR RESETTING SOME OF THE DEFAULTS STYLES
@@ -52,6 +59,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   overscroll-behavior: none;
   font-size: calc(100vw / 393);
@@ -61,6 +69,7 @@ html {
     font-size: calc(100vw / 1440);
   }
 }
+
 body {
   font-size: 15rem;
   font-family: "so";

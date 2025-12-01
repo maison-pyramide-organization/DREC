@@ -1,5 +1,6 @@
 :root {
   --p-i: 12rem;
+  --h-h: 84rem;
   --c-gray: #77726d;
   --c-black: #1b1b27;
   --c-gold: #c09470;
@@ -12,9 +13,17 @@
 *  GLOBAL  */
 /******************/
 ._ {
-  /* opacity: 1 !important; */
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1 !important;
+  /* opacity: 0;
+  visibility: hidden; */
+}
+.sh {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.hi {
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 .w {
   position: relative;

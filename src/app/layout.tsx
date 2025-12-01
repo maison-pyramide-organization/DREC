@@ -21,15 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Lenis>
-          <WindowProvider>
-            <div className="_" style={{ opacity: 0 }}>
-              <Header />
-              {children}
-              <Footer />
-            </div>
-          </WindowProvider>
-        </Lenis>
+        {/* <Lenis> */}
+        <WindowProvider>
+          <div className="_" style={{ opacity: 0 }}>
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </WindowProvider>
+        {/* </Lenis> */}
       </body>
     </html>
   );
