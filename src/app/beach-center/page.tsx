@@ -6,7 +6,9 @@ import Image from "next/image";
 import bcLogo from "@im/beach/bc-logo.png";
 import bcS0 from "@im/beach/bc-s0.png";
 import bcS1 from "@im/beach/bc-s1.png";
+import bcS1m from "@im/beach/bc-s1-m.png";
 import bcS2 from "@im/beach/bc-s2.png";
+import bcS2m from "@im/beach/bc-s2-m.png";
 import Animation from "./_animation";
 
 export default function BeachCenter() {
@@ -30,18 +32,23 @@ export default function BeachCenter() {
   return (
     <>
       <div className={s.p}>
-        {/* <video className={s.v} g-s="he-v" muted ref={vidR}>
-        <source src="/videos/beach-center.mp4" type="video/mp4" />
-      </video> */}
+        <video className={s.v} g-s="he-v" muted ref={vidR}>
+          <source src="/videos/beach-center.mp4" type="video/mp4" />
+        </video>
 
-        {/* <main id="m" className={s.m} style={{ opacity: 0, visibility: "hidden" }}> */}
-        <main id="m" className={s.m}>
+        <main
+          id="m"
+          className={s.m}
+          style={{ opacity: 0, visibility: "hidden" }}
+        >
+          {/* <main id="m" className={s.m}> */}
           {/* SECTION 0 */}
 
           <section className={s.s0}>
             <div className={s._}>
+              <h3 className="m-o">A PROJECT BY DREC</h3>
               <div className={s.l}>
-                <h3>A PROJECT BY DREC</h3>
+                <h3 className="d-o">A PROJECT BY DREC</h3>
                 <figure>
                   <Image src={bcLogo} alt="Beach Center" />
                 </figure>
@@ -63,10 +70,10 @@ export default function BeachCenter() {
 
           {/* SECTION 1 */}
 
-          <section className={s.s1}>
+          <section g-s="s1" className={s.s1}>
             <div className={s._}>
-              <div className={s.l}>
-                <h2 a-t="r">
+              <div g-s="s1-l" className={s.l}>
+                <h2 a-t="r" className="d-o">
                   BEACH CENTRE,
                   <br />
                   JUMEIRAH
@@ -86,8 +93,14 @@ export default function BeachCenter() {
                 </p>
               </div>
               <div className={s.r}>
+                <h2 a-t="r" className="m-o">
+                  BEACH CENTRE,
+                  <br />
+                  JUMEIRAH
+                </h2>
                 <figure>
-                  <Image src={bcS1} alt="Beach Center" />
+                  <Image src={bcS1m} className="m-o" alt="Beach Center" />
+                  <Image src={bcS1} className="d-o" alt="Beach Center" />
                 </figure>
               </div>
             </div>
@@ -102,10 +115,11 @@ export default function BeachCenter() {
               </h2>
               <p>
                 COMING SOON <br />
-                IN 2007
+                IN 2027
               </p>
               <figure>
-                <Image src={bcS2} alt="Beach Center" />
+                <Image src={bcS2m} className="m-o" alt="Beach Center" />
+                <Image src={bcS2} className="d-o" alt="Beach Center" />
               </figure>
             </div>
           </section>

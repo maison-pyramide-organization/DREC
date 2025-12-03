@@ -15,6 +15,7 @@ export default function Animation() {
     const $secs = gsap.utils.toArray("#m section");
     const hs = gsap.to($secs, {
       xPercent: -100 * ($secs.length - 1),
+      ease: "none",
       scrollTrigger: {
         trigger: "#m",
         pin: true,
@@ -22,50 +23,26 @@ export default function Animation() {
       },
     });
 
-    gsap.utils.toArray('[a-t="r"]').forEach((el: any) => {
-      const t_split = SplitText.create(el, { type: "lines", mask: "lines" });
+    // S1 TIMELINE
+    const $s1 = document.querySelector('[g-s="s1"]');
 
-      gsap.from(t_split.lines, {
-        yPercent: 100,
-        duration: 1.2,
-        ease: "power4.out",
-        stagger: 0.05,
-        scrollTrigger: {
-          trigger: el, // 👈 each element triggers its own animation
-          start: "left 90%",
-          horizontal: true,
-          containerAnimation: hs,
-        },
-        onComplete: () => {
-          t_split.masks.forEach((mask: any) => {
-            mask.style.overflow = "";
-          });
-        },
-      });
+    const s1_tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '[g-s="s1-l"]',
+        containerAnimation: hs,
+        start: "right right",
+        markers: true,
+      },
     });
-  };
-
-  const textsA = () => {
-    gsap.utils.toArray('[a-t="r"]').forEach((el: any) => {
-      const t_split = SplitText.create(el, { type: "lines", mask: "lines" });
-
-      gsap.from(t_split.lines, {
-        yPercent: 100,
-        duration: 1.2,
-        ease: "power4.out",
-        stagger: 0.05,
-        scrollTrigger: {
-          trigger: el, // 👈 each element triggers its own animation
-          start: "left center",
-          markers: true,
-        },
-        onComplete: () => {
-          t_split.masks.forEach((mask: any) => {
-            mask.style.overflow = "";
-          });
-        },
+    s1_tl
+      .from('[g-s="s1"] h2', {
+        opacity: 0,
+        duration: 0.5,
+      })
+      .from('[g-s="s1"] p', {
+        opacity: 0,
+        duration: 0.5,
       });
-    });
   };
 
   const initA = () => {
