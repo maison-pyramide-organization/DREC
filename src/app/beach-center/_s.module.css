@@ -1,7 +1,4 @@
-:global(#h) {
-  position: relative;
-  z-index: 1;
-}
+
 .p {
   --c-brown: #a7816b;
   --c-beige: #e1d5ce;
@@ -12,6 +9,15 @@
   top: 0;
   left: 0;
   background-color: var(--c-brown);
+}
+.p :global(.pin-spacer) {
+  overflow: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
 }
 .v {
   width: 100vw;
@@ -26,12 +32,14 @@
 }
 .m {
   display: flex;
+  overflow: hidden;
 }
 .m > section {
   position: relative;
   flex-shrink: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 .m > section > ._ {
   position: absolute;

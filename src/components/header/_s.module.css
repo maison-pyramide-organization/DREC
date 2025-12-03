@@ -7,6 +7,10 @@
     padding-top: 40rem;
   }
 }
+.z {
+  position: relative;
+  z-index: 1;
+}
 .lo {
   flex-basis: 100%;
 }

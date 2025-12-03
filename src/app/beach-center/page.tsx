@@ -7,6 +7,7 @@ import bcLogo from "@im/beach/bc-logo.png";
 import bcS0 from "@im/beach/bc-s0.png";
 import bcS1 from "@im/beach/bc-s1.png";
 import bcS2 from "@im/beach/bc-s2.png";
+import Animation from "./_animation";
 
 export default function BeachCenter() {
   const vidR = useRef(null);
@@ -27,87 +28,90 @@ export default function BeachCenter() {
   }, []);
 
   return (
-    <div className={s.p}>
-      {/* <video className={s.v} g-s="he-v" muted ref={vidR}>
+    <>
+      <div className={s.p}>
+        {/* <video className={s.v} g-s="he-v" muted ref={vidR}>
         <source src="/videos/beach-center.mp4" type="video/mp4" />
       </video> */}
 
-      {/* <main id="m" className={s.m} style={{ opacity: 0, visibility: "hidden" }}> */}
-      <main id="m" className={s.m}>
-        {/* SECTION 0 */}
+        {/* <main id="m" className={s.m} style={{ opacity: 0, visibility: "hidden" }}> */}
+        <main id="m" className={s.m}>
+          {/* SECTION 0 */}
 
-        <section className={s.s0}>
-          <div className={s._}>
-            <div className={s.l}>
-              <h3>A PROJECT BY DREC</h3>
-              <figure>
-                <Image src={bcLogo} alt="Beach Center" />
-              </figure>
+          <section className={s.s0}>
+            <div className={s._}>
+              <div className={s.l}>
+                <h3>A PROJECT BY DREC</h3>
+                <figure>
+                  <Image src={bcLogo} alt="Beach Center" />
+                </figure>
+              </div>
+              <div className={s.r}>
+                <h2>
+                  <div>A NEW</div>
+                  <div>
+                    RHYTHM <span>IN A</span>
+                  </div>
+                  <div>FAMILIAR PLACE</div>
+                </h2>
+                <figure>
+                  <Image src={bcS0} alt="Beach Center" />
+                </figure>
+              </div>
             </div>
-            <div className={s.r}>
+          </section>
+
+          {/* SECTION 1 */}
+
+          <section className={s.s1}>
+            <div className={s._}>
+              <div className={s.l}>
+                <h2 a-t="r">
+                  BEACH CENTRE,
+                  <br />
+                  JUMEIRAH
+                </h2>
+
+                <p>
+                  A neighborhood mall with
+                  <br />
+                  memory, reimagined with clarity.
+                </p>
+                <p>
+                  A Jumeirah landmark with new energy, Beach Centre keeps the
+                  spirit of a neighborhood mall while lifting the experience.
+                  Coffee, cultural moments and useful stops connect without the
+                  noise. Backed by A.R.M. Holding, it serves the community with
+                  clarity, comfort and care.
+                </p>
+              </div>
+              <div className={s.r}>
+                <figure>
+                  <Image src={bcS1} alt="Beach Center" />
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          {/* SECTION 2 */}
+          <section className={s.s2}>
+            <div className={s._}>
               <h2>
-                <div>A NEW</div>
-                <div>
-                  RHYTHM <span>IN A</span>
-                </div>
-                <div>FAMILIAR PLACE</div>
+                BEACH
+                <span>CENTRE</span>
               </h2>
+              <p>
+                COMING SOON <br />
+                IN 2007
+              </p>
               <figure>
-                <Image src={bcS0} alt="Beach Center" />
+                <Image src={bcS2} alt="Beach Center" />
               </figure>
             </div>
-          </div>
-        </section>
-
-        {/* SECTION 1 */}
-
-        <section className={s.s1}>
-          <div className={s._}>
-            <div className={s.l}>
-              <h2>
-                BEACH CENTRE,
-                <br />
-                JUMEIRAH
-              </h2>
-
-              <p>
-                A neighborhood mall with
-                <br />
-                memory, reimagined with clarity.
-              </p>
-              <p>
-                A Jumeirah landmark with new energy, Beach Centre keeps the
-                spirit of a neighborhood mall while lifting the experience.
-                Coffee, cultural moments and useful stops connect without the
-                noise. Backed by A.R.M. Holding, it serves the community with
-                clarity, comfort and care.
-              </p>
-            </div>
-            <div className={s.r}>
-              <figure>
-                <Image src={bcS1} alt="Beach Center" />
-              </figure>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 2 */}
-        <section className={s.s2}>
-          <div className={s._}>
-            <h2>
-              BEACH
-              <span>CENTRE</span>
-            </h2>
-            <p>
-              COMING SOON <br />
-              IN 2007
-            </p>
-            <figure>
-              <Image src={bcS2} alt="Beach Center" />
-            </figure>
-          </div>
-        </section>
-      </main>
-    </div>
+          </section>
+        </main>
+      </div>
+      <Animation />
+    </>
   );
 }

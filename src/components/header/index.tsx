@@ -6,9 +6,11 @@ import Logo from "@/assets/icons/logo.svg";
 import Menu from "./menu";
 import { useState } from "react";
 import Animation from "./_animation";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpened, setIsOpened] = useState(false);
+  const path = usePathname();
 
   const handleClick = () => {
     setIsOpened(!isOpened);
@@ -16,7 +18,7 @@ export default function Header() {
   };
   return (
     <>
-      <header id="h">
+      <header id="h" className={path == "/beach-center" ? s.z : ""}>
         <Link href="/" className={`${s.lo} y_`}>
           <Logo g-s="he_lo" />
         </Link>

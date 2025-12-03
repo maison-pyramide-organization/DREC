@@ -74,3 +74,16 @@
     display: unset;
   }
 }
+
+html {
+  /* For WebKit browsers */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+
+  /* For Firefox */
+  scrollbar-width: none;
+}

@@ -27,7 +27,9 @@
   position: absolute;
   top: 280rem;
   left: 0;
+  z-index: 1;
   @media (width > 770px) {
+    position: unset;
     width: 515rem;
     font-size: 40rem;
     line-height: 45rem;
