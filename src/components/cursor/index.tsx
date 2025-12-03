@@ -16,8 +16,6 @@ export default function Cursor() {
   const ease = 0.5;
   const size = 34;
 
-  console.log(isMobile);
-
   useEffect(() => {
     let rafId = 0;
     const $cursor = cursorRef.current as any;

@@ -33,7 +33,17 @@ export default function BeachCenter() {
     <>
       <div className={s.p}>
         <video className={s.v} g-s="he-v" muted ref={vidR}>
-          <source src="/videos/beach-center.mp4" type="video/mp4" />
+          {/* <source src="/videos/beach-center.mp4" type="video/mp4" /> */}
+          <source
+            src="/videos/bc-d.mp4"
+            type="video/mp4"
+            media="(min-width: 770px)"
+          />
+          <source
+            src="/videos/bc-m.mp4"
+            type="video/mp4"
+            media="(max-width: 769px)"
+          />
         </video>
 
         <main

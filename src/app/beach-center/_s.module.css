@@ -134,13 +134,13 @@
 }
 
 .s0 .r figure {
-  aspect-ratio: 369/519;
+  height: 520rem;
   & img {
     object-position: top right;
   }
   @media (width > 770px) {
-    aspect-ratio: unset;
     width: 740rem;
+    height: unset;
     & img {
       object-position: unset;
     }
