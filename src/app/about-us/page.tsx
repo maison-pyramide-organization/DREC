@@ -78,10 +78,6 @@ export default function About() {
               CARE THAT
               <br /> LASTS
             </h3>
-            <h3 className="d-o">
-              CARE THAT
-              <br /> LASTS
-            </h3>
             <p>
               We stand behind what we build. Maintenance is proactive,
               communication is steady and standards stay consistent across the
