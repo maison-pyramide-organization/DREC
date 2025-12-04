@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Lenis from "@/components/lenis";
 import { WindowProvider } from "@/contexts/windowContext";
+import Loader from "@/components/loader";
 // import SmoothScroller from "@/components/smooth-scroller";
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
+          <Loader />
         </WindowProvider>
         {/* </Lenis> */}
       </body>

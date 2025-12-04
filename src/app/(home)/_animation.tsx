@@ -10,7 +10,7 @@ import { imagesA, textsA } from "@/utils/animations";
 gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger);
 
 export default function Animation() {
-  const { fontLoaded } = useContext(WindowContext);
+  const { fontLoaded, loaderEnded } = useContext(WindowContext);
 
   // ANALYTICS NUMBERS ANIMATION
   const analyticsA = () => {
@@ -74,13 +74,14 @@ export default function Animation() {
 
   useGSAP(() => {
     if (!fontLoaded) return;
+    if (!loaderEnded) return;
     initA();
     textsA();
     imagesA();
     heA();
     analyticsA();
     plA();
-  }, [fontLoaded]);
+  }, [fontLoaded, loaderEnded]);
 
   return null;
 }

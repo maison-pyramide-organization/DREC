@@ -8,6 +8,8 @@ type Window = {
   isMobile: boolean | null;
   fontLoaded: boolean;
   firstLoad: boolean;
+  loaderEnded: boolean;
+  endLoader: () => void;
 };
 
 export const WindowContext = createContext<Window>({
@@ -16,6 +18,8 @@ export const WindowContext = createContext<Window>({
   isMobile: null,
   fontLoaded: false,
   firstLoad: true,
+  loaderEnded: false,
+  endLoader: () => {},
 });
 
 export function WindowProvider({ children }: { children: ReactNode }) {
@@ -25,6 +29,12 @@ export function WindowProvider({ children }: { children: ReactNode }) {
     () => !!(typeof window !== "undefined" && (window as any).__fontsReady)
   );
   const firstLoad = useRef(true);
+  // const loaderEnded = useRef(false);
+  const [loaderEnded, setLoaderEnded] = useState(false);
+  const endLoader = () => {
+    setLoaderEnded(true);
+    // loaderEnded.current = true;
+  };
 
   useEffect(() => {
     const update = () => {
@@ -35,7 +45,7 @@ export function WindowProvider({ children }: { children: ReactNode }) {
       window.innerWidth > 770 ? setIsMobile(false) : setIsMobile(true);
     };
     if (firstLoad.current) {
-      console.log("🚀 First website load");
+      // console.log("🚀 First website load");
       firstLoad.current = false;
     }
     update();
@@ -67,6 +77,9 @@ export function WindowProvider({ children }: { children: ReactNode }) {
         isMobile,
         fontLoaded,
         firstLoad: firstLoad.current,
+        loaderEnded,
+        // loaderEnded: loaderEnded.current,
+        endLoader,
       }}
     >
       {children}

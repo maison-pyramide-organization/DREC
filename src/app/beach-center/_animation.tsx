@@ -49,6 +49,7 @@ export default function Animation(props: any) {
         trigger: "#m",
         pin: true,
         scrub: true,
+        end: "+=" + $secs.length * 2000, // Adjust this value to control speed
       },
     });
 

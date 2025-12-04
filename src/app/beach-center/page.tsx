@@ -30,6 +30,7 @@ export default function BeachCenter() {
     if (!$vid) return;
     $vid.addEventListener("ended", showP);
     $vid.play();
+    return () => $vid.removeEventListener("ended", showP);
   }, []);
 
   return (
@@ -136,7 +137,7 @@ export default function BeachCenter() {
               </p>
               <figure>
                 <Image src={bcS2m} a-i="r" className="m-o" alt="Beach Center" />
-                <Image src={bcS2}  className="d-o" alt="Beach Center" />
+                <Image src={bcS2} className="d-o" alt="Beach Center" />
               </figure>
             </div>
           </section>

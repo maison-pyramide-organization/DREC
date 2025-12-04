@@ -8,7 +8,7 @@ import Iabout31 from "@/assets/images/about/about3.1.png";
 import Iabout41 from "@/assets/images/about/about4.1.png";
 import bg1 from "@/assets/images/about/bg1.png";
 import bg2 from "@/assets/images/about/ab-bg-2.png";
-import bg1m from "@/assets/images/about/bg1-m.png";
+// import bg1m from "@/assets/images/about/bg1-m.png";
 import Animation from "./_animation";
 
 export default function About() {
