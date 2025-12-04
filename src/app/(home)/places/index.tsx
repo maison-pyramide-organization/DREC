@@ -8,10 +8,12 @@ import iSl2 from "@/assets/images/home/sl-2.png";
 import iSl3 from "@/assets/images/home/sl-3.png";
 import Image from "next/image";
 import gsap from "gsap";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { WindowContext } from "@/contexts/windowContext";
 
 export default function Places() {
   const [running, setRunning] = useState(false);
+  const { isMobile } = useContext(WindowContext);
 
   const pls = [
     {
@@ -54,8 +56,8 @@ export default function Places() {
     tl.to(s3, { opacity: 0, duration: 0.2, onComplete: r })
       .set(s3, { top: 0, left: 0, opacity: 1 })
       .to([s1, s2], {
-        top: "+=40rem",
-        left: "+=50rem",
+        top: isMobile ? "+=20rem" : "+=40rem",
+        left: isMobile ? "+=25rem" : "+=50rem",
         duration: ".4",
       });
   };
@@ -92,7 +94,7 @@ export default function Places() {
         </Link>
         <h3 a-t="r">{activeS.name}</h3>
         <p a-t="r">{activeS.desc}</p>
-        <button onClick={shuffle} className="d-o">
+        <button onClick={shuffle}>
           Next
           <Chev />
         </button>

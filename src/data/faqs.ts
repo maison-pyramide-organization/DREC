@@ -5,11 +5,11 @@ const faqs = [
   },
   {
     q: "What documents do I need to apply?",
-    a: "For individuals: passport, valid UAE visa and valid Emirates ID. For companies: trade license, authorized signatory documents and tenant IDs. Your leasing advisor will confirm the exact list.",
+    a: "For individuals: passport, valid UAE visa and valid Emirates ID.\nFor companies: trade license, authorized signatory documents and tenant IDs. Your leasing advisor will confirm the exact list.",
   },
   {
     q: "Do I need Ejari and how do I set up utilities & internet?",
-    a: "Yes. This is the most important step in your guide to renting a home in Dubai. After your lease is signed we register Ejari, then you activate DEWA and the building’s internet provider. Some buildings have a separate chiller provider. We share the contacts at handover. Tip: Ask your leasing advisor to confirm there are no outstanding DEWA or chiller bills on the unit. Any balance should be settled before you activate your own DEWA account.",
+    a: "Yes. This is the most important step in your guide to renting a home in Dubai. After your lease is signed we register Ejari, then you activate DEWA and the building’s internet provider. Some buildings have a separate chiller provider. We share the contacts at handover.\nTip: Ask your leasing advisor to confirm there are no outstanding DEWA or chiller bills on the unit. Any balance should be settled before you activate your own DEWA account.",
   },
   {
     q: "What are the move-in requirements?",

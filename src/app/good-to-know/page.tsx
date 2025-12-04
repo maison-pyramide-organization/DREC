@@ -49,7 +49,12 @@ export default function GTK() {
         <div className={s.faqs}>
           {faqs.map((faq, i) => (
             <Accordion title={faq.q} key={i}>
-              <p>{faq.a}</p>
+              {/* <p>{faq.a}</p> */}
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: faq.a.replace(/\n/g, "<br/>"),
+                }}
+              />
             </Accordion>
           ))}
         </div>

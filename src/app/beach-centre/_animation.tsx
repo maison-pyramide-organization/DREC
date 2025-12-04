@@ -79,7 +79,12 @@ export default function Animation(props: any) {
 
     gsap.from('[g-s="s1-l"] .line', {
       ...tlDefaults,
-
+      onComplete: () => {
+        const $masks = document.querySelectorAll('[g-s="s1-l"] .line-mask');
+        $masks.forEach(($mask: any) => {
+          $mask.style.overflow = "visible";
+        });
+      },
       scrollTrigger: {
         trigger: '[g-s="s1-l"]',
         containerAnimation: hs,

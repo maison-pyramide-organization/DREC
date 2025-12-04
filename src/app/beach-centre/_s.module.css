@@ -118,7 +118,6 @@
   font-size: 45rem;
   line-height: 36rem;
   font-weight: normal;
-  /* z-index: 1; */
   & .l1 {
     margin-left: 157rem;
   }
@@ -133,6 +132,7 @@
     top: -60rem;
     font-size: 79rem;
     line-height: 60rem;
+    z-index: 1;
     & .l1 {
       margin-left: 340rem;
     }
