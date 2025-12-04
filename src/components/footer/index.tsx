@@ -85,10 +85,10 @@ export default function Footer() {
 
       <div className={s.f_b}>
         <div className={s.socials}>
-          <a target="_blank" href="/">
+          <a target="_blank" href="https://www.facebook.com/drecuae/">
             <Fb />
           </a>
-          <a target="_blank" href="/">
+          <a target="_blank" href="https://www.instagram.com/drecuae">
             <Ig />
           </a>
           <a target="_blank" href="/">
