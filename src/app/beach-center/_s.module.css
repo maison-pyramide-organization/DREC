@@ -113,21 +113,22 @@
   font-size: 45rem;
   line-height: 36rem;
   font-weight: normal;
-  & div:nth-child(1) {
+  z-index: 1;
+  & .l1 {
     margin-left: 157rem;
   }
-  & div:nth-child(2) {
+  & .l2 {
     display: flex;
     justify-content: space-between;
   }
-  & div:nth-child(3) {
+  & .l3 {
     text-align: right;
   }
   @media (width > 770px) {
     top: -60rem;
     font-size: 79rem;
     line-height: 60rem;
-    & div:nth-child(1) {
+    & .l1 {
       margin-left: 340rem;
     }
   }
@@ -245,6 +246,9 @@
   font-family: "pp";
   font-weight: 300;
   & span {
+    display: block;
+  }
+  & .l2 {
     position: absolute;
     top: 44.5rem;
     left: 98rem;
@@ -254,14 +258,13 @@
     left: 396rem;
     bottom: 200rem;
     font-size: 100rem;
-    & span {
+    & .l2 {
       position: absolute;
       top: 76rem;
       left: 175rem;
     }
   }
 }
-
 .s2 p {
   position: absolute;
   bottom: 28rem;

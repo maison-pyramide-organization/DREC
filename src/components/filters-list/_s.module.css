@@ -141,9 +141,13 @@ RANGE SLIDER
 }
 .rs_value {
   position: absolute;
-  bottom: calc(100% + 4rem);
+  bottom: calc(100% + 8rem);
   left: 50%;
   transform: translateX(-50%);
+  @media (width > 770px) {
+    bottom: calc(100% + 4rem);
+    left: 50%;
+  }
 }
 .rs input {
   width: 100%;
@@ -155,11 +159,16 @@ RANGE SLIDER
   &::-webkit-slider-thumb {
     appearance: none;
     -webkit-appearance: none;
-    width: 8rem;
-    height: 8rem;
+    width: 16rem;
+    height: 16rem;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 50%;
+
+    @media (width > 770px) {
+      width: 8rem;
+      height: 8rem;
+    }
   }
 }
 

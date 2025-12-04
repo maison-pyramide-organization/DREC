@@ -8,6 +8,7 @@ import Iabout31 from "@/assets/images/about/about3.1.png";
 import Iabout41 from "@/assets/images/about/about4.1.png";
 import bg1 from "@/assets/images/about/bg1.png";
 import bg2 from "@/assets/images/about/ab-bg-2.png";
+import bg1m from "@/assets/images/about/bg1-m.png";
 import Animation from "./_animation";
 
 export default function About() {
@@ -21,6 +22,7 @@ export default function About() {
         </figure>
 
         <p a-t="r">BUILDING COMMUNITIES SINCE 1991</p>
+        {/* <Image className="bg m-o" src={bg1m} alt="" /> */}
       </section>
 
       <section className={s.s_a1}>
@@ -47,7 +49,7 @@ export default function About() {
             <Image src={Iabout12} alt="DREC" />
           </figure>
         </div>
-        <Image className="bg" src={bg1} alt="" />
+        <Image className="bg d-o" src={bg1} alt="" />
       </section>
 
       <section className={s.s_a2}>

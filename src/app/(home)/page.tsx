@@ -9,6 +9,7 @@ import Animation from "./_animation";
 import Image from "next/image";
 import bg1 from "@im/home/bg1.png";
 import bg2 from "@im/home/bg2.png";
+import bg1m from "@im/home/bg1-m.png";
 import getHighlights from "@/services/api/highlights";
 
 export default async function Home() {
@@ -52,9 +53,10 @@ export default async function Home() {
         <div className="w">
           <About />
           <Places />
-          <Image className="bg" src={bg1} alt="" />
+          <Image className="bg d-o" src={bg1} alt="" />
+          <Image className="bg m-o" src={bg1m} alt="" />
           <Lifestyle />
-          <Image className={`${s.bg2} bg`} src={bg2} alt="" />
+          <Image className={`${s.bg2} bg d-o`} src={bg2} alt="" />
         </div>
         <Map />
         <Highlights highlights={highlights} />
