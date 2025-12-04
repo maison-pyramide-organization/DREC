@@ -18,7 +18,7 @@ export default function Header() {
   };
   return (
     <>
-      <header id="h" className={path == "/beach-center" ? s.z : ""}>
+      <header id="h" className={path == "/beach-centre" ? s.z : ""}>
         <Link href="/" className={`${s.lo} y_`}>
           <Logo g-s="he_lo" />
         </Link>

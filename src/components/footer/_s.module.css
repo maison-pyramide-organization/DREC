@@ -114,5 +114,6 @@
   text-decoration: underline;
   @media (width > 770px) {
     margin-top: unset;
+    margin-left: 90rem;
   }
 }

@@ -9,7 +9,7 @@
 }
 .z {
   position: relative;
-  z-index: 1;
+  z-index: 999;
 }
 .lo {
   flex-basis: 100%;

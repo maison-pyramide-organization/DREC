@@ -11,7 +11,7 @@ import bcS2 from "@im/beach/bc-s2.png";
 import bcS2m from "@im/beach/bc-s2-m.png";
 import Animation from "./_animation";
 
-export default function BeachCenter() {
+export default function BeachCentre() {
   const [vidEnded, setVidEnded] = useState(false);
   const vidR = useRef(null);
 
@@ -26,6 +26,9 @@ export default function BeachCenter() {
   };
 
   useEffect(() => {
+    const $_ = document.querySelector("._") as any;
+    $_.style.opacity = 1;
+    $_.style.visibility = "inherit";
     const $vid = vidR.current! as HTMLVideoElement;
     if (!$vid) return;
     $vid.addEventListener("ended", showP);
@@ -36,8 +39,7 @@ export default function BeachCenter() {
   return (
     <>
       <div className={s.p}>
-        <video className={s.v} g-s="he-v" muted ref={vidR}>
-          {/* <source src="/videos/beach-center.mp4" type="video/mp4" /> */}
+        <video className={s.v} g-s="he-v" muted playsInline ref={vidR}>
           <source
             src="/videos/bc-m.mp4"
             type="video/mp4"

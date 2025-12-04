@@ -11,7 +11,7 @@ export default function Menu(props: Iprops) {
 
   const links = [
     { name: "properties", link: "/properties" },
-    { name: "beach center", link: "/beach-center" },
+    { name: "beach centre", link: "/beach-centre" },
     { name: "good to know", link: "/good-to-know" },
     { name: "about us", link: "/about-us" },
     { name: "contact us", link: "/contact-us" },

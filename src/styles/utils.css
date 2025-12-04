@@ -14,9 +14,9 @@
 *  GLOBAL  */
 /******************/
 ._ {
-  opacity: 1 !important;
-  /* opacity: 0;
-  visibility: hidden; */
+  /* opacity: 1 !important; */
+  opacity: 0;
+  visibility: hidden;
 }
 .sh {
   opacity: 1 !important;

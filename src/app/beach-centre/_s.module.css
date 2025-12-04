@@ -38,20 +38,24 @@
 .m > section {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   @media (width > 770px) {
+    height: 100vh;
     flex-shrink: 0;
   }
 }
 .m > section > ._ {
-  position: absolute;
+  padding-inline: var(--p-i);
+  padding-top: var(--h-h);
   top: var(--h-h);
   right: var(--p-i);
   left: var(--p-i);
   bottom: 0;
   @media (width > 770px) {
+    padding-inline: unset;
     top: unset;
+    position: absolute;
   }
 }
 
@@ -59,14 +63,15 @@
   background-color: var(--c-brown);
 }
 .s0 ._ {
-  position: absolute;
   display: flex;
   flex-direction: column;
-  padding-top: 40rem;
+  padding-top: calc(40rem + var(--h-h)) !important;
+  gap: 40rem;
   @media (width > 770px) {
     padding-top: unset;
     flex-direction: row;
     justify-content: space-between;
+    gap: unset;
   }
 }
 
@@ -113,7 +118,7 @@
   font-size: 45rem;
   line-height: 36rem;
   font-weight: normal;
-  z-index: 1;
+  /* z-index: 1; */
   & .l1 {
     margin-left: 157rem;
   }
@@ -232,6 +237,7 @@
   left: 0 !important;
   right: 0 !important;
   padding-top: 80rem;
+  padding-inline: 0 !important;
   @media (width > 770px) {
     left: unset;
     right: unset;
@@ -245,6 +251,7 @@
   font-size: 55rem;
   font-family: "pp";
   font-weight: 300;
+  z-index: 1;
   & span {
     display: block;
   }

@@ -31,8 +31,8 @@ const nav = [
     title: "discover",
     links: [
       {
-        name: "beach center",
-        link: "/beach-center",
+        name: "beach centre",
+        link: "/beach-centre",
       },
       {
         name: "about us",

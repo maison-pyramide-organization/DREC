@@ -24,7 +24,7 @@ export default function About() {
             <h3>
               <span>250</span>
             </h3>
-            <p>EMPLOYEES AND MAINTANENCE PARTNERS</p>
+            <p>EMPLOYEES AND MAINTENENCE PARTNERS</p>
           </li>
           <li>
             <h3>
