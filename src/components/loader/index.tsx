@@ -20,7 +20,18 @@ export default function Loader() {
   return (
     <div className={loaderEnded ? `${s.end} ${s.lo}` : `${s.lo}`}>
       <video className={s.v} g-s="lo-v" muted ref={vidR}>
-        <source src="/videos/lo.mp4" type="video/mp4" />
+        <source type="video/mp4" />
+
+        <source
+          src="/videos/lo-m.mp4"
+          type="video/mp4"
+          media="(max-width: 769px)"
+        />
+        <source
+          src="/videos/lo.mp4"
+          type="video/mp4"
+          media="(min-width: 770px)"
+        />
       </video>
     </div>
   );
