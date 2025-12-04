@@ -91,7 +91,7 @@ export default function Footer() {
           <a target="_blank" href="https://www.instagram.com/drecuae">
             <Ig />
           </a>
-          <a target="_blank" href="/">
+          <a target="_blank" href="https://x.com/drecuae/">
             <X />
           </a>
         </div>
