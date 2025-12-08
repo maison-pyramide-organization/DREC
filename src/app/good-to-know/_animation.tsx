@@ -8,7 +8,7 @@ import { ScrollTrigger, SplitText } from "gsap/all";
 import { useContext } from "react";
 
 export default function Animation() {
-  const { fontLoaded } = useContext(WindowContext);
+  const { fontLoaded, loaderEnded } = useContext(WindowContext);
 
   gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
@@ -20,10 +20,11 @@ export default function Animation() {
 
   useGSAP(() => {
     if (!fontLoaded) return;
+    if (!loaderEnded) return;
     initA();
     textsA();
     imagesA();
-  }, [fontLoaded]);
+  }, [fontLoaded, loaderEnded]);
 
   return null;
 }
