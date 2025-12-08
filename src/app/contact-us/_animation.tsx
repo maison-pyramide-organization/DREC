@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { useContext } from "react";
 
 export default function Animation() {
-  const { fontLoaded } = useContext(WindowContext);
+  const { fontLoaded, loaderEnded } = useContext(WindowContext);
 
   gsap.registerPlugin(useGSAP);
 
@@ -18,8 +18,9 @@ export default function Animation() {
 
   useGSAP(() => {
     if (!fontLoaded) return;
+    if (!loaderEnded) return;
     initA();
-  }, [fontLoaded]);
+  }, [fontLoaded, loaderEnded]);
 
   return null;
 }

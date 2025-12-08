@@ -8,6 +8,7 @@
   top: 0;
   left: 0;
   background-color: var(--c-brown);
+  cursor: none;
 }
 .p :global(.pin-spacer) {
   overflow: auto !important;
@@ -292,5 +293,23 @@
     width: 680rem;
     margin-left: auto;
     margin-right: -2rem;
+  }
+}
+
+.cursor {
+  display: none;
+  position: fixed;
+  /* width: 34px;
+  height: 34px; */
+  place-content: center;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 99999;
+  color: white;
+  mix-blend-mode: difference;
+  font-size: 16rem;
+  @media (width > 770px) {
+    display: grid;
   }
 }

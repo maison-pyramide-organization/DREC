@@ -10,6 +10,7 @@ import bcS1m from "@im/beach/bc-s1-m.png";
 import bcS2 from "@im/beach/bc-s2.png";
 import bcS2m from "@im/beach/bc-s2-m.png";
 import Animation from "./_animation";
+import Cursor from "./cursor";
 
 export default function BeachCentre() {
   const [vidEnded, setVidEnded] = useState(false);
@@ -146,6 +147,7 @@ export default function BeachCentre() {
         </main>
       </div>
       <Animation play={vidEnded} />
+      <Cursor />
     </>
   );
 }
