@@ -1,6 +1,7 @@
 "use server";
 
 export async function careerAction(_prevState, formData: FormData) {
+  const api = `https://c01-deu.integrate-test.boomi.com/ws/rest/DRECWEB/careerWithUs`
   const fullName = formData.get("fullName")?.toString() || "";
   const message = formData.get("message")?.toString() || "";
   const file: any = formData.get("cv");
@@ -15,7 +16,7 @@ export async function careerAction(_prevState, formData: FormData) {
 
   const payload = { fullName, message, fileBase64 };
 
-  const boomiRes = await fetch(`${process.env.BOOMI_BASE}/careerWithUs`, {
+  const boomiRes = await fetch(api, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),

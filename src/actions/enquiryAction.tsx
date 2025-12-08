@@ -1,7 +1,7 @@
 "use server";
 
 export async function enquiryAction(_prevState, formData) {
-  const api = `https://c01-deu.integrate-test.boomi.com/ws/rest/DRECWEB/careerWithUs`;
+  const api = `https://c01-deu.integrate-test.boomi.com/ws/rest/DRECWEB/submitEnquiry`;
   const fullName = formData.get("fullName")?.toString() || "";
   const email = formData.get("email")?.toString() || "";
 
