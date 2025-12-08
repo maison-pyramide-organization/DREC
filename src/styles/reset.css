@@ -112,3 +112,8 @@ fieldset {
   outline: none;
   border: none;
 }
+
+input[type="file"]::-webkit-file-upload-button,
+input[type="file"]::file-selector-button {
+  display: none;
+}

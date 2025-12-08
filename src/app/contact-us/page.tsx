@@ -3,6 +3,8 @@ import Image from "next/image";
 import contactI from "@/assets/images/contact/contact.png";
 import bg from "@/assets/images/contact/contact-bg.png";
 import Animation from "./_animation";
+import EnquiryForm from "./enquiry-form";
+import CareerForm from "./career-form";
 
 export default function contact() {
   return (
@@ -63,18 +65,7 @@ export default function contact() {
         <figure>
           <Image src={contactI} alt="DREC" />
         </figure>
-        <form className={`${s.enqF} ${s.f}`}>
-          <input type="email" name="email" placeholder="EMAIL ADDRESS" />
-          <input type="text" name="name" placeholder="FULL NAME" />
-          <input type="text" name="subject" placeholder="SUBJECT" />
-          <input type="number" name="number" placeholder="PHONE NUMBER" />
-
-          <div className={s.b}>
-            <label htmlFor="message">MESSAGE</label>
-            <textarea name="message" />
-            <button type="submit">SUBMIT</button>
-          </div>
-        </form>
+        <EnquiryForm />
       </section>
 
       <section className={s.c2}>
@@ -82,15 +73,7 @@ export default function contact() {
           GROW YOUR
           <br /> CAREER WITH US
         </h2>
-        <form className={`${s.carF} ${s.f}`}>
-          <input type="text" name="name" placeholder="FULL NAME" />
-          <input type="text" name="subject" placeholder="ATTACH CV" />
-          <div className={s.b}>
-            <label htmlFor="message">MESSAGE</label>
-            <textarea name="message" />
-            <button type="submit">SUBMIT</button>
-          </div>
-        </form>
+        <CareerForm />
       </section>
       <Animation />
     </>
