@@ -299,6 +299,7 @@
 .cursor {
   display: none;
   position: fixed;
+  width: 40rem;
   /* width: 34px;
   height: 34px; */
   place-content: center;
@@ -307,7 +308,7 @@
   pointer-events: none;
   z-index: 99999;
   color: white;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   font-size: 16rem;
   @media (width > 770px) {
     display: grid;

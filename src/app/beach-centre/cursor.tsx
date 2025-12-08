@@ -2,8 +2,9 @@
 
 import { useContext, useEffect, useRef } from "react";
 import s from "./_s.module.css";
-import Iplus from "@/assets/icons/plus.svg";
 import { WindowContext } from "@/contexts/windowContext";
+import Image from "next/image";
+import cursorI from "@im/beach/cursor.png";
 
 export default function Cursor() {
   const cursorRef = useRef(null);
@@ -53,7 +54,8 @@ export default function Cursor() {
 
   return (
     <div id="cursor" className={s.cursor} ref={cursorRef}>
-      SCROLL
+      {/* SCROLL */}
+      <Image src={cursorI} alt="" />
     </div>
   );
 }
