@@ -75,6 +75,16 @@ export default function Animation(props: any) {
         "-=0.5"
       );
 
+    // CURSOR
+    gsap.to("#cursor", {
+      autoAlpha: 0,
+      scrollTrigger: {
+        trigger: '[g-s="s1-l"]',
+        containerAnimation: hs,
+        start: "left 90%",
+        markers: true,
+      },
+    });
     // S1 TIMELINE
 
     gsap.from('[g-s="s1-l"] .line', {
@@ -129,11 +139,17 @@ export default function Animation(props: any) {
       autoAlpha: 1,
     });
   };
+  const cursorA = () => {
+    gsap.set("#cursor", {
+      autoAlpha: 1,
+    });
+  };
 
   useGSAP(() => {
     if (!fontLoaded) return;
     if (!play) return;
     initA();
+    if( !isMobile) cursorA();
     if (!isMobile) horScroll();
     if (isMobile) {
       imagesA();

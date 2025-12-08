@@ -297,11 +297,11 @@
 }
 
 .cursor {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   width: 40rem;
-  /* width: 34px;
-  height: 34px; */
+  display: grid;
   place-content: center;
   left: 0;
   top: 0;
@@ -310,7 +310,7 @@
   color: white;
   /* mix-blend-mode: difference; */
   font-size: 16rem;
-  @media (width > 770px) {
-    display: grid;
+  @media (width <= 770px) {
+    display: none !important;
   }
 }
