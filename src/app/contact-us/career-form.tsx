@@ -14,7 +14,9 @@ export default function CareerForm() {
       <div className={s.b}>
         <label htmlFor="message">MESSAGE</label>
         <textarea name="message" />
-        <button type="submit">SUBMIT</button>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? "SUBMITTING" : "SUBMIT"}
+        </button>
       </div>
     </form>
   );
