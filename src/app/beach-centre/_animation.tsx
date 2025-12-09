@@ -82,7 +82,8 @@ export default function Animation(props: any) {
         trigger: '[g-s="s1-l"]',
         containerAnimation: hs,
         start: "left 90%",
-        markers: true,
+        end: "left 85%",
+        scrub: true,
       },
     });
     // S1 TIMELINE
@@ -149,7 +150,7 @@ export default function Animation(props: any) {
     if (!fontLoaded) return;
     if (!play) return;
     initA();
-    if( !isMobile) cursorA();
+    if (!isMobile) cursorA();
     if (!isMobile) horScroll();
     if (isMobile) {
       imagesA();
