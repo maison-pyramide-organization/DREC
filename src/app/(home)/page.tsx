@@ -14,7 +14,6 @@ import getHighlights from "@/services/api/highlights";
 
 export default async function Home() {
   const highlights = await getHighlights();
-  console.log("h", highlights);
 
   return (
     <>
