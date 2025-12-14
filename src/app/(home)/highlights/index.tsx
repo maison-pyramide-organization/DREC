@@ -13,7 +13,7 @@ export default function Highlights(props) {
 
     if (!$list || !$firstItem) return;
 
-    const step = $firstItem.offsetWidth; // المسافة اللي هتتحركها
+    const step = $firstItem.offsetWidth;
 
     if (isNext) {
       $list.scrollBy({ left: step, behavior: "smooth" });
