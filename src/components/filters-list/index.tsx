@@ -29,6 +29,9 @@ export default function FiltersList(props: any) {
     onFilter(target.name, target.value);
   };
 
+  const showBedroomsFilter =
+    filters.type == "Residential" || filters.type == null;
+
   return (
     <div
       id="filters"
@@ -52,16 +55,18 @@ export default function FiltersList(props: any) {
         open={openF}
         selected={filters.type}
       />
-      <Filter
-        type="range"
-        name="bedrooms"
-        min={0}
-        max={6}
-        step={1}
-        active={openedF === "bedrooms"}
-        open={openF}
-        selected={!!filters.bedrooms}
-      />
+      {showBedroomsFilter && (
+        <Filter
+          type="range"
+          name="bedrooms"
+          min={0}
+          max={6}
+          step={1}
+          active={openedF === "bedrooms"}
+          open={openF}
+          selected={!!filters.bedrooms}
+        />
+      )}
       <Filter
         type="minmax"
         name="price"
