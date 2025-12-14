@@ -8,7 +8,8 @@ import Animation from "./_animation";
 
 export default async function Properties({ searchParams }) {
   let properties = await getProperties();
-  const type = await searchParams.type;
+  const sp = await searchParams;
+  const type = sp?.type?.toLowerCase();
   if (type)
     properties = properties.filter((prp) => prp.type.toLowerCase() == type);
 
