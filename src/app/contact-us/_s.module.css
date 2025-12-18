@@ -180,8 +180,7 @@
   }
 }
 .carF input[type="file"] {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 .carF label[for="cv"] {
   display: inline-block;
