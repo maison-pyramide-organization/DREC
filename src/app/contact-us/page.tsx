@@ -75,6 +75,12 @@ export default function contact() {
         </h2>
         <CareerForm />
       </section>
+
+      <p className={s.disc}>
+        By submitting any form on this page, you consent to the collection and
+        storage of your information for the purpose of responding to your
+        request.
+      </p>
       <Animation />
     </>
   );
