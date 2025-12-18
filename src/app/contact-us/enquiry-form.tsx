@@ -8,7 +8,7 @@ export default function EnquiryForm() {
   const initial: any = { ok: null, error: null, message: null };
   const [state, action, isLoading] = useActionState(enquiryAction, initial);
   const { ok, error } = state;
-  const [popup, setPopup] = useState(false);
+  const [popup, setPopup] = useState(true);
   const closeP = () => setPopup(false);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function EnquiryForm() {
       </form>
       {popup && (
         <Popup
-          message="YOUR QUERY HAS BEEN SUBMITTED SUCCESSFULLY"
+          message="YOUR ENQUIRY HAS BEEN SUBMITTED SUCCESSFULLY"
           close={closeP}
         />
       )}

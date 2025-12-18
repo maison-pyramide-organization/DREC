@@ -1,7 +1,7 @@
 'use client";';
 
 import s from "./_s.module.css";
-import Iclose from "@ic/close.svg";
+import Icloses from "@ic/closes.svg";
 
 interface Iprops {
   message: string;
@@ -15,7 +15,7 @@ export default function Popup(props: Iprops) {
     <div className={s.popup}>
       <div className={s.popup_}>
         <button onClick={close}>
-          <Iclose />
+          <Icloses />
         </button>
 
         <h1>
