@@ -209,6 +209,7 @@
   font-size: 10rem;
   padding-inline: var(--p-i);
   text-align: center;
+  color: var(--c-gray);
   @media (width > 770px) {
     top: 80rem;
     font-size: 12rem;
