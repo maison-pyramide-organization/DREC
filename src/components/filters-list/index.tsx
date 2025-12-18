@@ -29,8 +29,7 @@ export default function FiltersList(props: any) {
     onFilter(target.name, target.value);
   };
 
-  const showBedroomsFilter =
-    filters.type == "Residential" || filters.type == null;
+  const showBedroomsFilter = filters.type == "Residential";
 
   return (
     <div

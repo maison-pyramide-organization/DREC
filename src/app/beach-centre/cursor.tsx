@@ -1,7 +1,7 @@
 "use client";
 
-import { useContext, useEffect, useRef } from "react";
 import s from "./_s.module.css";
+import { useContext, useEffect, useRef } from "react";
 import { WindowContext } from "@/contexts/windowContext";
 import Image from "next/image";
 import cursorI from "@im/beach/cursor.png";
