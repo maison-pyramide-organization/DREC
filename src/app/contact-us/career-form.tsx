@@ -10,7 +10,7 @@ export default function CareerForm() {
   const { ok, error } = state;
   const [fileName, setFileName] = useState("");
 
-  const [popup, setPopup] = useState(true);
+  const [popup, setPopup] = useState(false);
   const closeP = () => setPopup(false);
 
   useEffect(() => {
