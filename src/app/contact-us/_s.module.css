@@ -193,7 +193,6 @@
   width: 100%;
   @media (width > 770px) {
     width: calc((100% - 50rem) / 2);
-    padding: 12rem 16rem;
   }
 }
 
