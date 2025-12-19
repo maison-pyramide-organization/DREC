@@ -8,14 +8,18 @@ import PropertyCard from "@/components/property-card";
 import { useEffect, useState } from "react";
 import { updateFilters, filterPrps } from "./utils/filter";
 import { getSavedIds } from "./utils/saved";
+import prpTypes from "@/data/prp-types";
+import { useSearchParams, useRouter } from "next/navigation";
 
 interface Iprops {
   title: string;
   description: string;
   properties: any[];
+  type?: string;
+  showF?: boolean;
 }
 
-const initFilters = {
+const initFilters: any = {
   area: null,
   type: null,
   bedrooms: null,
@@ -24,7 +28,11 @@ const initFilters = {
 };
 
 export default function Listings(props: Iprops) {
-  const { title, description, properties } = props;
+  let { title, description, properties, showF = true } = props;
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const initType = searchParams.get("type");
 
   const savedIds = getSavedIds();
   let savedPrps = properties.filter((prp) => savedIds.includes(prp.id));
@@ -33,28 +41,46 @@ export default function Listings(props: Iprops) {
   const [filters, setFilters] = useState(initFilters);
   const [filteredProperties, setFilteredProperties] = useState(properties);
 
-  useEffect(() => {
-    setFilteredProperties(properties);
-  }, [properties]);
+  let type = filters.type || initType;
+
+  if (type) {
+    type = type.toLowerCase();
+    title = prpTypes[type].title;
+    description = prpTypes[type].description;
+  }
 
   useEffect(() => {
     //reset filters
-    setFilters(initFilters);
+    if (saveView) setFilters(initFilters);
     //set filteredPrps
     if (saveView) setFilteredProperties(savedPrps);
     else setFilteredProperties(properties);
   }, [saveView]);
 
-  // main filter function
+  useEffect(() => {
+    if (!initType) return;
 
+    const fprps = initType
+      ? properties.filter((prp) => prp.type.toLowerCase() === initType)
+      : properties;
+
+    setFilteredProperties(fprps);
+    setFilters({ ...initFilters, type: initType });
+  }, []);
+
+  // MAIN FILTER FUNCTION
   const handleFilter = (filterName: string, filterValue: any) => {
-    // Update filters object only
-
     const updatedFilters = updateFilters(filters, filterName, filterValue);
     const updatedPrps = filterPrps(updatedFilters, properties);
 
     setFilters(updatedFilters);
     setFilteredProperties(updatedPrps);
+
+    if (filterName == "type") {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("type", filterValue?.toLowerCase());
+      router.replace(`/properties?${params.toString()}`, { scroll: false });
+    }
   };
 
   const handleSearch = (text) => {
@@ -99,23 +125,25 @@ export default function Listings(props: Iprops) {
       </button>
 
       {/* FILTERS AND SEARCH */}
-      <div className={s.listings_h}>
-        <div className={s.l}>
-          <SearchBar onSearch={handleSearch} />
-        </div>
+      {showF && (
+        <div className={s.listings_h}>
+          <div className={s.l}>
+            <SearchBar onSearch={handleSearch} />
+          </div>
 
-        <div className={s.r}>
-          <FiltersList
-            onFilter={handleFilter}
-            onClear={handleClear}
-            filters={filters}
-          />
+          <div className={s.r}>
+            <FiltersList
+              onFilter={handleFilter}
+              onClear={handleClear}
+              filters={filters}
+            />
+          </div>
+          <button className={`m-o`} onClick={handleBtnClick}>
+            Filters
+            <FiltersI />
+          </button>
         </div>
-        <button className={`m-o`} onClick={handleBtnClick}>
-          Filters
-          <FiltersI />
-        </button>
-      </div>
+      )}
 
       {/* TITLE AND DESCRIPTION */}
       <div className={s.listings_intro}>

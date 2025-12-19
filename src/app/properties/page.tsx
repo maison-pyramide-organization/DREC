@@ -4,14 +4,11 @@ import bannerI from "@/assets/images/ps-banner.png";
 import getProperties from "@/services/api/properties";
 import Listings from "@/components/listings";
 import Animation from "./_animation";
-// import { headers } from "next/headers";
 
 export default async function Properties({ searchParams }) {
   let properties = await getProperties();
   const sp = await searchParams;
-  const type = sp?.type?.toLowerCase();
-  if (type)
-    properties = properties.filter((prp) => prp.type.toLowerCase() == type);
+  const type = sp?.type;
 
   const title = "CITYWIDE COMMUNITIES, THOUGHTFULLY MANAGED";
   const description = `
@@ -37,6 +34,7 @@ export default async function Properties({ searchParams }) {
       <div className={s.prs}>
         <h2 className={s.prs_title}>PROPERTIES</h2>
         <Listings
+          key={type}
           title={title}
           description={description}
           properties={properties}
