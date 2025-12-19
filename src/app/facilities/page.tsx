@@ -4,6 +4,7 @@ import bannerI from "@/assets/images/facilities-banner.png";
 import Listings from "@/components/listings";
 import { getFacilities } from "@/services/api/properties";
 import Animation from "./_animation";
+import { Suspense } from "react";
 
 export default async function Facilities() {
   const title = `
@@ -26,7 +27,14 @@ export default async function Facilities() {
         </figure>
 
         <div className={s.prps}>
-          <Listings title={title} description={desc} properties={fac} showF={false} />
+          <Suspense fallback={null}>
+            <Listings
+              title={title}
+              description={desc}
+              properties={fac}
+              showF={false}
+            />
+          </Suspense>
         </div>
       </div>
       <Animation />
