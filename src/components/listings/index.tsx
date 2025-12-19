@@ -5,7 +5,7 @@ import FiltersI from "@/assets/icons/filters.svg";
 import FiltersList from "../filters-list";
 import SearchBar from "../search-bar";
 import PropertyCard from "@/components/property-card";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { updateFilters, filterPrps } from "./utils/filter";
 import { getSavedIds } from "./utils/saved";
 import prpTypes from "@/data/prp-types";
@@ -114,52 +114,50 @@ export default function Listings(props: Iprops) {
   };
 
   return (
-    <Suspense fallback={null}>
-      <div className={s.listings}>
-        <button
-          type="button"
-          className={`${saveView ? s.active : ""}`}
-          onClick={toogleView}
-        >
-          <StarI />
-          SAVED SEARCHES
-        </button>
+    <div className={s.listings}>
+      <button
+        type="button"
+        className={`${saveView ? s.active : ""}`}
+        onClick={toogleView}
+      >
+        <StarI />
+        SAVED SEARCHES
+      </button>
 
-        {/* FILTERS AND SEARCH */}
-        {showF && (
-          <div className={s.listings_h}>
-            <div className={s.l}>
-              <SearchBar onSearch={handleSearch} />
-            </div>
-
-            <div className={s.r}>
-              <FiltersList
-                onFilter={handleFilter}
-                onClear={handleClear}
-                filters={filters}
-              />
-            </div>
-            <button className={`m-o`} onClick={handleBtnClick}>
-              Filters
-              <FiltersI />
-            </button>
+      {/* FILTERS AND SEARCH */}
+      {showF && (
+        <div className={s.listings_h}>
+          <div className={s.l}>
+            <SearchBar onSearch={handleSearch} />
           </div>
-        )}
 
-        {/* TITLE AND DESCRIPTION */}
-        <div className={s.listings_intro}>
-          <h2>{saveView ? "YOUR SAVED SEARCHES" : title}</h2>
-          {!saveView && <p>{description}</p>}
+          <div className={s.r}>
+            <FiltersList
+              onFilter={handleFilter}
+              onClear={handleClear}
+              filters={filters}
+            />
+          </div>
+          <button className={`m-o`} onClick={handleBtnClick}>
+            Filters
+            <FiltersI />
+          </button>
         </div>
+      )}
 
-        <ul className={s.prps}>
-          {filteredProperties.map((prp, i) => (
-            <li key={prp.id}>
-              <PropertyCard prp={prp} i={i} />
-            </li>
-          ))}
-        </ul>
+      {/* TITLE AND DESCRIPTION */}
+      <div className={s.listings_intro}>
+        <h2>{saveView ? "YOUR SAVED SEARCHES" : title}</h2>
+        {!saveView && <p>{description}</p>}
       </div>
-    </Suspense>
+
+      <ul className={s.prps}>
+        {filteredProperties.map((prp, i) => (
+          <li key={prp.id}>
+            <PropertyCard prp={prp} i={i} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
