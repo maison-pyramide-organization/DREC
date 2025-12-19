@@ -26,7 +26,7 @@ export default async function Facilities() {
         </figure>
 
         <div className={s.prps}>
-          <Listings title={title} description={desc} properties={fac} />
+          <Listings title={title} description={desc} properties={fac} showF={false} />
         </div>
       </div>
       <Animation />
